@@ -661,10 +661,10 @@ function openPreviousPapers(){
     color:'#1565c0',
     tabs:[{
       key:'papers', label:'Previous Year Papers', html:`
+      
         ${userPapers.map(p=>`<li><b>${p.title}</b><p><a href="${p.url}" target="_blank" rel="noopener">Click Hear to Download PDF</a></p></li>`).join('')}
         </ul>
-        `: " }
-      `
+        `      
     }]
   });
 }
