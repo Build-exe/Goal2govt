@@ -641,6 +641,22 @@ function openCategoryOverview(kind){
 }
 
 /* ============================================================
+   YOUR OWN UPLOADED PAPERS — Google Drive / OneDrive links
+   Add one entry per paper here: { title, url }.
+   Just send me the links and titles and I'll fill this in for
+   you — or edit this array yourself, it's plain JavaScript.
+   ============================================================ */
+const userPapers = [
+  // Example — replace with your real links:
+  // { title: "SSC CGL 2023 Tier 1 (with answer key)", url: "https://drive.google.com/file/d/XXXXXXXX/view?usp=sharing" },
+  // { title: "RRB NTPC 2022 Paper Set A", url: "https://1drv.ms/b/s!XXXXXXXX" },
+const userPapers = [
+  { title: "SSC CGL 2023 Tier 1", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQArQV72PdOBQIxKaz6YjkvNAbW7dLPYGqJQbpUW8Y14Quw?e=uWAv2Pview?usp=sharing" },
+//{ title: "RRB NTPC 2022 Paper", url: "https://1drv.ms/b/YOUR_LINK" },
+];
+];
+
+/* ============================================================
    PREVIOUS YEAR PAPERS — grouped by exam body, official links
    ============================================================ */
 function openPreviousPapers(){
@@ -651,7 +667,13 @@ function openPreviousPapers(){
     tierLabel:'Exam Preparation Dashboard',
     tabs:[{
       key:'papers', label:'Previous Year Papers', html:`
-        <p class="overview-text">Always download previous year papers from the recruiting body's own site — third-party PDFs can be outdated, mislabelled or simply wrong.</p>
+        ${userPapers.length ? `
+          <div class="note-box" style="background:#1E3A2A;border-color:#2F7D4F;color:#B7E4C7;">Your uploaded papers</div>
+          <ul class="stage-list">
+            ${userPapers.map(p=>`<li><b>${p.title}</b><p><a href="${p.url}" target="_blank" rel="noopener">Open PDF</a></p></li>`).join('')}
+          </ul>
+        ` : ''}
+        <p class="overview-text">Always download official previous year papers from the recruiting body's own site — third-party PDFs can be outdated, mislabelled or simply wrong.</p>
         <ul class="stage-list">
           <li><b>SSC (CGL, CHSL, MTS, GD, JE, Stenographer)</b><p>Official papers/answer-key portal: <a href="https://ssc.gov.in/for-candidates/previous-year-question-paper" target="_blank" rel="noopener">ssc.gov.in — Previous Year Question Paper</a></p></li>
           <li><b>UPSC (Civil Services, CDS, NDA, CAPF, Engineering Services)</b><p>Official archive: <a href="https://upsc.gov.in/examinations/previous-question-papers" target="_blank" rel="noopener">upsc.gov.in — Previous Question Papers</a></p></li>
