@@ -655,10 +655,6 @@ const userPapers = [
   { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQCxtjjR9CyzRqmEM3heSQRxAX1sKVCKt3LeYa7CaYHYa4Q?e=Co2bga" },
 ];
 ];
-const userPapers = [
-  { title: "SSC-CGL-QUESTION-PAPER-13-Aug-2021-Shift-1-English_clean", url: https://1drv.ms/b/c/a286cf94575cb02f/IQArQV72PdOBQIxKaz6YjkvNAbW7dLPYGqJQbpUW8Y14Quw?e=iGmUfs" },
-  { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQCxtjjR9CyzRqmEM3heSQRxAX1sKVCKt3LeYa7CaYHYa4Q?e=Co2bga" },
-];
 /* ============================================================
    PREVIOUS YEAR PAPERS — grouped by exam body, official links
    ============================================================ */
