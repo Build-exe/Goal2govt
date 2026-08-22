@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Goal2Govt - Find Your Path to Success</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo"><span class="logo-icon">▲</span> Goal2Govt</div>
+  <nav>
+    <ul>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#roadmap-section">Roadmaps</a></li>
+      <li><a href="#prep-section">Exam Prep</a></li>
+      <li><a href="#">Resources</a></li>
+      <li><a href="#">About Us</a></li>
+    </ul>
+  </nav>
+  <button class="signin-btn">Sign In</button>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Find Your Path to Success</h1>
+    <p>Get Personalized Career Roadmaps &amp; Exam Guidance</p>
+    <button class="get-started" onclick="document.getElementById('explorer-section').scrollIntoView({behavior:'smooth'})">Get Started</button>
+  </div>
+  <div class="hero-visual">
+    <div class="illustration">Personalized guidance for every qualification level — from 10th pass to B.Tech</div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Explore Your Career Options</h2>
+  <div class="options-grid">
+    <div class="option-card" id="card-government-jobs">
+      <div class="option-icon">🏛️</div>
+      <div class="option-body">
+        <h3>Government Jobs</h3>
+        <p>Explore by Qualification</p>
+      </div>
+      <div class="option-arrow">›</div>
+    </div>
+    <div class="option-card" id="card-banking-finance">
+      <div class="option-icon">💼</div>
+      <div class="option-body">
+        <h3>Banking &amp; Finance</h3>
+        <p>Explore Career Roadmaps</p>
+      </div>
+      <div class="option-arrow">›</div>
+    </div>
+    <div class="option-card" id="card-engineering-it">
+      <div class="option-icon">⚙️</div>
+      <div class="option-body">
+        <h3>Engineering &amp; IT</h3>
+        <p>Career Pathway Overview</p>
+      </div>
+      <div class="option-arrow">›</div>
+    </div>
+    <div class="option-card" id="card-healthcare-careers">
+      <div class="option-icon">❤️</div>
+      <div class="option-body">
+        <h3>Healthcare Careers</h3>
+        <p>Explore More Resources</p>
+      </div>
+      <div class="option-arrow">›</div>
+    </div>
+  </div>
+</section>
+
+<section id="roadmap-section">
+  <h2 class="section-title">Your Career Roadmap</h2>
+  <div class="roadmap-grid">
+    <div class="roadmap-card">
+      <div class="roadmap-head">Software Developer</div>
+      <div class="roadmap-body">
+        <ul>
+          <li>Overview</li>
+          <li>Skills &amp; Qualifications</li>
+          <li>Steps to Become</li>
+        </ul>
+        <button class="view-details" id="btn-software-developer">View Details</button>
+      </div>
+    </div>
+    <div class="roadmap-card">
+      <div class="roadmap-head">Civil Services</div>
+      <div class="roadmap-body">
+        <ul>
+          <li>Eligibility Criteria</li>
+          <li>Exam Stages</li>
+          <li>Preparation Tips</li>
+        </ul>
+        <button class="view-details" id="btn-civil-services">View Details</button>
+      </div>
+    </div>
+    <div class="roadmap-card">
+      <div class="roadmap-head">Nursing Career</div>
+      <div class="roadmap-body">
+        <ul>
+          <li>Qualifications</li>
+          <li>Certification Exams</li>
+          <li>Career Path</li>
+        </ul>
+        <button class="view-details" id="btn-nursing-career">View Details</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Interactive explorer built from the "Government Jobs After 10th, 12th, ITI, Diploma, Degree & BTech" flow chart -->
+<section id="explorer-section">
+  <h2 class="section-title">Government Jobs by Qualification</h2>
+  <div class="explorer">
+    <h2>What is your qualification?</h2>
+    <p>Select your qualification level to see matching government job opportunities.</p>
+    <div class="qual-tabs" id="qualTabs"></div>
+    <div class="job-list" id="jobList"></div>
+    <div class="explorer-footer">
+      <div class="col">
+        <h4>Benefits</h4>
+        <ul>
+          <li>Job Security</li>
+          <li>Good Salary</li>
+          <li>Allowances</li>
+          <li>Pension &amp; Other Perks</li>
+          <li>Respect in Society</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Tips</h4>
+        <ul>
+          <li>Check Notifications Regularly</li>
+          <li>Prepare Well</li>
+          <li>Stay Updated</li>
+          <li>Never Give Up</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="prep-section">
+  <h2 class="section-title">Exam Preparation <span class="link">Dashboard</span></h2>
+  <div class="prep-grid">
+    <div class="prep-card" id="card-previous-papers">
+      <div class="prep-icon">⬇️</div>
+      <div class="prep-body">
+        <h3>Previous Year Papers</h3>
+        <p>PDF Files</p>
+      </div>
+    </div>
+    <div class="prep-card">
+      <div class="prep-icon">📱</div>
+      <div class="prep-body">
+        <h3>E-Books &amp; Guides</h3>
+        <p>Essential Study Guides</p>
+      </div>
+    </div>
+    <div class="prep-card" id="card-career-tips">
+      <div class="prep-icon">💡</div>
+      <div class="prep-body">
+        <h3>Career Tips</h3>
+        <p>Expert Advice</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 Goal2Govt. Find Your Path to Success.
+</footer>
+
+<!-- Detail modal: tabbed sheet reused for government jobs, roadmap careers, category overviews and tips -->
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+  <div class="sheet">
+    <div class="sheet-sticky">
+      <div class="sheet-head" id="sheetHead">
+        <button class="close-btn" id="closeBtn" aria-label="Close">✕</button>
+        <span class="code" id="sheetCode"></span>
+        <h2 id="sheetTitle"></h2>
+        <div class="tier-label" id="sheetTier"></div>
+      </div>
+      <div class="section-tabs"></div>
+    </div>
+    <div class="sheet-body"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
