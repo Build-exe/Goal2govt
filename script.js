@@ -659,13 +659,11 @@ function openPreviousPapers(){
     title:'Previous Year Papers',
     code:'OFFICIAL SOURCES ONLY',
     color:'#1565c0',
-    tierLabel:'Exam Preparation Dashboard',
     tabs:[{
       key:'papers', label:'Previous Year Papers', html:`
         ${userPapers.length ? `
-        <div class="note-box" style="background:#1E3A2A;border-color:#2F7D4F;color:#B7E4C7;">Available Papers</div>
         <ul class="stage-list">
-        ${userPapers.map(p=>`<li><b>${p.title}</b><p><a href="${p.url}" target="_blank" rel="noopener">Open PDF</a></p></li>`).join('')}
+        ${userPapers.map(p=>`<li><b>${p.title}</b><p><a href="${p.url}" target="_blank" rel="noopener">Click Hear to Download PDF</a></p></li>`).join('')}
         </ul>
         ` : ''}
       `
