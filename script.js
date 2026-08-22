@@ -311,14 +311,17 @@ let lastFocused = null;
 
 /**
  * tabs: [{key, label, html?, render?(panelEl)}]
+ * opts: { fullscreen?: boolean }
  */
-function openSheet({ title, code, color, tierLabel, tabs }){
+function openSheet({ title, code, color, tierLabel, tabs, fullscreen }){
   lastFocused = document.activeElement;
   sheetHead.style.background = color;
   sheetCode.textContent = code || '';
   sheetCode.style.display = code ? '' : 'none';
   sheetTitle.textContent = title;
   sheetTier.textContent = tierLabel || '';
+
+  overlay.classList.toggle('fullscreen', !!fullscreen);
 
   sectionTabsEl.innerHTML = '';
   sheetBodyEl.innerHTML = '';
@@ -370,6 +373,7 @@ function unlockBackgroundScroll(){
 }
 function closeOverlay(){
   overlay.classList.remove('open');
+  overlay.classList.remove('fullscreen');
   unlockBackgroundScroll();
   if (lastFocused) lastFocused.focus();
 }
@@ -646,10 +650,52 @@ function openCategoryOverview(kind){
    Just send me the links and titles and I'll fill this in for
    you — or edit this array yourself, it's plain JavaScript.
    ============================================================ */
-/*const userPapers = [
-   { title: "SSC-CGL-QUESTION-PAPER-13-Aug-2021-Shift-1-English_clean", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQArQV72PdOBQIxKaz6YjkvNAbW7dLPYGqJQbpUW8Y14Quw?e=y0qN0Z" },
+const userPapers = [
+   { title: "SSC-CGL-QUESTION-PAPER-13-Aug-2021-Shift-1-English", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQArQV72PdOBQIxKaz6YjkvNAbW7dLPYGqJQbpUW8Y14Quw?e=y0qN0Z" },
    { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQCxtjjR9CyzRqmEM3heSQRxAX1sKVCKt3LeYa7CaYHYa4Q?e=tYuNqN" },
-];/*
+   { title: "SSC-CGL-Tier-1-Question-Paper-English_09_09_2024", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQBUHpKGWre4QYMsns5toQrgASGFLJ81adNS2yNbblW8TEk?e=uyOr5n" },
+   { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQCxtjjR9CyzRqmEM3heSQRxAX1sKVCKt3LeYa7CaYHYa4Q?e=tYuNqN" },
+];
+
+/* ============================================================
+   YOUR OWN E-BOOKS & GUIDES — Google Drive / OneDrive links
+   Add one entry per e-book here: { title, url }.
+   Same idea as userPapers above — send me links and titles,
+   or edit this array yourself.
+   ============================================================ */
+const userEbooks = [
+  // { title: "General Studies Complete Guide", url: "https://drive.google.com/file/d/XXXXXXXX/view?usp=sharing" },
+];
+
+/* ---------- Shared search-filtered list renderer ---------- */
+function renderSearchableList(panel, items, opts){
+  const { searchPlaceholder, emptyMessage, itemLabel } = opts;
+  panel.innerHTML = `
+    <div class="doc-search-wrap">
+      <input type="text" class="doc-search" id="${panel.id}-search" placeholder="${searchPlaceholder}" autocomplete="off">
+    </div>
+    <ul class="stage-list" id="${panel.id}-list"></ul>
+    <p class="doc-empty" id="${panel.id}-empty" style="display:none;">${emptyMessage}</p>
+  `;
+  const listEl = panel.querySelector(`#${panel.id}-list`);
+  const emptyEl = panel.querySelector(`#${panel.id}-empty`);
+  const searchEl = panel.querySelector(`#${panel.id}-search`);
+
+  function draw(filter){
+    const f = filter.trim().toLowerCase();
+    const filtered = items.filter(it => it.title.toLowerCase().includes(f));
+    if (filtered.length === 0){
+      listEl.innerHTML = '';
+      emptyEl.style.display = 'block';
+      emptyEl.textContent = items.length === 0 ? emptyMessage : `No ${itemLabel} match "${filter}".`;
+    } else {
+      emptyEl.style.display = 'none';
+      listEl.innerHTML = filtered.map(it=>`<li><b>${it.title}</b><p><a href="${it.url}" target="_blank" rel="noopener">Open / Download</a></p></li>`).join('');
+    }
+  }
+  searchEl.addEventListener('input', ()=> draw(searchEl.value));
+  draw('');
+}
 
 /* ============================================================
    PREVIOUS YEAR PAPERS — grouped by exam body, official links
@@ -659,21 +705,59 @@ function openPreviousPapers(){
     title:'Previous Year Papers',
     code:'OFFICIAL SOURCES ONLY',
     color:'#1565c0',
-    tabs:[{
-      key:'papers', label:'Previous Year Papers', html:`
-      
-        ${userPapers.map(p=>`<li><b>${p.title}</b><p><a href="${p.url}" target="_blank" rel="noopener">Click Hear to Download PDF</a></p></li>`).join('')}
-        </ul>
-        `      
-    }]
+    tierLabel:'Exam Preparation Dashboard',
+    fullscreen: true,
+    tabs:[
+      {
+        key:'uploaded', label:'Your Uploaded Papers', render:(el)=>{
+          renderSearchableList(el, userPapers, {
+            searchPlaceholder:'Search your uploaded papers (e.g. "SSC CGL 2023")…',
+            emptyMessage:'No papers uploaded yet.',
+            itemLabel:'papers'
+          });
+        }
+      },
+      {
+        key:'official', label:'Official Sources', html:`
+          <p class="overview-text">Always download official previous year papers from the recruiting body's own site — third-party PDFs can be outdated, mislabelled or simply wrong.</p>
+          <ul class="stage-list">
+            <li><b>SSC (CGL, CHSL, MTS, GD, JE, Stenographer)</b><p>Official papers/answer-key portal: <a href="https://ssc.gov.in/for-candidates/previous-year-question-paper" target="_blank" rel="noopener">ssc.gov.in — Previous Year Question Paper</a></p></li>
+            <li><b>UPSC (Civil Services, CDS, NDA, CAPF, Engineering Services)</b><p>Official archive: <a href="https://upsc.gov.in/examinations/previous-question-papers" target="_blank" rel="noopener">upsc.gov.in — Previous Question Papers</a></p></li>
+            <li><b>Railway / RRB (NTPC, Group D, ALP, JE)</b><p>Official portal: <a href="https://rrb.indianrailways.gov.in" target="_blank" rel="noopener">rrb.indianrailways.gov.in</a> — response sheets and answer keys are posted under each CEN notification after the exam, not as a standing archive.</p></li>
+            <li><b>Banking (IBPS PO/Clerk, SBI, RBI)</b><p>Official sites: <a href="https://www.ibps.in" target="_blank" rel="noopener">ibps.in</a>, <a href="https://sbi.co.in/web/careers" target="_blank" rel="noopener">sbi.co.in/web/careers</a>, <a href="https://opportunities.rbi.org.in" target="_blank" rel="noopener">opportunities.rbi.org.in</a> — these exams are fully computer-based and full papers usually aren't released; only your own response sheet/scorecard is provided post-exam.</p></li>
+            <li><b>State PSC / State Police / Other State Exams</b><p>No single national archive exists — each state commission publishes its own. Start at <a href="https://www.ncs.gov.in" target="_blank" rel="noopener">ncs.gov.in</a> (National Career Service) to find the right state board.</p></li>
+          </ul>
+          <div class="note-box">If a body doesn't publicly release full papers (common for CBT-based exams), your best substitute is the response sheet you can download from your own login after the exam, plus the official syllabus/exam-pattern PDF in the same notification.</div>
+        `
+      }
+    ]
   });
 }
-const userPapers = [
-       { title: "SSC-CGL-QUESTION-PAPER-13-Aug-2021-Shift-1-English", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQArQV72PdOBQIxKaz6YjkvNAbW7dLPYGqJQbpUW8Y14Quw?e=y0qN0Z" },
-       { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQCxtjjR9CyzRqmEM3heSQRxAX1sKVCKt3LeYa7CaYHYa4Q?e=tYuNqN" },
-       { title: "SSC-CGL-Tier-1-Question-Paper-English_09_09_2024", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQBUHpKGWre4QYMsns5toQrgASGFLJ81adNS2yNbblW8TEk?e=uyOr5n" },
-       { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQCxtjjR9CyzRqmEM3heSQRxAX1sKVCKt3LeYa7CaYHYa4Q?e=tYuNqN" },
-];
+
+/* ============================================================
+   E-BOOKS & GUIDES
+   ============================================================ */
+function openEbooks(){
+  openSheet({
+    title:'E-Books & Guides',
+    code:'STUDY MATERIAL',
+    color:'#1565c0',
+    tierLabel:'Exam Preparation Dashboard',
+    fullscreen: true,
+    tabs:[
+      {
+        key:'ebooks', label:'Your Uploaded E-Books', render:(el)=>{
+          renderSearchableList(el, userEbooks, {
+            searchPlaceholder:'Search your e-books & guides (e.g. "General Studies")…',
+            emptyMessage:'No e-books uploaded yet. Send me your Google Drive/OneDrive links and titles and I\'ll add them to the userEbooks list in script.js.',
+            itemLabel:'e-books'
+          });
+        }
+      }
+    ]
+  });
+}
+
 /* ============================================================
    CAREER TIPS
    ============================================================ */
@@ -683,6 +767,7 @@ function openCareerTips(){
     code:'EXPERT ADVICE',
     color:'#0d3b7a',
     tierLabel:'Exam Preparation Dashboard',
+    fullscreen: true,
     tabs:[{
       key:'tips', label:'Career Tips', html:`
         <ul class="stage-list">
@@ -760,6 +845,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
   // Previous Year Papers card
   const papersCard = document.getElementById('card-previous-papers');
   if (papersCard) papersCard.addEventListener('click', openPreviousPapers);
+
+  // E-Books & Guides card
+  const ebooksCard = document.getElementById('card-ebooks');
+  if (ebooksCard) ebooksCard.addEventListener('click', openEbooks);
 });
 
 try{
