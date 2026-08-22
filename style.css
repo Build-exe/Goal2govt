@@ -26,12 +26,12 @@
     box-shadow:0 2px 8px rgba(13,59,122,0.06);
     position:sticky;top:0;z-index:50;
   }
-  .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px;color:var(--blue-dark);}
-  .logo-icon{
-    width:30px;height:30px;background:var(--blue);border-radius:6px;
-    display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;
-    transform:rotate(-8deg);
-  }
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px;}
+  .logo-badge{width:34px;height:34px;flex-shrink:0;}
+  .logo-text{display:flex;align-items:baseline;font-family:'Segoe UI', Arial, Helvetica, sans-serif;}
+  .logo-dark{color:#16233F;}
+  .logo-orange{color:#F5821F;}
+  .logo-blue{color:var(--blue);}
   nav ul{display:flex;gap:34px;list-style:none;}
   nav a{font-size:15px;font-weight:500;color:var(--text-dark);padding-bottom:6px;transition:color .2s;}
   nav a.active{color:var(--blue);border-bottom:2px solid var(--blue);}
@@ -175,6 +175,25 @@
   }
   .overlay.open .sheet{ transform:scale(1); }
   @media (min-width:600px){ .sheet{ width:90%; } }
+
+  /* Fullscreen variant — used for Previous Year Papers, Career Tips, E-Books & Guides */
+  .overlay.fullscreen{ padding:0; }
+  .overlay.fullscreen .sheet{
+    width:100%; max-width:100%; height:100%; max-height:100%;
+    border-radius:0; transform:none;
+  }
+  .overlay.fullscreen.open .sheet{ transform:none; }
+
+  /* Search bar used inside Previous Year Papers / E-Books panels */
+  .doc-search-wrap{margin-bottom:18px;}
+  .doc-search{
+    width:100%; padding:12px 16px; border-radius:10px; border:1px solid #3A3F48;
+    background:#23262D; color:#F1F2F4; font-size:14px; font-family:'Segoe UI', Arial, Helvetica, sans-serif;
+    outline:none; transition:border-color .15s;
+  }
+  .doc-search::placeholder{color:#8A909B;}
+  .doc-search:focus{border-color:#1e88e5;}
+  .doc-empty{color:#9BA2AE; font-size:13.5px; padding:10px 0;}
   .sheet-sticky{ position:sticky; top:0; z-index:5; background:#1B1E24; flex:none; }
   .sheet-body{padding:22px 26px 30px; background:#1B1E24 !important; opacity:1 !important;}
   .section-tabs{ display:flex; gap:6px; flex-wrap:wrap; border-bottom:2px solid #3A3F48; padding:10px 26px 0; background:#1B1E24; }
