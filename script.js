@@ -650,11 +650,10 @@ const userPapers = [
   // Example — replace with your real links:
   // { title: "SSC CGL 2023 Tier 1 (with answer key)", url: "https://drive.google.com/file/d/XXXXXXXX/view?usp=sharing" },
   // { title: "RRB NTPC 2022 Paper Set A", url: "https://1drv.ms/b/s!XXXXXXXX" },
-const userPapers = [
   { title: "SSC-CGL-QUESTION-PAPER-13-Aug-2021-Shift-1-English_clean", url: https://1drv.ms/b/c/a286cf94575cb02f/IQArQV72PdOBQIxKaz6YjkvNAbW7dLPYGqJQbpUW8Y14Quw?e=iGmUfs" },
   { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQCxtjjR9CyzRqmEM3heSQRxAX1sKVCKt3LeYa7CaYHYa4Q?e=Co2bga" },
 ];
-];
+
 /* ============================================================
    PREVIOUS YEAR PAPERS — grouped by exam body, official links
    ============================================================ */
