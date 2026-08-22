@@ -646,11 +646,10 @@ function openCategoryOverview(kind){
    Just send me the links and titles and I'll fill this in for
    you — or edit this array yourself, it's plain JavaScript.
    ============================================================ */
-const userPapers = [
-  // Example — replace with your real links:
+/*const userPapers = [
    { title: "SSC-CGL-QUESTION-PAPER-13-Aug-2021-Shift-1-English_clean", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQArQV72PdOBQIxKaz6YjkvNAbW7dLPYGqJQbpUW8Y14Quw?e=y0qN0Z" },
    { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQCxtjjR9CyzRqmEM3heSQRxAX1sKVCKt3LeYa7CaYHYa4Q?e=tYuNqN" },
-];
+];/*
 
 /* ============================================================
    PREVIOUS YEAR PAPERS — grouped by exam body, official links
@@ -664,16 +663,16 @@ function openPreviousPapers(){
     tabs:[{
       key:'papers', label:'Previous Year Papers', html:`
         ${userPapers.length ? `
+        const userPapers = [
+        { title: "SSC-CGL-QUESTION-PAPER-13-Aug-2021-Shift-1-English_clean", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQArQV72PdOBQIxKaz6YjkvNAbW7dLPYGqJQbpUW8Y14Quw?e=y0qN0Z" },
+        { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQCxtjjR9CyzRqmEM3heSQRxAX1sKVCKt3LeYa7CaYHYa4Q?e=tYuNqN" }
+        ];
           <div class="note-box" style="background:#1E3A2A;border-color:#2F7D4F;color:#B7E4C7;">Available Papers</div>
           <ul class="stage-list">
             ${userPapers.map(p=>`<li><b>${p.title}</b><p><a href="${p.url}" target="_blank" rel="noopener">Open PDF</a></p></li>`).join('')}
           </ul>
         ` : ''}
-        //const userPapers = [
-        // Example — replace with your real links:
-        // { title: "SSC-CGL-QUESTION-PAPER-13-Aug-2021-Shift-1-English_clean", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQArQV72PdOBQIxKaz6YjkvNAbW7dLPYGqJQbpUW8Y14Quw?e=y0qN0Z" },
-        // { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQCxtjjR9CyzRqmEM3heSQRxAX1sKVCKt3LeYa7CaYHYa4Q?e=tYuNqN" },
-        ];
+
       `
     }]
   });
