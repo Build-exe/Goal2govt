@@ -649,7 +649,7 @@ function openCategoryOverview(kind){
 const userPapers = [
   // Example — replace with your real links:
   // { title: "SSC CGL 2023 Tier 1 (with answer key)", url: "https://drive.google.com/file/d/XXXXXXXX/view?usp=sharing" },
-  // { title: "RRB NTPC 2022 Paper Set A", url: "https://1drv.ms/b/s!XXXXXXXX" },
+   { title: "RRB NTPC 2022 Paper Set A", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQCxtjjR9CyzRqmEM3heSQRxAX1sKVCKt3LeYa7CaYHYa4Q?e=tYuNqN" },
 ];
 
 /* ============================================================
