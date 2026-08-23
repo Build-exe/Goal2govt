@@ -673,6 +673,8 @@ const userPapers = [
        { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQCxtjjR9CyzRqmEM3heSQRxAX1sKVCKt3LeYa7CaYHYa4Q?e=tYuNqN" },
        { title: "SSC-CGL-Tier-1-Question-Paper-English_09_09_2024", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQBUHpKGWre4QYMsns5toQrgASGFLJ81adNS2yNbblW8TEk?e=uyOr5n" },
        { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQCxtjjR9CyzRqmEM3heSQRxAX1sKVCKt3LeYa7CaYHYa4Q?e=tYuNqN" },
+       { title: "MTS_Havaldar_CBIC_CBN_2024_Shift2", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQCm7OoG8JMzTLY52Aie74arAQI_2E0JZ3Skt3a52UVtNkU?e=6FJPIZ" },
+       { title: "NTPC-CBT-2-2019_09_05_2022_", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQALoH3qJ446SJegZ-8qM97nAUsaqecCRXW5hOWeIjPFUbQ?e=EgDWto" },
 ];
 /* ============================================================
    CAREER TIPS
