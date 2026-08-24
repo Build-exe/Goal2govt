@@ -26,12 +26,8 @@
     box-shadow:0 2px 8px rgba(13,59,122,0.06);
     position:sticky;top:0;z-index:50;
   }
-  .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px;}
-  .logo-badge{width:34px;height:34px;flex-shrink:0;}
-  .logo-text{display:flex;align-items:baseline;font-family:'Segoe UI', Arial, Helvetica, sans-serif;}
-  .logo-dark{color:#16233F;}
-  .logo-orange{color:#F5821F;}
-  .logo-blue{color:var(--blue);}
+  .logo{display:flex;align-items:center;}
+  .logo-img{height:34px;width:auto;display:block;}
   nav ul{display:flex;gap:34px;list-style:none;}
   nav a{font-size:15px;font-weight:500;color:var(--text-dark);padding-bottom:6px;transition:color .2s;}
   nav a.active{color:var(--blue);border-bottom:2px solid var(--blue);}
