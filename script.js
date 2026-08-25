@@ -80,16 +80,7 @@ const quizPools = {
     ["If A is the brother of B, and B is the sister of C, how is A related to C?","Father","Brother","Uncle","Cousin","Brother"],
     ["The longest river in India is the:","Godavari","Ganga","Brahmaputra","Yamuna","Ganga"],
     ["A train 100 m long crosses a pole in 10 seconds. Its speed is:","10 m/s","36 km/h","Both A and B","5 m/s","Both A and B"],
-    ["Which gas do plants absorb from the air for photosynthesis?","Oxygen","Nitrogen","Carbon dioxide","Hydrogen","Carbon dioxide"],
-    ["Which planet is known as the Red Planet?","Mars","Venus","Jupiter","Saturn","Mars"],
-    ["The chemical symbol for water is:","H2O","HO2","O2H","H3O","H2O"],
-    ["Complete the analogy: Bird is to Sky as Fish is to __","Sand","Water","Air","Tree","Water"],
-    ["If today is Monday, what day will it be after 10 days?","Wednesday","Thursday","Friday","Tuesday","Thursday"],
-    ["Which of these is a prime number?","21","33","37","45","37"],
-    ["The freezing point of water in Celsius is:","0","32","100","-1","0"],
-    ["Who wrote the Indian National Anthem?","Bankim Chandra Chatterjee","Rabindranath Tagore","Sarojini Naidu","Subhas Chandra Bose","Rabindranath Tagore"],
-    ["Find the missing number: 5, 10, 20, 40, __","60","70","80","45","80"],
-    ["Which is the smallest continent by area?","Asia","Africa","Australia","Europe","Australia"]
+    ["Which gas do plants absorb from the air for photosynthesis?","Oxygen","Nitrogen","Carbon dioxide","Hydrogen","Carbon dioxide"]
   ],
   p12: [
     ["Choose the correctly spelt word:","Recieve","Receive","Receeve","Receve","Receive"],
@@ -97,16 +88,7 @@ const quizPools = {
     ["Who among the following is the ceremonial head of the Indian State?","Prime Minister","President","Chief Justice","Speaker of Lok Sabha","President"],
     ["Pointing to a photo, Rohan said, 'She is the daughter of my grandfather's only son.' Who is she to Rohan?","Mother","Sister","Aunt","Cousin","Sister"],
     ["Which of the following is a fundamental right under the Indian Constitution?","Right to Property","Right to Education","Right to Employment","Right to Free Legal Aid","Right to Education"],
-    ["A boat goes 10 km downstream in 1 hour and returns in 2 hours. The speed of the boat in still water is:","5 km/h","6 km/h","7.5 km/h","10 km/h","7.5 km/h"],
-    ["The HCF of 12 and 18 is:","2","3","6","9","6"],
-    ["Which article of the Indian Constitution deals with the Right to Equality?","Article 14","Article 19","Article 21","Article 32","Article 14"],
-    ["Synonym of 'Abundant' is:","Scarce","Plentiful","Rare","Empty","Plentiful"],
-    ["A sum triples itself in 8 years at simple interest. The rate of interest is:","20%","25%","12.5%","15%","25%"],
-    ["Which gas is most abundant in Earth's atmosphere?","Oxygen","Carbon Dioxide","Nitrogen","Hydrogen","Nitrogen"],
-    ["The capital of Australia is:","Sydney","Melbourne","Canberra","Perth","Canberra"],
-    ["If 20% of a number is 50, the number is:","200","250","300","100","250"],
-    ["Antonym of 'Genuine' is:","Authentic","Real","Fake","True","Fake"],
-    ["Which Five-Year Plan is associated with the early push for the Green Revolution in India?","First","Third","Fourth","Second","Third"]
+    ["A boat goes 10 km downstream in 1 hour and returns in 2 hours. The speed of the boat in still water is:","5 km/h","6 km/h","7.5 km/h","10 km/h","7.5 km/h"]
   ],
   technical: [
     ["Which of these is the best conductor of electricity?","Rubber","Copper","Wood","Plastic","Copper"],
@@ -114,16 +96,7 @@ const quizPools = {
     ["1 Horsepower is approximately equal to:","550 W","746 W","1000 W","500 W","746 W"],
     ["Find the odd one out:","Screwdriver","Hammer","Spanner","Ruler","Ruler"],
     ["A motor draws 100 W and works at 80% efficiency. Its output power is:","60 W","70 W","80 W","90 W","80 W"],
-    ["Which of the following is a measuring instrument for current?","Voltmeter","Ammeter","Barometer","Thermometer","Ammeter"],
-    ["Which of these tools is used to measure diameter precisely?","Ruler","Vernier Caliper","Measuring Tape","Protractor","Vernier Caliper"],
-    ["The unit of electrical power is:","Volt","Ampere","Watt","Ohm","Watt"],
-    ["Which material is a good electrical insulator?","Copper","Aluminium","Rubber","Iron","Rubber"],
-    ["A transformer works on the principle of:","Electromagnetic Induction","Thermal Expansion","Friction","Gravity","Electromagnetic Induction"],
-    ["The SI unit of pressure is:","Pascal","Newton","Joule","Watt","Pascal"],
-    ["A distinctive feature of a two-stroke engine compared to a four-stroke engine is:","Camshaft","Valve Train","Port Timing","Turbocharger","Port Timing"],
-    ["1 kWh of energy equals:","1000 Joules","3.6 million Joules","1 Joule","36 Joules","3.6 million Joules"],
-    ["Which welding process uses a consumable electrode with shielding gas?","MIG","TIG","Gas Welding","Brazing","MIG"],
-    ["Find the odd one out:","Voltmeter","Ammeter","Wattmeter","Barometer","Barometer"]
+    ["Which of the following is a measuring instrument for current?","Voltmeter","Ammeter","Barometer","Thermometer","Ammeter"]
   ],
   grad: [
     ["The 'Prelims' stage of most graduate-level competitive exams mainly tests:","Descriptive writing","Objective/MCQ ability","Physical fitness","Interview skills","Objective/MCQ ability"],
@@ -131,16 +104,7 @@ const quizPools = {
     ["In banking exams, 'CRR' stands for:","Cash Reserve Ratio","Credit Rating Ratio","Cash Repayment Rate","Capital Reserve Rate","Cash Reserve Ratio"],
     ["If the ratio of two numbers is 3:5 and their sum is 96, the smaller number is:","30","36","40","48","36"],
     ["Which schedule of the Constitution deals with the allocation of seats in the Rajya Sabha?","Second Schedule","Fourth Schedule","Seventh Schedule","Ninth Schedule","Fourth Schedule"],
-    ["A can finish a work in 12 days and B in 18 days. Working together, they will finish it in:","6 days","7.2 days","8 days","9 days","7.2 days"],
-    ["The 'Mains' stage of most graduate-level exams is typically:","Objective only","Descriptive or in-depth","Physical","Only an interview","Descriptive or in-depth"],
-    ["Which body regulates monetary policy in India?","SEBI","RBI","IRDAI","NABARD","RBI"],
-    ["The Indian Constitution was adopted by the Constituent Assembly on:","26 January 1950","15 August 1947","26 November 1949","2 October 1950","26 November 1949"],
-    ["If the average of 5 numbers is 20, their sum is:","100","80","25","120","100"],
-    ["Which committee recommended major banking sector reforms in India in 1991?","Narasimham Committee","Chelliah Committee","Rangarajan Committee","Tarapore Committee","Narasimham Committee"],
-    ["A profit of 20% on cost price means the selling price is what multiple of the cost price?","1.1","1.2","1.25","1.5","1.2"],
-    ["Which writ is issued to produce a detained person before a court?","Mandamus","Habeas Corpus","Certiorari","Quo Warranto","Habeas Corpus"],
-    ["A country's national income measured at current prices is called:","Real GDP","Nominal GDP","Per Capita Income","Green GDP","Nominal GDP"],
-    ["Which of these is listed as a Fundamental Duty under the Indian Constitution?","Right to vote","Protect the environment","Right to property","Right to privacy","Protect the environment"]
+    ["A can finish a work in 12 days and B in 18 days. Working together, they will finish it in:","6 days","7.2 days","8 days","9 days","7.2 days"]
   ],
   engineering: [
     ["A GATE score can be used for admission to M.Tech and recruitment to:","Only private companies","PSUs","Only state jobs","None of these","PSUs"],
@@ -148,16 +112,7 @@ const quizPools = {
     ["The SI unit of electrical resistance is the:","Ohm","Henry","Farad","Tesla","Ohm"],
     ["In a queue data structure, insertion happens at the ___ and deletion at the ___.","Front, rear","Rear, front","Both ends","Middle","Rear, front"],
     ["Find the next term: 3, 9, 27, 81, __","162","216","243","270","243"],
-    ["Which of these is a renewable source of energy?","Coal","Natural gas","Solar","Petroleum","Solar"],
-    ["Which sorting algorithm has the best average-case time complexity among these?","Bubble Sort","Quick Sort","Selection Sort","Insertion Sort","Quick Sort"],
-    ["The SI unit of frequency is:","Hertz","Watt","Ohm","Tesla","Hertz"],
-    ["In OOP, encapsulation primarily refers to:","Inheriting properties","Bundling data and methods together","Overriding methods","Creating multiple objects","Bundling data and methods together"],
-    ["Which of these is a NoSQL database?","MySQL","PostgreSQL","MongoDB","Oracle","MongoDB"],
-    ["The time complexity of binary search on a sorted array is:","O(n)","O(log n)","O(n^2)","O(1)","O(log n)"],
-    ["Which protocol is used to securely transfer web pages?","HTTP","FTP","HTTPS","SMTP","HTTPS"],
-    ["In GATE-based PSU recruitment, a candidate's shortlist rank is primarily based on:","Interview only","GATE score","College reputation","Work experience","GATE score"],
-    ["Which of these is a compiled language?","Python","JavaScript","C++","PHP","C++"],
-    ["RAM stands for:","Random Access Memory","Read Access Memory","Run Access Memory","Rapid Access Memory","Random Access Memory"]
+    ["Which of these is a renewable source of energy?","Coal","Natural gas","Solar","Petroleum","Solar"]
   ]
 };
 function tierPool(tier){
@@ -167,19 +122,6 @@ function tierPool(tier){
   if (tier==="degree") return quizPools.grad;
   return quizPools.engineering; // btech
 }
-
-/* ---------- Timed mock-exam patterns, by roadmap type ----------
-   Original practice content, scaled to mirror the pacing (time
-   per question) typical of that exam style — not the official
-   full-length paper or leaked/real exam questions. ---------- */
-const examPatterns = {
-  physical:  { questionCount: 15, durationMinutes: 12, label: "Physical/GD-style Screening Test" },
-  clerical:  { questionCount: 15, durationMinutes: 12, label: "Clerical Aptitude Test" },
-  exam:      { questionCount: 15, durationMinutes: 12, label: "Tier-1 Style Screening Test" },
-  trade:     { questionCount: 15, durationMinutes: 15, label: "Trade Theory Test" },
-  technical: { questionCount: 15, durationMinutes: 18, label: "Technical Paper-1 Style Test" },
-  elite:     { questionCount: 15, durationMinutes: 20, label: "Prelims/GATE Style Screening Test" }
-};
 
 /* ---------- Official recruiting-body lookup (verified direct links) ---------- */
 const orgLookup = [
@@ -369,17 +311,14 @@ let lastFocused = null;
 
 /**
  * tabs: [{key, label, html?, render?(panelEl)}]
- * opts: { fullscreen?: boolean }
  */
-function openSheet({ title, code, color, tierLabel, tabs, fullscreen }){
+function openSheet({ title, code, color, tierLabel, tabs }){
   lastFocused = document.activeElement;
   sheetHead.style.background = color;
   sheetCode.textContent = code || '';
   sheetCode.style.display = code ? '' : 'none';
   sheetTitle.textContent = title;
   sheetTier.textContent = tierLabel || '';
-
-  overlay.classList.toggle('fullscreen', !!fullscreen);
 
   sectionTabsEl.innerHTML = '';
   sheetBodyEl.innerHTML = '';
@@ -431,7 +370,6 @@ function unlockBackgroundScroll(){
 }
 function closeOverlay(){
   overlay.classList.remove('open');
-  overlay.classList.remove('fullscreen');
   unlockBackgroundScroll();
   if (lastFocused) lastFocused.focus();
 }
@@ -708,52 +646,10 @@ function openCategoryOverview(kind){
    Just send me the links and titles and I'll fill this in for
    you — or edit this array yourself, it's plain JavaScript.
    ============================================================ */
-const userPapers = [
-   { title: "SSC-CGL-QUESTION-PAPER-13-Aug-2021-Shift-1-English", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQArQV72PdOBQIxKaz6YjkvNAbW7dLPYGqJQbpUW8Y14Quw?e=y0qN0Z" },
+/*const userPapers = [
+   { title: "SSC-CGL-QUESTION-PAPER-13-Aug-2021-Shift-1-English_clean", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQArQV72PdOBQIxKaz6YjkvNAbW7dLPYGqJQbpUW8Y14Quw?e=y0qN0Z" },
    { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQCxtjjR9CyzRqmEM3heSQRxAX1sKVCKt3LeYa7CaYHYa4Q?e=tYuNqN" },
-   { title: "SSC-CGL-Tier-1-Question-Paper-English_09_09_2024", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQBUHpKGWre4QYMsns5toQrgASGFLJ81adNS2yNbblW8TEk?e=uyOr5n" },
-   { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQCxtjjR9CyzRqmEM3heSQRxAX1sKVCKt3LeYa7CaYHYa4Q?e=tYuNqN" },
-];
-
-/* ============================================================
-   YOUR OWN E-BOOKS & GUIDES — Google Drive / OneDrive links
-   Add one entry per e-book here: { title, url }.
-   Same idea as userPapers above — send me links and titles,
-   or edit this array yourself.
-   ============================================================ */
-const userEbooks = [
-  // { title: "General Studies Complete Guide", url: "https://drive.google.com/file/d/XXXXXXXX/view?usp=sharing" },
-];
-
-/* ---------- Shared search-filtered list renderer ---------- */
-function renderSearchableList(panel, items, opts){
-  const { searchPlaceholder, emptyMessage, itemLabel } = opts;
-  panel.innerHTML = `
-    <div class="doc-search-wrap">
-      <input type="text" class="doc-search" id="${panel.id}-search" placeholder="${searchPlaceholder}" autocomplete="off">
-    </div>
-    <ul class="stage-list" id="${panel.id}-list"></ul>
-    <p class="doc-empty" id="${panel.id}-empty" style="display:none;">${emptyMessage}</p>
-  `;
-  const listEl = panel.querySelector(`#${panel.id}-list`);
-  const emptyEl = panel.querySelector(`#${panel.id}-empty`);
-  const searchEl = panel.querySelector(`#${panel.id}-search`);
-
-  function draw(filter){
-    const f = filter.trim().toLowerCase();
-    const filtered = items.filter(it => it.title.toLowerCase().includes(f));
-    if (filtered.length === 0){
-      listEl.innerHTML = '';
-      emptyEl.style.display = 'block';
-      emptyEl.textContent = items.length === 0 ? emptyMessage : `No ${itemLabel} match "${filter}".`;
-    } else {
-      emptyEl.style.display = 'none';
-      listEl.innerHTML = filtered.map(it=>`<li><b>${it.title}</b><p><a href="${it.url}" target="_blank" rel="noopener">Open / Download</a></p></li>`).join('');
-    }
-  }
-  searchEl.addEventListener('input', ()=> draw(searchEl.value));
-  draw('');
-}
+];/*
 
 /* ============================================================
    PREVIOUS YEAR PAPERS — grouped by exam body, official links
@@ -763,59 +659,22 @@ function openPreviousPapers(){
     title:'Previous Year Papers',
     code:'OFFICIAL SOURCES ONLY',
     color:'#1565c0',
-    tierLabel:'Exam Preparation Dashboard',
-    fullscreen: true,
-    tabs:[
-      {
-        key:'uploaded', label:'Your Uploaded Papers', render:(el)=>{
-          renderSearchableList(el, userPapers, {
-            searchPlaceholder:'Search your uploaded papers (e.g. "SSC CGL 2023")…',
-            emptyMessage:'No papers uploaded yet.',
-            itemLabel:'papers'
-          });
-        }
-      },
-      {
-        key:'official', label:'Official Sources', html:`
-          <p class="overview-text">Always download official previous year papers from the recruiting body's own site — third-party PDFs can be outdated, mislabelled or simply wrong.</p>
-          <ul class="stage-list">
-            <li><b>SSC (CGL, CHSL, MTS, GD, JE, Stenographer)</b><p>Official papers/answer-key portal: <a href="https://ssc.gov.in/for-candidates/previous-year-question-paper" target="_blank" rel="noopener">ssc.gov.in — Previous Year Question Paper</a></p></li>
-            <li><b>UPSC (Civil Services, CDS, NDA, CAPF, Engineering Services)</b><p>Official archive: <a href="https://upsc.gov.in/examinations/previous-question-papers" target="_blank" rel="noopener">upsc.gov.in — Previous Question Papers</a></p></li>
-            <li><b>Railway / RRB (NTPC, Group D, ALP, JE)</b><p>Official portal: <a href="https://rrb.indianrailways.gov.in" target="_blank" rel="noopener">rrb.indianrailways.gov.in</a> — response sheets and answer keys are posted under each CEN notification after the exam, not as a standing archive.</p></li>
-            <li><b>Banking (IBPS PO/Clerk, SBI, RBI)</b><p>Official sites: <a href="https://www.ibps.in" target="_blank" rel="noopener">ibps.in</a>, <a href="https://sbi.co.in/web/careers" target="_blank" rel="noopener">sbi.co.in/web/careers</a>, <a href="https://opportunities.rbi.org.in" target="_blank" rel="noopener">opportunities.rbi.org.in</a> — these exams are fully computer-based and full papers usually aren't released; only your own response sheet/scorecard is provided post-exam.</p></li>
-            <li><b>State PSC / State Police / Other State Exams</b><p>No single national archive exists — each state commission publishes its own. Start at <a href="https://www.ncs.gov.in" target="_blank" rel="noopener">ncs.gov.in</a> (National Career Service) to find the right state board.</p></li>
-          </ul>
-          <div class="note-box">If a body doesn't publicly release full papers (common for CBT-based exams), your best substitute is the response sheet you can download from your own login after the exam, plus the official syllabus/exam-pattern PDF in the same notification.</div>
-        `
-      }
-    ]
+    tabs:[{
+      key:'papers', label:'Previous Year Papers', html:`
+      
+        ${userPapers.map(p=>`<li><b>${p.title}</b><p><a href="${p.url}" target="_blank" rel="noopener">Click Hear to Download PDF</a></p></li>`).join('')}
+        </ul>
+        `      
+    }]
   });
 }
+const userPapers = [
+       { title: "SSC-CGL-QUESTION-PAPER-13-Aug-2021-Shift-1-English", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQArQV72PdOBQIxKaz6YjkvNAbW7dLPYGqJQbpUW8Y14Quw?e=y0qN0Z" },
+       { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQCxtjjR9CyzRqmEM3heSQRxAX1sKVCKt3LeYa7CaYHYa4Q?e=tYuNqN" },
+       { title: "SSC-CGL-Tier-1-Question-Paper-English_09_09_2024", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQBUHpKGWre4QYMsns5toQrgASGFLJ81adNS2yNbblW8TEk?e=uyOr5n" },
+       { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQCxtjjR9CyzRqmEM3heSQRxAX1sKVCKt3LeYa7CaYHYa4Q?e=tYuNqN" },
 
-/* ============================================================
-   E-BOOKS & GUIDES
-   ============================================================ */
-function openEbooks(){
-  openSheet({
-    title:'E-Books & Guides',
-    code:'STUDY MATERIAL',
-    color:'#1565c0',
-    tierLabel:'Exam Preparation Dashboard',
-    fullscreen: true,
-    tabs:[
-      {
-        key:'ebooks', label:'Your Uploaded E-Books', render:(el)=>{
-          renderSearchableList(el, userEbooks, {
-            searchPlaceholder:'Search your e-books & guides (e.g. "General Studies")…',
-            emptyMessage:'No e-books uploaded yet. Send me your Google Drive/OneDrive links and titles and I\'ll add them to the userEbooks list in script.js.',
-            itemLabel:'e-books'
-          });
-        }
-      }
-    ]
-  });
-}
-
+];
 /* ============================================================
    CAREER TIPS
    ============================================================ */
@@ -825,7 +684,6 @@ function openCareerTips(){
     code:'EXPERT ADVICE',
     color:'#0d3b7a',
     tierLabel:'Exam Preparation Dashboard',
-    fullscreen: true,
     tabs:[{
       key:'tips', label:'Career Tips', html:`
         <ul class="stage-list">
@@ -903,388 +761,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
   // Previous Year Papers card
   const papersCard = document.getElementById('card-previous-papers');
   if (papersCard) papersCard.addEventListener('click', openPreviousPapers);
-
-  // E-Books & Guides card
-  const ebooksCard = document.getElementById('card-ebooks');
-  if (ebooksCard) ebooksCard.addEventListener('click', openEbooks);
 });
 
 try{
   var count = parseInt(localStorage.getItem('g2g_visit_count') || '0', 10) + 1;
   localStorage.setItem('g2g_visit_count', count);
 }catch(e){}
-
-/* ============================================================
-   AUTH SYSTEM (client-side demo)
-   Stored only in this browser's localStorage — there is no
-   server or database here, so this is NOT secure real
-   authentication. It's enough to gate a feature per-browser
-   for a static site; a production version would need a real
-   backend to store accounts and verify passwords safely.
-   ============================================================ */
-const AUTH_USERS_KEY = 'g2g_users';
-const AUTH_SESSION_KEY = 'g2g_session';
-
-function getUsers(){
-  try{ return JSON.parse(localStorage.getItem(AUTH_USERS_KEY) || '[]'); }
-  catch(e){ return []; }
-}
-function saveUsers(users){
-  try{ localStorage.setItem(AUTH_USERS_KEY, JSON.stringify(users)); }catch(e){}
-}
-function getCurrentUser(){
-  const email = localStorage.getItem(AUTH_SESSION_KEY);
-  if (!email) return null;
-  return getUsers().find(u => u.email.toLowerCase() === email.toLowerCase()) || null;
-}
-function setSession(email){
-  try{ localStorage.setItem(AUTH_SESSION_KEY, email); }catch(e){}
-}
-function clearSession(){
-  try{ localStorage.removeItem(AUTH_SESSION_KEY); }catch(e){}
-}
-// Simple obfuscation only — NOT cryptographic security.
-function obfuscate(str){
-  try{ return btoa(unescape(encodeURIComponent(str))); }catch(e){ return str; }
-}
-
-function signUp(name, email, password){
-  const users = getUsers();
-  if (users.some(u => u.email.toLowerCase() === email.toLowerCase())){
-    return { ok:false, error:'An account with this email already exists — try logging in instead.' };
-  }
-  users.push({ name: name.trim(), email: email.trim(), passHash: obfuscate(password) });
-  saveUsers(users);
-  setSession(email.trim());
-  return { ok:true };
-}
-function logIn(email, password){
-  const users = getUsers();
-  const user = users.find(u => u.email.toLowerCase() === email.trim().toLowerCase());
-  if (!user) return { ok:false, error:'No account found with this email. Try signing up.' };
-  if (user.passHash !== obfuscate(password)) return { ok:false, error:'Incorrect password.' };
-  setSession(user.email);
-  return { ok:true };
-}
-function logOut(){
-  clearSession();
-  refreshAuthUI();
-}
-
-function refreshAuthUI(){
-  const user = getCurrentUser();
-  const authBtn = document.getElementById('authBtn');
-  const userMenu = document.getElementById('userMenu');
-  const mockLocked = document.getElementById('mockLocked');
-  const mockUnlocked = document.getElementById('mockUnlocked');
-  const mockWelcome = document.getElementById('mockWelcome');
-
-  if (user){
-    authBtn.textContent = 'Hi, ' + user.name.split(' ')[0] + ' ▾';
-    if (mockLocked) mockLocked.style.display = 'none';
-    if (mockUnlocked) mockUnlocked.style.display = 'block';
-    if (mockWelcome) mockWelcome.textContent = `Signed in as ${user.name}. Pick a qualification and an exam/job role below, then start your timed mock exam.`;
-  } else {
-    authBtn.textContent = 'Sign In';
-    userMenu.classList.remove('open');
-    if (mockLocked) mockLocked.style.display = 'block';
-    if (mockUnlocked) mockUnlocked.style.display = 'none';
-  }
-}
-
-/* ---------- Auth modal wiring ---------- */
-const authOverlay = document.getElementById('authOverlay');
-document.body.appendChild(authOverlay);
-
-function openAuthModal(defaultTab){
-  document.getElementById('loginError').textContent = '';
-  document.getElementById('signupError').textContent = '';
-  document.querySelectorAll('.auth-tab-btn').forEach(b=>b.classList.remove('active'));
-  const tab = defaultTab || 'login';
-  document.querySelector(`.auth-tab-btn[data-authtab="${tab}"]`).classList.add('active');
-  document.getElementById('loginForm').style.display = tab === 'login' ? 'flex' : 'none';
-  document.getElementById('signupForm').style.display = tab === 'signup' ? 'flex' : 'none';
-  authOverlay.classList.add('open');
-  lockBackgroundScroll();
-}
-function closeAuthModal(){
-  authOverlay.classList.remove('open');
-  unlockBackgroundScroll();
-}
-document.getElementById('authCloseBtn').addEventListener('click', closeAuthModal);
-authOverlay.addEventListener('click', (e)=>{ if (e.target === authOverlay) closeAuthModal(); });
-
-document.querySelectorAll('.auth-tab-btn').forEach(btn=>{
-  btn.addEventListener('click', ()=>{
-    document.querySelectorAll('.auth-tab-btn').forEach(b=>b.classList.remove('active'));
-    btn.classList.add('active');
-    const tab = btn.dataset.authtab;
-    document.getElementById('loginForm').style.display = tab === 'login' ? 'flex' : 'none';
-    document.getElementById('signupForm').style.display = tab === 'signup' ? 'flex' : 'none';
-  });
-});
-
-document.getElementById('loginForm').addEventListener('submit', (e)=>{
-  e.preventDefault();
-  const email = document.getElementById('loginEmail').value;
-  const password = document.getElementById('loginPassword').value;
-  const res = logIn(email, password);
-  const errEl = document.getElementById('loginError');
-  if (!res.ok){ errEl.textContent = res.error; return; }
-  errEl.textContent = '';
-  closeAuthModal();
-  refreshAuthUI();
-});
-
-document.getElementById('signupForm').addEventListener('submit', (e)=>{
-  e.preventDefault();
-  const name = document.getElementById('signupName').value;
-  const email = document.getElementById('signupEmail').value;
-  const password = document.getElementById('signupPassword').value;
-  const confirm = document.getElementById('signupConfirm').value;
-  const errEl = document.getElementById('signupError');
-  if (password.length < 6){ errEl.textContent = 'Password must be at least 6 characters.'; return; }
-  if (password !== confirm){ errEl.textContent = 'Passwords do not match.'; return; }
-  const res = signUp(name, email, password);
-  if (!res.ok){ errEl.textContent = res.error; return; }
-  errEl.textContent = '';
-  closeAuthModal();
-  refreshAuthUI();
-});
-
-document.getElementById('authBtn').addEventListener('click', ()=>{
-  if (getCurrentUser()){
-    document.getElementById('userMenu').classList.toggle('open');
-  } else {
-    openAuthModal('login');
-  }
-});
-document.getElementById('logoutBtn').addEventListener('click', ()=>{
-  logOut();
-});
-document.addEventListener('click', (e)=>{
-  const authArea = document.getElementById('authArea');
-  if (authArea && !authArea.contains(e.target)){
-    document.getElementById('userMenu').classList.remove('open');
-  }
-});
-
-const mockSignupCta = document.getElementById('mockSignupCta');
-if (mockSignupCta) mockSignupCta.addEventListener('click', ()=> openAuthModal('signup'));
-
-/* ============================================================
-   TIMED MOCK EXAM — qualification + job/exam selectors
-   ============================================================ */
-const mockTierSelect = document.getElementById('mockTierSelect');
-const mockJobSelect = document.getElementById('mockJobSelect');
-const mockPatternBox = document.getElementById('mockPatternBox');
-const mockStartBtn = document.getElementById('mockStartBtn');
-
-if (mockTierSelect){
-  Object.keys(tierMeta).forEach(tier=>{
-    const opt = document.createElement('option');
-    opt.value = tier;
-    opt.textContent = tierMeta[tier].label;
-    mockTierSelect.appendChild(opt);
-  });
-
-  function populateMockJobs(){
-    const tier = mockTierSelect.value;
-    mockJobSelect.innerHTML = '';
-    jobs.filter(j=>j.tier===tier).forEach(job=>{
-      const opt = document.createElement('option');
-      opt.value = job.id;
-      opt.textContent = job.name;
-      mockJobSelect.appendChild(opt);
-    });
-    updateMockPatternBox();
-  }
-  function updateMockPatternBox(){
-    const job = jobs.find(j=>j.id===mockJobSelect.value);
-    if (!job) return;
-    const pattern = examPatterns[job.roadmapType];
-    mockPatternBox.innerHTML = `<b>${pattern.label}</b> &middot; ${pattern.questionCount} questions &middot; ${pattern.durationMinutes} minutes &middot; recruiting body: ${job.body}`;
-  }
-  mockTierSelect.addEventListener('change', populateMockJobs);
-  mockJobSelect.addEventListener('change', updateMockPatternBox);
-  populateMockJobs();
-
-  mockStartBtn.addEventListener('click', ()=>{
-    if (!getCurrentUser()){ openAuthModal('login'); return; }
-    const job = jobs.find(j=>j.id===mockJobSelect.value);
-    if (job) startTimedExam(job);
-  });
-}
-
-/* ---------- Timed exam-taking engine (separate from the casual practice quiz) ---------- */
-const examOverlay = document.getElementById('examOverlay');
-document.body.appendChild(examOverlay);
-const examJobTitle = document.getElementById('examJobTitle');
-const examProgress = document.getElementById('examProgress');
-const examTimerEl = document.getElementById('examTimer');
-const examBody = document.getElementById('examBody');
-
-let examState = null; // { job, pattern, questions:[{text,choices,correct}], answers:[], current, secondsLeft, timerId }
-
-function buildExamQuestions(tier, count){
-  const pool = tierPool(tier);
-  const picked = shuffle(pool).slice(0, Math.min(count, pool.length));
-  return picked.map(q=>{
-    const [text, ...opts] = q;
-    const correct = opts[opts.length-1];
-    const choices = shuffle(opts.slice(0,4));
-    return { text, choices, correct };
-  });
-}
-
-function startTimedExam(job){
-  const pattern = examPatterns[job.roadmapType];
-  const questions = buildExamQuestions(job.tier, pattern.questionCount);
-  examState = {
-    job, pattern, questions,
-    answers: new Array(questions.length).fill(null),
-    current: 0,
-    secondsLeft: pattern.durationMinutes * 60,
-    timerId: null,
-    submitted: false
-  };
-  examJobTitle.textContent = job.name + ' — Timed Mock Exam';
-  examOverlay.classList.add('open');
-  lockBackgroundScroll();
-  renderExamQuestion();
-  examState.timerId = setInterval(tickExamTimer, 1000);
-  updateExamTimerDisplay();
-}
-
-function tickExamTimer(){
-  if (!examState || examState.submitted) return;
-  examState.secondsLeft--;
-  updateExamTimerDisplay();
-  if (examState.secondsLeft <= 0){
-    submitExam(true);
-  }
-}
-function updateExamTimerDisplay(){
-  const s = Math.max(0, examState.secondsLeft);
-  const mm = String(Math.floor(s/60)).padStart(2,'0');
-  const ss = String(s%60).padStart(2,'0');
-  examTimerEl.textContent = `${mm}:${ss}`;
-  examTimerEl.classList.toggle('low-time', s <= 60);
-}
-
-function renderExamQuestion(){
-  const { questions, current, answers } = examState;
-  const q = questions[current];
-  examProgress.textContent = `Question ${current+1} of ${questions.length}`;
-
-  const dots = questions.map((_,i)=>{
-    const cls = ['exam-qdot'];
-    if (i === current) cls.push('current');
-    if (answers[i] !== null) cls.push('answered');
-    return `<div class="${cls.join(' ')}" data-qi="${i}">${i+1}</div>`;
-  }).join('');
-
-  examBody.innerHTML = `
-    <div class="exam-qgrid">${dots}</div>
-    <div class="exam-q-text">${current+1}. ${q.text}</div>
-    <div class="exam-opts">
-      ${q.choices.map(c=>`
-        <label class="exam-opt${answers[current]===c ? ' selected':''}">
-          <input type="radio" name="examq" value="${c.replace(/"/g,'&quot;')}" ${answers[current]===c?'checked':''}>
-          <span>${c}</span>
-        </label>
-      `).join('')}
-    </div>
-    <div class="exam-nav-row">
-      <button class="exam-nav-btn" id="examPrevBtn" ${current===0?'disabled':''}>Previous</button>
-      ${current === questions.length-1
-        ? `<button class="exam-nav-btn submit" id="examSubmitBtn">Submit Exam</button>`
-        : `<button class="exam-nav-btn submit" id="examNextBtn">Next</button>`}
-    </div>
-  `;
-
-  examBody.querySelectorAll('.exam-opt input').forEach(inp=>{
-    inp.addEventListener('change', ()=>{
-      examState.answers[current] = inp.value;
-      renderExamQuestion();
-    });
-  });
-  examBody.querySelectorAll('.exam-qdot').forEach(dot=>{
-    dot.addEventListener('click', ()=>{
-      examState.current = parseInt(dot.dataset.qi, 10);
-      renderExamQuestion();
-    });
-  });
-  const prevBtn = document.getElementById('examPrevBtn');
-  if (prevBtn) prevBtn.addEventListener('click', ()=>{ examState.current--; renderExamQuestion(); });
-  const nextBtn = document.getElementById('examNextBtn');
-  if (nextBtn) nextBtn.addEventListener('click', ()=>{ examState.current++; renderExamQuestion(); });
-  const submitBtn = document.getElementById('examSubmitBtn');
-  if (submitBtn) submitBtn.addEventListener('click', ()=> submitExam(false));
-}
-
-function submitExam(timeUp){
-  if (!examState || examState.submitted) return;
-  examState.submitted = true;
-  clearInterval(examState.timerId);
-
-  const { questions, answers, pattern } = examState;
-  let score = 0;
-  questions.forEach((q,i)=>{ if (answers[i] === q.correct) score++; });
-  const timeUsed = pattern.durationMinutes*60 - Math.max(0, examState.secondsLeft);
-  const mm = String(Math.floor(timeUsed/60)).padStart(2,'0');
-  const ss = String(timeUsed%60).padStart(2,'0');
-
-  examProgress.textContent = 'Result';
-  examTimerEl.textContent = timeUp ? "TIME'S UP" : `${mm}:${ss}`;
-
-  examBody.innerHTML = `
-    <div class="exam-result-score">
-      <div class="big">${score} / ${questions.length}</div>
-      <div class="sub">${pattern.label} &middot; time used ${mm}:${ss} of ${pattern.durationMinutes}:00${timeUp ? ' (auto-submitted — time ran out)' : ''}</div>
-    </div>
-    <div id="examReviewList"></div>
-    <div class="exam-nav-row">
-      <button class="exam-nav-btn" id="examCloseResultBtn">Close</button>
-      <button class="exam-nav-btn submit" id="examRetryBtn">Retry This Exam</button>
-    </div>
-  `;
-  const reviewList = document.getElementById('examReviewList');
-  reviewList.innerHTML = questions.map((q,i)=>{
-    const yourAnswer = answers[i] || '(not answered)';
-    const isCorrect = answers[i] === q.correct;
-    return `
-      <div class="exam-review-item">
-        <div class="rq">${i+1}. ${q.text}</div>
-        <div class="ra ${isCorrect ? 'correct' : 'wrong'}">Your answer: ${yourAnswer}</div>
-        ${!isCorrect ? `<div class="ra correct">Correct answer: ${q.correct}</div>` : ''}
-      </div>
-    `;
-  }).join('');
-
-  document.getElementById('examCloseResultBtn').addEventListener('click', closeExamOverlay);
-  document.getElementById('examRetryBtn').addEventListener('click', ()=>{
-    startTimedExam(examState.job);
-  });
-}
-
-function closeExamOverlay(){
-  if (examState && examState.timerId) clearInterval(examState.timerId);
-  examState = null;
-  examOverlay.classList.remove('open');
-  unlockBackgroundScroll();
-}
-document.getElementById('examCloseBtn').addEventListener('click', ()=>{
-  if (examState && !examState.submitted){
-    const ok = confirm('Leave the exam now? Your progress on this attempt will be lost.');
-    if (!ok) return;
-  }
-  closeExamOverlay();
-});
-examOverlay.addEventListener('click', (e)=>{
-  if (e.target === examOverlay && examState && examState.submitted){
-    closeExamOverlay();
-  }
-});
-
-refreshAuthUI();
