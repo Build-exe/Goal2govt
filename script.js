@@ -311,14 +311,17 @@ let lastFocused = null;
 
 /**
  * tabs: [{key, label, html?, render?(panelEl)}]
+ * opts: { fullscreen?: boolean }
  */
-function openSheet({ title, code, color, tierLabel, tabs }){
+function openSheet({ title, code, color, tierLabel, tabs, fullscreen }){
   lastFocused = document.activeElement;
   sheetHead.style.background = color;
   sheetCode.textContent = code || '';
   sheetCode.style.display = code ? '' : 'none';
   sheetTitle.textContent = title;
   sheetTier.textContent = tierLabel || '';
+
+  overlay.classList.toggle('fullscreen', !!fullscreen);
 
   sectionTabsEl.innerHTML = '';
   sheetBodyEl.innerHTML = '';
@@ -370,6 +373,7 @@ function unlockBackgroundScroll(){
 }
 function closeOverlay(){
   overlay.classList.remove('open');
+  overlay.classList.remove('fullscreen');
   unlockBackgroundScroll();
   if (lastFocused) lastFocused.focus();
 }
@@ -646,10 +650,52 @@ function openCategoryOverview(kind){
    Just send me the links and titles and I'll fill this in for
    you — or edit this array yourself, it's plain JavaScript.
    ============================================================ */
-/*const userPapers = [
-   { title: "SSC-CGL-QUESTION-PAPER-13-Aug-2021-Shift-1-English_clean", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQArQV72PdOBQIxKaz6YjkvNAbW7dLPYGqJQbpUW8Y14Quw?e=y0qN0Z" },
+const userPapers = [
+   { title: "SSC-CGL-QUESTION-PAPER-13-Aug-2021-Shift-1-English", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQArQV72PdOBQIxKaz6YjkvNAbW7dLPYGqJQbpUW8Y14Quw?e=y0qN0Z" },
    { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQCxtjjR9CyzRqmEM3heSQRxAX1sKVCKt3LeYa7CaYHYa4Q?e=tYuNqN" },
-];/*
+   { title: "SSC-CGL-Tier-1-Question-Paper-English_09_09_2024", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQBUHpKGWre4QYMsns5toQrgASGFLJ81adNS2yNbblW8TEk?e=uyOr5n" },
+   { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQCxtjjR9CyzRqmEM3heSQRxAX1sKVCKt3LeYa7CaYHYa4Q?e=tYuNqN" },
+];
+
+/* ============================================================
+   YOUR OWN E-BOOKS & GUIDES — Google Drive / OneDrive links
+   Add one entry per e-book here: { title, url }.
+   Same idea as userPapers above — send me links and titles,
+   or edit this array yourself.
+   ============================================================ */
+const userEbooks = [
+  // { title: "General Studies Complete Guide", url: "https://drive.google.com/file/d/XXXXXXXX/view?usp=sharing" },
+];
+
+/* ---------- Shared search-filtered list renderer ---------- */
+function renderSearchableList(panel, items, opts){
+  const { searchPlaceholder, emptyMessage, itemLabel } = opts;
+  panel.innerHTML = `
+    <div class="doc-search-wrap">
+      <input type="text" class="doc-search" id="${panel.id}-search" placeholder="${searchPlaceholder}" autocomplete="off">
+    </div>
+    <ul class="stage-list" id="${panel.id}-list"></ul>
+    <p class="doc-empty" id="${panel.id}-empty" style="display:none;">${emptyMessage}</p>
+  `;
+  const listEl = panel.querySelector(`#${panel.id}-list`);
+  const emptyEl = panel.querySelector(`#${panel.id}-empty`);
+  const searchEl = panel.querySelector(`#${panel.id}-search`);
+
+  function draw(filter){
+    const f = filter.trim().toLowerCase();
+    const filtered = items.filter(it => it.title.toLowerCase().includes(f));
+    if (filtered.length === 0){
+      listEl.innerHTML = '';
+      emptyEl.style.display = 'block';
+      emptyEl.textContent = items.length === 0 ? emptyMessage : `No ${itemLabel} match "${filter}".`;
+    } else {
+      emptyEl.style.display = 'none';
+      listEl.innerHTML = filtered.map(it=>`<li><b>${it.title}</b><p><a href="${it.url}" target="_blank" rel="noopener">Open / Download</a></p></li>`).join('');
+    }
+  }
+  searchEl.addEventListener('input', ()=> draw(searchEl.value));
+  draw('');
+}
 
 /* ============================================================
    PREVIOUS YEAR PAPERS — grouped by exam body, official links
@@ -659,8 +705,8 @@ function openPreviousPapers(){
     title:'Previous Year Papers',
     code:'OFFICIAL SOURCES ONLY',
     color:'#1565c0',
-    tabs:[{
-      key:'papers', label:'Previous Year Papers', html:`
+      tabs:[{
+       key:'papers', label:'Previous Year Papers', html:`
       
         ${userPapers.map(p=>`<li><b>${p.title}</b><p><a href="${p.url}" target="_blank" rel="noopener">Click Hear to Download PDF</a></p></li>`).join('')}
         </ul>
@@ -673,8 +719,31 @@ const userPapers = [
        { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQCxtjjR9CyzRqmEM3heSQRxAX1sKVCKt3LeYa7CaYHYa4Q?e=tYuNqN" },
        { title: "SSC-CGL-Tier-1-Question-Paper-English_09_09_2024", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQBUHpKGWre4QYMsns5toQrgASGFLJ81adNS2yNbblW8TEk?e=uyOr5n" },
        { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQCxtjjR9CyzRqmEM3heSQRxAX1sKVCKt3LeYa7CaYHYa4Q?e=tYuNqN" },
+   ]
+/* ============================================================
+   E-BOOKS & GUIDES
+   ============================================================ */
+function openEbooks(){
+  openSheet({
+    title:'E-Books & Guides',
+    code:'STUDY MATERIAL',
+    color:'#1565c0',
+    tierLabel:'Exam Preparation Dashboard',
+    fullscreen: true,
+    tabs:[
+      {
+        key:'ebooks', label:'Your Uploaded E-Books', render:(el)=>{
+          renderSearchableList(el, userEbooks, {
+            searchPlaceholder:'Search your e-books & guides (e.g. "General Studies")…',
+            emptyMessage:'No e-books uploaded yet. Send me your Google Drive/OneDrive links and titles and I\'ll add them to the userEbooks list in script.js.',
+            itemLabel:'e-books'
+          });
+        }
+      }
+    ]
+  });
+}
 
-];
 /* ============================================================
    CAREER TIPS
    ============================================================ */
@@ -684,6 +753,7 @@ function openCareerTips(){
     code:'EXPERT ADVICE',
     color:'#0d3b7a',
     tierLabel:'Exam Preparation Dashboard',
+    fullscreen: true,
     tabs:[{
       key:'tips', label:'Career Tips', html:`
         <ul class="stage-list">
@@ -761,9 +831,198 @@ document.addEventListener('DOMContentLoaded', ()=>{
   // Previous Year Papers card
   const papersCard = document.getElementById('card-previous-papers');
   if (papersCard) papersCard.addEventListener('click', openPreviousPapers);
+
+  // E-Books & Guides card
+  const ebooksCard = document.getElementById('card-ebooks');
+  if (ebooksCard) ebooksCard.addEventListener('click', openEbooks);
 });
 
 try{
   var count = parseInt(localStorage.getItem('g2g_visit_count') || '0', 10) + 1;
   localStorage.setItem('g2g_visit_count', count);
 }catch(e){}
+
+/* ============================================================
+   AUTH — Sign In / Sign Up
+   Client-side only demo: "accounts" are stored in localStorage
+   on this device/browser. There is no real backend, so this is
+   not secure storage for real passwords — it's a working mock
+   of the sign-up/sign-in flow.
+   ============================================================ */
+(function(){
+  const USERS_KEY = 'g2g_users';
+  const SESSION_KEY = 'g2g_session_email';
+
+  const authOverlay = document.getElementById('authOverlay');
+  const authCloseBtn = document.getElementById('authCloseBtn');
+  const signinOpenBtn = document.getElementById('signinOpenBtn');
+  const signupOpenBtn = document.getElementById('signupOpenBtn');
+  const headerActions = document.getElementById('headerActions');
+
+  const authTabSignin = document.getElementById('authTabSignin');
+  const authTabSignup = document.getElementById('authTabSignup');
+  const signinForm = document.getElementById('signinForm');
+  const signupForm = document.getElementById('signupForm');
+  const signinError = document.getElementById('signinError');
+  const signupError = document.getElementById('signupError');
+
+  if (!authOverlay) return; // markup not present, bail safely
+
+  function getUsers(){
+    try{ return JSON.parse(localStorage.getItem(USERS_KEY) || '{}'); }
+    catch(e){ return {}; }
+  }
+  function saveUsers(users){
+    try{ localStorage.setItem(USERS_KEY, JSON.stringify(users)); }catch(e){}
+  }
+  function setSession(email){
+    try{ localStorage.setItem(SESSION_KEY, email); }catch(e){}
+  }
+  function clearSession(){
+    try{ localStorage.removeItem(SESSION_KEY); }catch(e){}
+  }
+  function getSessionEmail(){
+    try{ return localStorage.getItem(SESSION_KEY); }catch(e){ return null; }
+  }
+  // Not real cryptographic hashing — this is a static-site demo,
+  // just avoids storing the raw password string as-is.
+  function simpleHash(str){
+    let h = 0;
+    for (let i=0; i<str.length; i++){ h = (Math.imul(31,h) + str.charCodeAt(i)) | 0; }
+    return String(h);
+  }
+
+  function showAuthError(el, msg){
+    el.textContent = msg;
+    el.classList.add('show');
+  }
+  function clearAuthError(el){
+    el.textContent = '';
+    el.classList.remove('show');
+  }
+
+  function switchAuthTab(tab){
+    const isSignin = tab === 'signin';
+    authTabSignin.classList.toggle('active', isSignin);
+    authTabSignup.classList.toggle('active', !isSignin);
+    signinForm.classList.toggle('active', isSignin);
+    signupForm.classList.toggle('active', !isSignin);
+    clearAuthError(signinError);
+    clearAuthError(signupError);
+    const firstField = isSignin ? document.getElementById('signinEmail') : document.getElementById('signupName');
+    if (firstField) setTimeout(()=>firstField.focus(), 50);
+  }
+
+  let authLastFocused = null;
+  function openAuth(tab){
+    authLastFocused = document.activeElement;
+    switchAuthTab(tab || 'signin');
+    authOverlay.classList.add('open');
+    if (typeof lockBackgroundScroll === 'function') lockBackgroundScroll();
+  }
+  function closeAuth(){
+    authOverlay.classList.remove('open');
+    if (typeof unlockBackgroundScroll === 'function') unlockBackgroundScroll();
+    if (authLastFocused) authLastFocused.focus();
+  }
+
+  if (signinOpenBtn) signinOpenBtn.addEventListener('click', ()=> openAuth('signin'));
+  if (signupOpenBtn) signupOpenBtn.addEventListener('click', ()=> openAuth('signup'));
+  authCloseBtn.addEventListener('click', closeAuth);
+  authOverlay.addEventListener('click', (e)=>{ if (e.target === authOverlay) closeAuth(); });
+  document.addEventListener('keydown', (e)=>{ if (e.key === 'Escape' && authOverlay.classList.contains('open')) closeAuth(); });
+
+  document.querySelectorAll('[data-auth-tab]').forEach(el=>{
+    el.addEventListener('click', ()=> switchAuthTab(el.dataset.authTab));
+  });
+
+  function renderHeaderForUser(user){
+    if (!headerActions) return;
+    if (user){
+      const initial = (user.name || user.email || '?').trim().charAt(0).toUpperCase();
+      headerActions.innerHTML = `
+        <div class="user-chip">
+          <span class="user-avatar">${initial}</span>
+          <span class="user-name">${user.name || user.email}</span>
+          <button type="button" class="logout-btn" id="logoutBtn">Log out</button>
+        </div>`;
+      const logoutBtn = document.getElementById('logoutBtn');
+      if (logoutBtn) logoutBtn.addEventListener('click', ()=>{
+        clearSession();
+        renderHeaderForUser(null);
+      });
+    } else {
+      headerActions.innerHTML = `
+        <button class="signup-btn" id="signupOpenBtn">Sign Up</button>
+        <button class="signin-btn" id="signinOpenBtn">Sign In</button>`;
+      const newSigninBtn = document.getElementById('signinOpenBtn');
+      const newSignupBtn = document.getElementById('signupOpenBtn');
+      if (newSigninBtn) newSigninBtn.addEventListener('click', ()=> openAuth('signin'));
+      if (newSignupBtn) newSignupBtn.addEventListener('click', ()=> openAuth('signup'));
+    }
+  }
+
+  function restoreSession(){
+    const email = getSessionEmail();
+    if (!email) return;
+    const users = getUsers();
+    const user = users[email];
+    if (user) renderHeaderForUser(user);
+    else clearSession();
+  }
+
+  signinForm.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    clearAuthError(signinError);
+    const email = document.getElementById('signinEmail').value.trim().toLowerCase();
+    const password = document.getElementById('signinPassword').value;
+    if (!email || !password){
+      showAuthError(signinError, 'Please enter your email and password.');
+      return;
+    }
+    const users = getUsers();
+    const user = users[email];
+    if (!user || user.passwordHash !== simpleHash(password)){
+      showAuthError(signinError, 'Incorrect email or password.');
+      return;
+    }
+    setSession(email);
+    renderHeaderForUser(user);
+    closeAuth();
+    signinForm.reset();
+  });
+
+  signupForm.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    clearAuthError(signupError);
+    const name = document.getElementById('signupName').value.trim();
+    const email = document.getElementById('signupEmail').value.trim().toLowerCase();
+    const password = document.getElementById('signupPassword').value;
+
+    if (!name || !email || !password){
+      showAuthError(signupError, 'Please fill in every field.');
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+      showAuthError(signupError, 'Enter a valid email address.');
+      return;
+    }
+    if (password.length < 6){
+      showAuthError(signupError, 'Password must be at least 6 characters.');
+      return;
+    }
+    const users = getUsers();
+    if (users[email]){
+      showAuthError(signupError, 'An account with this email already exists.');
+      return;
+    }
+    users[email] = { name, email, passwordHash: simpleHash(password) };
+    saveUsers(users);
+    setSession(email);
+    renderHeaderForUser(users[email]);
+    closeAuth();
+    signupForm.reset();
+  });
+
+  restoreSession();
+})();
