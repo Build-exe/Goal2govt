@@ -718,13 +718,17 @@ function openPreviousPapers(){
         }
       },
       {
-        const userPapers = [
-       { title: "SSC-CGL-QUESTION-PAPER-13-Aug-2021-Shift-1-English", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQArQV72PdOBQIxKaz6YjkvNAbW7dLPYGqJQbpUW8Y14Quw?e=y0qN0Z" },
-       { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQCxtjjR9CyzRqmEM3heSQRxAX1sKVCKt3LeYa7CaYHYa4Q?e=tYuNqN" },
-       { title: "SSC-CGL-Tier-1-Question-Paper-English_09_09_2024", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQBUHpKGWre4QYMsns5toQrgASGFLJ81adNS2yNbblW8TEk?e=uyOr5n" },
-       { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQCxtjjR9CyzRqmEM3heSQRxAX1sKVCKt3LeYa7CaYHYa4Q?e=tYuNqN" },
-   ]
-
+        key:'official', label:'Official Sources', html:`
+          <p class="overview-text">Always download official previous year papers from the recruiting body's own site — third-party PDFs can be outdated, mislabelled or simply wrong.</p>
+          <ul class="stage-list">
+            <li><b>SSC (CGL, CHSL, MTS, GD, JE, Stenographer)</b><p>Official papers/answer-key portal: <a href="https://ssc.gov.in/for-candidates/previous-year-question-paper" target="_blank" rel="noopener">ssc.gov.in — Previous Year Question Paper</a></p></li>
+            <li><b>UPSC (Civil Services, CDS, NDA, CAPF, Engineering Services)</b><p>Official archive: <a href="https://upsc.gov.in/examinations/previous-question-papers" target="_blank" rel="noopener">upsc.gov.in — Previous Question Papers</a></p></li>
+            <li><b>Railway / RRB (NTPC, Group D, ALP, JE)</b><p>Official portal: <a href="https://rrb.indianrailways.gov.in" target="_blank" rel="noopener">rrb.indianrailways.gov.in</a> — response sheets and answer keys are posted under each CEN notification after the exam, not as a standing archive.</p></li>
+            <li><b>Banking (IBPS PO/Clerk, SBI, RBI)</b><p>Official sites: <a href="https://www.ibps.in" target="_blank" rel="noopener">ibps.in</a>, <a href="https://sbi.co.in/web/careers" target="_blank" rel="noopener">sbi.co.in/web/careers</a>, <a href="https://opportunities.rbi.org.in" target="_blank" rel="noopener">opportunities.rbi.org.in</a> — these exams are fully computer-based and full papers usually aren't released; only your own response sheet/scorecard is provided post-exam.</p></li>
+            <li><b>State PSC / State Police / Other State Exams</b><p>No single national archive exists — each state commission publishes its own. Start at <a href="https://www.ncs.gov.in" target="_blank" rel="noopener">ncs.gov.in</a> (National Career Service) to find the right state board.</p></li>
+          </ul>
+          <div class="note-box">If a body doesn't publicly release full papers (common for CBT-based exams), your best substitute is the response sheet you can download from your own login after the exam, plus the official syllabus/exam-pattern PDF in the same notification.</div>
+        `
       }
     ]
   });
