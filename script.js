@@ -705,21 +705,31 @@ function openPreviousPapers(){
     title:'Previous Year Papers',
     code:'OFFICIAL SOURCES ONLY',
     color:'#1565c0',
-      tabs:[{
-       key:'papers', label:'Previous Year Papers', html:`
-      
-        ${userPapers.map(p=>`<li><b>${p.title}</b><p><a href="${p.url}" target="_blank" rel="noopener">Click Hear to Download PDF</a></p></li>`).join('')}
-        </ul>
-        `      
-    }]
-  });
-}
-const userPapers = [
+    tierLabel:'Exam Preparation Dashboard',
+    fullscreen: true,
+    tabs:[
+      {
+        key:'uploaded', label:'Your Uploaded Papers', render:(el)=>{
+          renderSearchableList(el, userPapers, {
+            searchPlaceholder:'Search your uploaded papers (e.g. "SSC CGL 2023")…',
+            emptyMessage:'No papers uploaded yet.',
+            itemLabel:'papers'
+          });
+        }
+      },
+      {
+        const userPapers = [
        { title: "SSC-CGL-QUESTION-PAPER-13-Aug-2021-Shift-1-English", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQArQV72PdOBQIxKaz6YjkvNAbW7dLPYGqJQbpUW8Y14Quw?e=y0qN0Z" },
        { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQCxtjjR9CyzRqmEM3heSQRxAX1sKVCKt3LeYa7CaYHYa4Q?e=tYuNqN" },
        { title: "SSC-CGL-Tier-1-Question-Paper-English_09_09_2024", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQBUHpKGWre4QYMsns5toQrgASGFLJ81adNS2yNbblW8TEk?e=uyOr5n" },
        { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://1drv.ms/b/c/a286cf94575cb02f/IQCxtjjR9CyzRqmEM3heSQRxAX1sKVCKt3LeYa7CaYHYa4Q?e=tYuNqN" },
    ]
+
+      }
+    ]
+  });
+}
+
 /* ============================================================
    E-BOOKS & GUIDES
    ============================================================ */
