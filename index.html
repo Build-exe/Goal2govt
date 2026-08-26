@@ -17,13 +17,17 @@
       <li><a href="#" class="active">Home</a></li>
       <li><a href="#roadmap-section">Roadmaps</a></li>
       <li><a href="#prep-section">Exam Prep</a></li>
+      <li><a href="#mockexam-section">Mock Test</a></li>
       <li><a href="#">Resources</a></li>
       <li><a href="#">About Us</a></li>
     </ul>
   </nav>
-  <div class="header-actions" id="headerActions">
-    <button class="signup-btn" id="signupOpenBtn">Sign Up</button>
-    <button class="signin-btn" id="signinOpenBtn">Sign In</button>
+  <div class="auth-area" id="authArea">
+    <button class="signup-btn" id="signupBtn">Sign Up</button>
+    <button class="signin-btn" id="authBtn">Sign In</button>
+    <div class="user-menu" id="userMenu">
+      <button class="user-menu-item" id="logoutBtn">Log Out</button>
+    </div>
   </div>
 </header>
 
@@ -174,6 +178,33 @@
   </div>
 </section>
 
+<section id="mockexam-section">
+  <h2 class="section-title">Timed Mock Exam <span class="link">Sign-Up Members Only</span></h2>
+
+  <div class="mock-panel" id="mockLocked">
+    <div class="mock-lock-icon">🔒</div>
+    <h3>Sign up free to attend a real-time timed mock exam</h3>
+    <p>Guests can browse every job, roadmap and the casual practice quiz for free. A full timed mock exam — matching the question count and duration of the real exam pattern — is available once you create a free account.</p>
+    <button class="mock-cta" id="mockSignupCta">Sign Up / Log In</button>
+  </div>
+
+  <div class="mock-panel mock-panel-active" id="mockUnlocked" style="display:none;">
+    <p class="mock-welcome" id="mockWelcome"></p>
+    <div class="mock-select-row">
+      <div class="mock-field">
+        <label for="mockTierSelect">Qualification</label>
+        <select id="mockTierSelect"></select>
+      </div>
+      <div class="mock-field">
+        <label for="mockJobSelect">Exam / Job Role</label>
+        <select id="mockJobSelect"></select>
+      </div>
+    </div>
+    <div class="mock-pattern-box" id="mockPatternBox"></div>
+    <button class="mock-cta" id="mockStartBtn">Start Timed Mock Exam</button>
+  </div>
+</section>
+
 <footer>
   &copy; 2026 Goal2Govt. Find Your Path to Success.
 </footer>
@@ -194,41 +225,56 @@
   </div>
 </div>
 
-<!-- Auth modal: shared Sign In / Sign Up card -->
-<div class="auth-overlay" id="authOverlay" role="dialog" aria-modal="true" aria-labelledby="authTitle">
-  <div class="auth-card">
-    <button class="auth-close" id="authCloseBtn" aria-label="Close">✕</button>
-    <div class="auth-tabs">
-      <button class="auth-tab active" id="authTabSignin" data-auth-tab="signin">Sign In</button>
-      <button class="auth-tab" id="authTabSignup" data-auth-tab="signup">Sign Up</button>
+<!-- Auth modal: Sign Up / Log In (client-side demo auth, stored in this browser only) -->
+<div class="overlay" id="authOverlay" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+  <div class="sheet auth-sheet">
+    <button class="close-btn" id="authCloseBtn" aria-label="Close">✕</button>
+    <div class="auth-body">
+      <h2 id="authTitle">Welcome to Goal2Govt</h2>
+      <div class="auth-tabs">
+        <button class="auth-tab-btn active" data-authtab="login">Log In</button>
+        <button class="auth-tab-btn" data-authtab="signup">Sign Up</button>
+      </div>
+
+      <form id="loginForm" class="auth-form">
+        <label>Email</label>
+        <input type="email" id="loginEmail" required autocomplete="email">
+        <label>Password</label>
+        <input type="password" id="loginPassword" required autocomplete="current-password">
+        <p class="auth-error" id="loginError"></p>
+        <button type="submit" class="auth-submit">Log In</button>
+      </form>
+
+      <form id="signupForm" class="auth-form" style="display:none;">
+        <label>Full Name</label>
+        <input type="text" id="signupName" required autocomplete="name">
+        <label>Email</label>
+        <input type="email" id="signupEmail" required autocomplete="email">
+        <label>Password</label>
+        <input type="password" id="signupPassword" required autocomplete="new-password" minlength="6">
+        <label>Confirm Password</label>
+        <input type="password" id="signupConfirm" required autocomplete="new-password" minlength="6">
+        <p class="auth-error" id="signupError"></p>
+        <button type="submit" class="auth-submit">Create Free Account</button>
+      </form>
+
+      <p class="auth-disclaimer">Demo account system — your details are stored only in this browser, not on a server. Don't reuse a real password.</p>
     </div>
+  </div>
+</div>
 
-    <form class="auth-form active" id="signinForm" novalidate>
-      <h2 id="authTitle" class="auth-form-title">Welcome back</h2>
-      <p class="auth-form-sub">Sign in to continue your prep.</p>
-      <label class="auth-label" for="signinEmail">Email</label>
-      <input class="auth-input" type="email" id="signinEmail" autocomplete="email" required>
-      <label class="auth-label" for="signinPassword">Password</label>
-      <input class="auth-input" type="password" id="signinPassword" autocomplete="current-password" required>
-      <p class="auth-error" id="signinError"></p>
-      <button type="submit" class="auth-submit">Sign In</button>
-      <p class="auth-switch">New here? <button type="button" class="auth-link" data-auth-tab="signup">Create an account</button></p>
-    </form>
-
-    <form class="auth-form" id="signupForm" novalidate>
-      <h2 class="auth-form-title">Create your account</h2>
-      <p class="auth-form-sub">Save your roadmap and pick up where you left off.</p>
-      <label class="auth-label" for="signupName">Full name</label>
-      <input class="auth-input" type="text" id="signupName" autocomplete="name" required>
-      <label class="auth-label" for="signupEmail">Email</label>
-      <input class="auth-input" type="email" id="signupEmail" autocomplete="email" required>
-      <label class="auth-label" for="signupPassword">Password</label>
-      <input class="auth-input" type="password" id="signupPassword" autocomplete="new-password" minlength="6" required>
-      <p class="auth-hint">At least 6 characters.</p>
-      <p class="auth-error" id="signupError"></p>
-      <button type="submit" class="auth-submit">Sign Up</button>
-      <p class="auth-switch">Already have an account? <button type="button" class="auth-link" data-auth-tab="signin">Sign in</button></p>
-    </form>
+<!-- Timed mock exam — full screen, separate from the casual practice quiz -->
+<div class="overlay fullscreen" id="examOverlay" role="dialog" aria-modal="true" aria-labelledby="examJobTitle">
+  <div class="sheet exam-sheet">
+    <div class="exam-topbar">
+      <div class="exam-topbar-info">
+        <div class="exam-job-title" id="examJobTitle"></div>
+        <div class="exam-progress" id="examProgress"></div>
+      </div>
+      <div class="exam-timer" id="examTimer">--:--</div>
+      <button class="close-btn" id="examCloseBtn" aria-label="Close">✕</button>
+    </div>
+    <div class="exam-body" id="examBody"></div>
   </div>
 </div>
 
