@@ -1,3 +1,23 @@
+async function loadQuestionPapers() {
+    try {
+        const response = await fetch(
+            "http://localhost:5000/api/question-papers"
+        );
+
+        if (!response.ok) {
+            throw new Error("Failed to load question papers");
+        }
+
+        const papers = await response.json();
+
+        console.log("Question Papers:", papers);
+
+        return papers;
+    } catch (error) {
+        console.error("Error loading question papers:", error);
+        return [];
+    }
+}
 /* ============================================================
    Goal2Govt — main script
    - Government Jobs by Qualification (6 tiers, ~81 posts)
