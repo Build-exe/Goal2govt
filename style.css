@@ -267,6 +267,30 @@
     background:var(--blue-dark);color:#fff;text-align:center;padding:22px;font-size:13px;
   }
 
+  /* About Us */
+  .about-section{background:var(--card-bg);}
+  .about-wrap{max-width:820px;margin:0 auto;text-align:center;}
+  .about-logo{height:56px;width:auto;margin:0 auto 18px;}
+  .about-title{margin-bottom:16px;}
+  .about-lead{
+    font-size:15.5px;line-height:1.7;color:var(--text-mid);
+    max-width:680px;margin:0 auto 32px;
+  }
+  .about-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:left;
+  }
+  .about-card{
+    background:var(--white);border:1px solid var(--border);border-radius:14px;
+    padding:22px;transition:box-shadow .2s, transform .2s;
+  }
+  .about-card:hover{box-shadow:0 8px 20px rgba(13,59,122,0.12);transform:translateY(-2px);}
+  .about-card h4{font-size:15px;font-weight:700;color:var(--blue-dark);margin-bottom:8px;}
+  .about-card p{font-size:13.5px;line-height:1.6;color:var(--text-mid);}
+
+  @media (max-width:900px){
+    .about-grid{grid-template-columns:1fr;}
+  }
+
   @media (max-width:900px){
     .options-grid{grid-template-columns:repeat(2,1fr);}
     .roadmap-grid,.prep-grid{grid-template-columns:1fr;}
