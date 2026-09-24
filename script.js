@@ -2157,12 +2157,11 @@ function openPreviousPapers(){
     tabs:[
       {
         key:'uploaded', label:'Your Uploaded Papers', render:(el)=>{
-          {
-    renderSearchableList(el, userPapers, {
-    searchPlaceholder:'Search your uploaded papers (e.g. "SSC CGL 2023")…',
-    emptyMessage:'No papers uploaded yet.',
-    itemLabel:'papers'
-});
+          renderSearchableList(el, userPapers, {
+            searchPlaceholder:'Search your uploaded papers (e.g. "SSC CGL 2023")…',
+            emptyMessage:'No papers uploaded yet.',
+            itemLabel:'papers'
+          });
         }
       },
       {
