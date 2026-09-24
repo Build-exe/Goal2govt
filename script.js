@@ -1,23 +1,3 @@
-async function loadQuestionPapers() {
-    try {
-        const response = await fetch(
-            "http://localhost:5000/api/question-papers"
-        );
-
-        if (!response.ok) {
-            throw new Error("Failed to load question papers");
-        }
-
-        const papers = await response.json();
-
-        console.log("Question Papers:", papers);
-
-        return papers;
-    } catch (error) {
-        console.error("Error loading question papers:", error);
-        return [];
-    }
-}
 /* ============================================================
    Goal2Govt — main script
    - Government Jobs by Qualification (6 tiers, ~81 posts)
@@ -2176,23 +2156,14 @@ function openPreviousPapers(){
     fullscreen: true,
     tabs:[
       {
-        fetch("http://localhost:5000/api/question-papers")
-    .then(response => response.json())
-    .then(papers => {
-        console.log(papers);
-
-        papers.forEach(paper => {
-            console.log(paper.exam_name);
-            console.log(paper.year);
-            console.log(paper.subject);
-            console.log(paper.paper_title);
-            console.log(paper.pdf_url);
-        });
-    })
-    .catch(error => {
-        console.error("Error loading question papers:", error);
-    });
-   },
+        key:'uploaded', label:'Your Uploaded Papers', render:(el)=>{
+          renderSearchableList(el, userPapers, {
+            searchPlaceholder:'Search your uploaded papers (e.g. "SSC CGL 2023")…',
+            emptyMessage:'No papers uploaded yet.',
+            itemLabel:'papers'
+          });
+        }
+      },
       {
         key:'official', label:'Official Sources', html:`
           <p class="overview-text">Always download official previous year papers from the recruiting body's own site — third-party PDFs can be outdated, mislabelled or simply wrong.</p>
