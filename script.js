@@ -2158,89 +2158,11 @@ function openPreviousPapers(){
       {
         key:'uploaded', label:'Your Uploaded Papers', render:(el)=>{
           {
-    key: 'uploaded',
-    label: 'Your Uploaded Papers',
-    render: async (el) => {
-        el.innerHTML = '<p>Loading papers...</p>';
-
-        try {
-            const response = await fetch('http://localhost:5000/api/question-papers');
-
-            if (!response.ok) {
-                throw new Error('Failed to load papers');
-            }
-
-            const papers = await response.json();
-
-            if (papers.length === 0) {
-                el.innerHTML = '<p class="doc-empty">No papers available yet.</p>';
-                return;
-            }
-
-            el.innerHTML = `
-                <div class="doc-search-wrap">
-                    <input
-                        type="text"
-                        class="doc-search"
-                        id="papers-search"
-                        placeholder="Search question papers..."
-                    >
-                </div>
-
-                <ul class="stage-list" id="papers-list"></ul>
-            `;
-
-            const list = document.getElementById('papers-list');
-            const search = document.getElementById('papers-search');
-
-            function displayPapers(filter = '') {
-                const filtered = papers.filter(p =>
-                    `${p.exam_name} ${p.year} ${p.subject} ${p.paper_title}`
-                        .toLowerCase()
-                        .includes(filter.toLowerCase())
-                );
-
-                list.innerHTML = filtered.map(p => `
-                    <li>
-                        <b>${p.paper_title}</b>
-                        <p>
-                            Exam: ${p.exam_name}<br>
-                            Year: ${p.year}<br>
-                            Subject: ${p.subject || 'General'}
-                        </p>
-                        <a
-                            href="${p.pdf_url}"
-                            target="_blank"
-                            rel="noopener"
-                        >
-                            Open / Download PDF
-                        </a>
-                    </li>
-                `).join('');
-
-                if (filtered.length === 0) {
-                    list.innerHTML = '<li>No matching papers found.</li>';
-                }
-            }
-
-            search.addEventListener('input', () => {
-                displayPapers(search.value);
-            });
-
-            displayPapers();
-
-        } catch (error) {
-            console.error(error);
-
-            el.innerHTML = `
-                <div class="note-box">
-                    Unable to connect to Goal2Govt server.
-                    Please make sure the backend is running.
-                </div>
-            `;
-        }
-    }
-},
+    renderSearchableList(el, userPapers, {
+    searchPlaceholder:'Search your uploaded papers (e.g. "SSC CGL 2023")…',
+    emptyMessage:'No papers uploaded yet.',
+    itemLabel:'papers'
+});
         }
       },
       {
