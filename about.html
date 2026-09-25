@@ -3,154 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us - Goal2Govt</title>
-<link rel="stylesheet" href="style.css">
+<title>Goal2Govt | Team Build.exe</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#fff}
+body{font-family:Arial,Helvetica,sans-serif}
+.page{width:100%;max-width:1100px;margin:0 auto;line-height:0}
+.page img{display:block;width:100%;height:auto}
+@media(max-width:600px){
+  .page{width:100%}
+}
+</style>
 </head>
 <body>
-<header>
-  <div class="logo">
-    <img src="logo.png" alt="Goal2Govt" class="logo-img">
-  </div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="roadmap.html">Roadmaps</a></li>
-      <li><a href="index.html#prep-section">Exam Prep</a></li>
-      <li><a href="mocktest.html">Mock Test</a></li>
-      <li><a href="#">Resources</a></li>
-      <li><a href="about.html" class="active">About Us</a></li>
-    </ul>
-  </nav>
-  <div class="auth-area" id="authArea">
-    <button class="signup-btn" id="signupBtn">Sign Up</button>
-    <button class="signin-btn" id="authBtn">Sign In</button>
-    <div class="user-menu" id="userMenu">
-      <button class="user-menu-item" id="logoutBtn">Log Out</button>
-    </div>
-  </div>
-</header>
-
-<section class="page-banner">
-  <h1>About Us</h1>
-  <p>Hi! We are Team Build.exe</p>
-</section>
-
-<section id="about-section" class="about-section">
-  <div class="about-wrap">
-    <img src="logo.png" alt="Goal2Govt" class="about-logo">
-
-    <p class="about-lead">
-      Goal2Govt is a student-built platform created by <strong>Team Build.exe</strong>,
-      dedicated to helping students and job seekers achieve their government career goals.
-      We provide curated mock tests, previous year papers, career roadmaps, and exam updates
-      to support every aspirant on their journey to success.
-    </p>
-
-    <ol class="about-steps road-map">
-      <li>
-        <span class="rm-num">1</span>
-        <div class="rm-body">
-          <h4>Our Mission</h4>
-          <p>To make government exam preparation simple, structured and accessible —
-            guiding every aspirant with clear roadmaps and reliable resources at every
-            stage of their journey.</p>
-        </div>
-      </li>
-      <li>
-        <span class="rm-num">2</span>
-        <div class="rm-body">
-          <h4>Acknowledgements</h4>
-          <p>With sincere thanks to <strong>Lakshya Technologies</strong> and
-            <strong>Lalatakshya</strong> for their constant encouragement, guidance and
-            support, and to <strong>Nethaji Degree College</strong> for its belief in
-            student innovation.</p>
-        </div>
-      </li>
-      <li>
-        <span class="rm-num">3</span>
-        <div class="rm-body">
-          <h4>Our Team</h4>
-          <p>Goal2Govt is founded and developed by <strong>Nikhil Boddu</strong>, built on
-            an original idea by <strong>Ram Prasad</strong>, with the dedicated support of
-            Team Build.exe.</p>
-        </div>
-      </li>
-    </ol>
-  </div>
-</section>
-<footer>
-  &copy; 2026 Goal2Govt. Find Your Path to Success.
-</footer>
-
-<!-- Detail modal: tabbed sheet reused for government jobs, roadmap careers, category overviews and tips -->
-<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
-  <div class="sheet">
-    <div class="sheet-sticky">
-      <div class="sheet-head" id="sheetHead">
-        <button class="close-btn" id="closeBtn" aria-label="Close">✕</button>
-        <span class="code" id="sheetCode"></span>
-        <h2 id="sheetTitle"></h2>
-        <div class="tier-label" id="sheetTier"></div>
-      </div>
-      <div class="section-tabs"></div>
-    </div>
-    <div class="sheet-body"></div>
-  </div>
-</div>
-
-<!-- Auth modal: Sign Up / Log In (client-side demo auth, stored in this browser only) -->
-<div class="overlay" id="authOverlay" role="dialog" aria-modal="true" aria-labelledby="authTitle">
-  <div class="sheet auth-sheet">
-    <button class="close-btn" id="authCloseBtn" aria-label="Close">✕</button>
-    <div class="auth-body">
-      <h2 id="authTitle">Welcome to Goal2Govt</h2>
-      <div class="auth-tabs">
-        <button class="auth-tab-btn active" data-authtab="login">Log In</button>
-        <button class="auth-tab-btn" data-authtab="signup">Sign Up</button>
-      </div>
-
-      <form id="loginForm" class="auth-form">
-        <label>Email</label>
-        <input type="email" id="loginEmail" required autocomplete="email">
-        <label>Password</label>
-        <input type="password" id="loginPassword" required autocomplete="current-password">
-        <p class="auth-error" id="loginError"></p>
-        <button type="submit" class="auth-submit">Log In</button>
-      </form>
-
-      <form id="signupForm" class="auth-form" style="display:none;">
-        <label>Full Name</label>
-        <input type="text" id="signupName" required autocomplete="name">
-        <label>Email</label>
-        <input type="email" id="signupEmail" required autocomplete="email">
-        <label>Password</label>
-        <input type="password" id="signupPassword" required autocomplete="new-password" minlength="6">
-        <label>Confirm Password</label>
-        <input type="password" id="signupConfirm" required autocomplete="new-password" minlength="6">
-        <p class="auth-error" id="signupError"></p>
-        <button type="submit" class="auth-submit">Create Free Account</button>
-      </form>
-
-      <p class="auth-disclaimer">Demo account system — your details are stored only in this browser, not on a server. Don't reuse a real password.</p>
-    </div>
-  </div>
-</div>
-
-<!-- Timed mock exam — full screen, separate from the casual practice quiz -->
-<div class="overlay fullscreen" id="examOverlay" role="dialog" aria-modal="true" aria-labelledby="examJobTitle">
-  <div class="sheet exam-sheet">
-    <div class="exam-topbar">
-      <div class="exam-topbar-info">
-        <div class="exam-job-title" id="examJobTitle"></div>
-        <div class="exam-progress" id="examProgress"></div>
-      </div>
-      <div class="exam-timer" id="examTimer">--:--</div>
-      <button class="close-btn" id="examCloseBtn" aria-label="Close">✕</button>
-    </div>
-    <div class="exam-body" id="examBody"></div>
-  </div>
-</div>
-
-<script src="script.js"></script>
+<main class="page">
+  <img src="about-design.png"
+       width="728" height="2048"
+       alt="Goal2Govt Team Build.exe About Us">
+</main>
 </body>
 </html>
