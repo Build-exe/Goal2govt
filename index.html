@@ -7,18 +7,19 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
   <div class="logo">
     <img src="logo.png" alt="Goal2Govt" class="logo-img">
   </div>
   <nav>
     <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="roadmap.html">Roadmaps</a></li>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#roadmap-section">Roadmaps</a></li>
       <li><a href="#prep-section">Exam Prep</a></li>
-      <li><a href="mocktest.html">Mock Test</a></li>
-      <li><a href="jobsdetails.html">Jobs & Details</a></li>
-      <li><a href="about.html">About Us</a></li>
+      <li><a href="#mockexam-section">Mock Test</a></li>
+      <li><a href="#">Resources</a></li>
+      <li><a href="#">About Us</a></li>
     </ul>
   </nav>
   <div class="auth-area" id="authArea">
@@ -34,7 +35,7 @@
   <div class="hero-text">
     <h1>Find Your Path to Success</h1>
     <p>Get Personalized Career Roadmaps &amp; Exam Guidance</p>
-    <button class="get-started" onclick="window.location.href='jobsdetails.html'">Get Started</button>
+    <button class="get-started" onclick="document.getElementById('explorer-section').scrollIntoView({behavior:'smooth'})">Get Started</button>
   </div>
   <div class="hero-visual">
     <div class="illustration">Personalized guidance for every qualification level — from 10th pass to B.Tech</div>
@@ -79,6 +80,77 @@
   </div>
 </section>
 
+<section id="roadmap-section">
+  <h2 class="section-title">Your Career Roadmap</h2>
+  <div class="roadmap-grid">
+    <div class="roadmap-card">
+      <div class="roadmap-head">Software Developer</div>
+      <div class="roadmap-body">
+        <ul>
+          <li>Overview</li>
+          <li>Skills &amp; Qualifications</li>
+          <li>Steps to Become</li>
+        </ul>
+        <button class="view-details" id="btn-software-developer">View Details</button>
+      </div>
+    </div>
+    <div class="roadmap-card">
+      <div class="roadmap-head">Civil Services</div>
+      <div class="roadmap-body">
+        <ul>
+          <li>Eligibility Criteria</li>
+          <li>Exam Stages</li>
+          <li>Preparation Tips</li>
+        </ul>
+        <button class="view-details" id="btn-civil-services">View Details</button>
+      </div>
+    </div>
+    <div class="roadmap-card">
+      <div class="roadmap-head">Nursing Career</div>
+      <div class="roadmap-body">
+        <ul>
+          <li>Qualifications</li>
+          <li>Certification Exams</li>
+          <li>Career Path</li>
+        </ul>
+        <button class="view-details" id="btn-nursing-career">View Details</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Interactive explorer built from the "Government Jobs After 10th, 12th, ITI, Diploma, Degree & BTech" flow chart -->
+<section id="explorer-section">
+  <h2 class="section-title">Government Jobs by Qualification</h2>
+  <div class="explorer">
+    <h2>What is your qualification?</h2>
+    <p>Select your qualification level to see matching government job opportunities.</p>
+    <div class="qual-tabs" id="qualTabs"></div>
+    <div class="job-list" id="jobList"></div>
+    <div class="explorer-footer">
+      <div class="col">
+        <h4>Benefits</h4>
+        <ul>
+          <li>Job Security</li>
+          <li>Good Salary</li>
+          <li>Allowances</li>
+          <li>Pension &amp; Other Perks</li>
+          <li>Respect in Society</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Tips</h4>
+        <ul>
+          <li>Check Notifications Regularly</li>
+          <li>Prepare Well</li>
+          <li>Stay Updated</li>
+          <li>Never Give Up</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="prep-section">
   <h2 class="section-title">Exam Preparation <span class="link">Dashboard</span></h2>
   <div class="prep-grid">
@@ -105,6 +177,35 @@
     </div>
   </div>
 </section>
+
+<section id="mockexam-section">
+  <h2 class="section-title">Timed Mock Exam <span class="link">Sign-Up Members Only</span></h2>
+
+  <div class="mock-panel" id="mockLocked">
+    <div class="mock-lock-icon">🔒</div>
+    <h3>Sign up free to attend a real-time timed mock exam</h3>
+    <p>Guests can browse every job, roadmap and the casual practice quiz for free. A full timed mock exam — matching the question count and duration of the real exam pattern — is available once you create a free account.</p>
+    <button class="mock-cta" id="mockSignupCta">Sign Up / Log In</button>
+  </div>
+
+  <div class="mock-panel mock-panel-active" id="mockUnlocked" style="display:none;">
+    <p class="mock-welcome" id="mockWelcome"></p>
+    <div class="mock-select-row">
+      <div class="mock-field">
+        <label for="mockTierSelect">Qualification</label>
+        <select id="mockTierSelect"></select>
+      </div>
+      <div class="mock-field">
+        <label for="mockJobSelect">Exam / Job Role</label>
+        <select id="mockJobSelect"></select>
+      </div>
+    </div>
+    <div class="mock-pattern-box" id="mockPatternBox"></div>
+    <p class="mock-set-intro">Pick any set below — each one is a distinct, repeatable mock test (same question count and time limit as the real exam pattern above).</p>
+    <div class="mock-set-row" id="mockSetRow"></div>
+  </div>
+</section>
+
 <footer>
   &copy; 2026 Goal2Govt. Find Your Path to Success.
 </footer>
