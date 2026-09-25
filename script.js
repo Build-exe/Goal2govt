@@ -2241,28 +2241,32 @@ const tabsEl = document.getElementById('qualTabs');
 const listEl = document.getElementById('jobList');
 const tierKeys = Object.keys(tierMeta);
 
-function renderJobs(tier){
-  listEl.innerHTML = '';
-  jobs.filter(j=>j.tier===tier).forEach(job=>{
-    const chip = document.createElement('div');
-    chip.className = 'job-chip';
-    chip.innerHTML = `<span>${job.name}</span><span class="chip-arrow">›</span>`;
-    chip.onclick = ()=> openJob(job.id);
-    listEl.appendChild(chip);
+// Guarded: the qualification explorer (qualTabs/jobList) only exists on the
+// home page now that Roadmaps/Mock Test/About Us are separate pages.
+if (tabsEl && listEl){
+  function renderJobs(tier){
+    listEl.innerHTML = '';
+    jobs.filter(j=>j.tier===tier).forEach(job=>{
+      const chip = document.createElement('div');
+      chip.className = 'job-chip';
+      chip.innerHTML = `<span>${job.name}</span><span class="chip-arrow">›</span>`;
+      chip.onclick = ()=> openJob(job.id);
+      listEl.appendChild(chip);
+    });
+  }
+  tierKeys.forEach((tier,i)=>{
+    const tab = document.createElement('div');
+    tab.className = 'qual-tab' + (i===0 ? ' active' : '');
+    tab.textContent = tierMeta[tier].label;
+    tab.onclick = ()=>{
+      document.querySelectorAll('.qual-tab').forEach(t=>t.classList.remove('active'));
+      tab.classList.add('active');
+      renderJobs(tier);
+    };
+    tabsEl.appendChild(tab);
   });
+  renderJobs(tierKeys[0]);
 }
-tierKeys.forEach((tier,i)=>{
-  const tab = document.createElement('div');
-  tab.className = 'qual-tab' + (i===0 ? ' active' : '');
-  tab.textContent = tierMeta[tier].label;
-  tab.onclick = ()=>{
-    document.querySelectorAll('.qual-tab').forEach(t=>t.classList.remove('active'));
-    tab.classList.add('active');
-    renderJobs(tier);
-  };
-  tabsEl.appendChild(tab);
-});
-renderJobs(tierKeys[0]);
 
 document.addEventListener('DOMContentLoaded', ()=>{
   // Explore Your Career Options cards

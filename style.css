@@ -269,26 +269,34 @@
 
   /* About Us */
   .about-section{background:var(--card-bg);}
-  .about-wrap{max-width:820px;margin:0 auto;text-align:center;}
+  .about-wrap{max-width:760px;margin:0 auto;text-align:center;}
   .about-logo{height:56px;width:auto;margin:0 auto 18px;}
   .about-title{margin-bottom:16px;}
   .about-lead{
     font-size:15.5px;line-height:1.7;color:var(--text-mid);
-    max-width:680px;margin:0 auto 32px;
+    max-width:680px;margin:0 auto 36px;
   }
-  .about-grid{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:left;
-  }
-  .about-card{
+  .about-steps{text-align:left;max-width:620px;margin:0 auto;}
+  .about-steps li{
     background:var(--white);border:1px solid var(--border);border-radius:14px;
-    padding:22px;transition:box-shadow .2s, transform .2s;
+    padding:18px 20px;margin-bottom:16px;display:flex;gap:16px;align-items:flex-start;
+    transition:box-shadow .2s, transform .2s;
   }
-  .about-card:hover{box-shadow:0 8px 20px rgba(13,59,122,0.12);transform:translateY(-2px);}
-  .about-card h4{font-size:15px;font-weight:700;color:var(--blue-dark);margin-bottom:8px;}
-  .about-card p{font-size:13.5px;line-height:1.6;color:var(--text-mid);}
+  .about-steps li:hover{box-shadow:0 8px 20px rgba(13,59,122,0.12);transform:translateY(-2px);}
+  .about-steps li:last-child{margin-bottom:0;}
+  .about-steps .rm-body h4{font-size:15px;font-weight:700;color:var(--blue-dark);margin-bottom:6px;}
+  .about-steps .rm-body p{font-size:13.5px;line-height:1.65;color:var(--text-mid);}
+
+  /* Simple banner used at the top of standalone pages (Roadmaps / Mock Test / About Us) */
+  .page-banner{
+    background:linear-gradient(120deg,var(--blue-dark) 0%,var(--blue) 55%,var(--blue-light) 100%);
+    padding:40px 40px 46px;color:#fff;text-align:center;
+  }
+  .page-banner h1{font-size:30px;font-weight:800;margin-bottom:8px;}
+  .page-banner p{font-size:15px;opacity:.9;max-width:520px;margin:0 auto;}
 
   @media (max-width:900px){
-    .about-grid{grid-template-columns:1fr;}
+    .page-banner{padding:32px 20px 36px;}
   }
 
   @media (max-width:900px){
