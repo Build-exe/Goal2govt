@@ -1,317 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Goal2Govt - Team Build.exe. A student-built platform for government exam aspirants in India.">
-  <title>Goal2Govt | We are Team Build.exe</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - Goal2Govt</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#">
-        <div class="brand-mark">🎓</div>
-        <div>
-          <div class="brand-name">Goal<span>2</span>Govt</div>
-          <div class="brand-tagline">YOUR GOAL. OUR GUIDANCE. YOUR GOVERNMENT JOB.</div>
-        </div>
-      </a>
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
-      <nav id="mainNav">
-        <a href="#story">Our Story</a>
-        <a href="#mission">Our Mission</a>
-        <a href="#vision">Our Vision</a>
-        <a href="#why">Why Choose Us</a>
-        <a href="#team">Our Team</a>
-        <a href="#thanks">Thanks</a>
-      </nav>
+<header>
+  <div class="logo">
+    <img src="logo.png" alt="Goal2Govt" class="logo-img">
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="roadmap.html">Roadmaps</a></li>
+      <li><a href="index.html#prep-section">Exam Prep</a></li>
+      <li><a href="mocktest.html">Mock Test</a></li>
+      <li><a href="jobsdetails.html">Jobs & Details</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+    </ul>
+  </nav>
+  <div class="auth-area" id="authArea">
+    <button class="signup-btn" id="signupBtn">Sign Up</button>
+    <button class="signin-btn" id="authBtn">Sign In</button>
+    <div class="user-menu" id="userMenu">
+      <button class="user-menu-item" id="logoutBtn">Log Out</button>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main>
+<!-- ============================================================
+     ABOUT US — fully coded page (no uploaded images).
+     All visuals below are plain CSS shapes or inline SVG.
+     ============================================================ -->
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-content reveal">
-          <span class="pill">ABOUT US</span>
-          <h1>We are Team <strong>Build.exe</strong></h1>
-          <p class="hero-subtitle">A student-built initiative for every government job aspirant in India.</p>
-          <p>
-            Goal2Govt is a platform by Team <b>"Build.exe"</b>, dedicated to helping students
-            achieve their government job dreams. We provide mock tests, previous year question
-            papers, career guidance, exam updates, and useful resources to support every aspirant
-            on their journey to success.
-          </p>
-        </div>
+<section class="ap-hero">
+  <div class="ap-hero-text">
+    <span class="ap-badge">ABOUT US</span>
+    <h1>We are <span class="ap-tag">Team Build.exe</span></h1>
+    <p class="ap-hero-sub">A student-built initiative for every government job aspirant in India.</p>
+    <div class="ap-underline"></div>
+    <p class="ap-lead">
+      Goal2Govt is a platform by Team <strong>"Build.exe"</strong>, dedicated to helping
+      students achieve their government job dreams. We provide mock tests, previous year
+      question papers, career guidance, exam updates, and useful resources to support
+      every aspirant on their journey to success.
+    </p>
+  </div>
+  <div class="ap-hero-visual">
+    <svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="120,70 250,15 380,70" fill="#a9c6e8"/>
+      <rect x="130" y="70" width="240" height="150" fill="#cfe0f5"/>
+      <rect x="150" y="90" width="14" height="110" fill="#a9c6e8"/>
+      <rect x="185" y="90" width="14" height="110" fill="#a9c6e8"/>
+      <rect x="220" y="90" width="14" height="110" fill="#a9c6e8"/>
+      <rect x="255" y="90" width="14" height="110" fill="#a9c6e8"/>
+      <rect x="290" y="90" width="14" height="110" fill="#a9c6e8"/>
+      <rect x="325" y="90" width="14" height="110" fill="#a9c6e8"/>
+      <rect x="246" y="0" width="4" height="20" fill="#5a4a3a"/>
+      <rect x="250" y="2" width="16" height="10" fill="#ff9933"/>
+      <rect x="0" y="220" width="400" height="8" fill="#dfe9f5"/>
+      <g>
+        <circle cx="150" cy="240" r="14" fill="#0d3b7a"/>
+        <rect x="136" y="254" width="28" height="55" rx="10" fill="#0d3b7a"/>
+        <rect x="118" y="275" width="20" height="14" rx="3" fill="#1e88e5"/>
+      </g>
+      <g>
+        <circle cx="212" cy="248" r="13" fill="#1565c0"/>
+        <rect x="199" y="261" width="26" height="50" rx="10" fill="#1565c0"/>
+        <rect x="222" y="280" width="18" height="13" rx="3" fill="#5aa9e6"/>
+      </g>
+    </svg>
+  </div>
+</section>
 
-        <div class="hero-illustration reveal">
-          <div class="college-card">
-            <div class="college-emblem">◉</div>
-            <h3>NETHAJI DEGREE COLLEGE</h3>
-            <small>SIRCILLA - 505301</small>
-          </div>
-          <div class="student student-one">
-            <div class="head"></div><div class="body">🎒</div>
-          </div>
-          <div class="student student-two">
-            <div class="head"></div><div class="body">📚</div>
-          </div>
-          <div class="ground"></div>
-        </div>
+<!-- Our Story -->
+<section class="ap-split">
+  <div class="ap-split-text">
+    <h2>Our <span class="ap-tag">Story</span></h2>
+    <div class="ap-underline"></div>
+    <p>Goal2Govt started as a small idea among a group of students who wanted to create a
+      platform that provides all government exam resources in one place. We noticed that
+      many aspirants struggle to find reliable question papers, mock tests, and proper
+      guidance, so we decided to build a simple, useful, and student-friendly website to
+      help them.</p>
+    <p>With the support, encouragement, and guidance from our mentors and well-wishers,
+      this idea slowly turned into Goal2Govt — a platform built by students, for
+      students.</p>
+  </div>
+  <div class="ap-split-visual">
+    <div class="ap-books">
+      <div class="ap-books-stack">
+        <div class="ap-book-bar b1">PREVIOUS YEAR PAPERS</div>
+        <div class="ap-book-bar b2">MOCK TESTS</div>
+        <div class="ap-book-bar b3">GUIDANCE</div>
+        <div class="ap-book-bar b4">SUCCESS</div>
       </div>
-    </section>
-
-    <!-- STORY -->
-    <section class="section" id="story">
-      <div class="container split">
-        <div class="copy-card reveal">
-          <h2>Our <span>Story</span></h2>
-          <div class="title-line"></div>
-          <p>
-            Goal2Govt started as a small idea among a group of students who wanted to create
-            a platform that provides all government exam resources in one place.
-          </p>
-          <p>
-            We noticed that many aspirants struggle to find reliable question papers, mock tests,
-            and proper guidance, so we decided to build a simple, useful, and student-friendly
-            website to help them.
-          </p>
-          <p>
-            With the support, encouragement, and guidance from our mentors and well-wishers,
-            this idea slowly turned into Goal2Govt — a platform built by students, for students.
-          </p>
-        </div>
-
-        <div class="book-scene reveal">
-          <div class="plant">🌿</div>
-          <div class="books">
-            <div>PREVIOUS YEAR PAPERS</div>
-            <div>MOCK TESTS</div>
-            <div>GUIDANCE</div>
-            <div>SUCCESS</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MISSION -->
-    <section class="section pale" id="mission">
-      <div class="container split reverse-mobile">
-        <div class="copy-card reveal">
-          <h2>Our <span>Mission</span></h2>
-          <div class="title-line"></div>
-          <p>
-            Our mission is to make government exam preparation simple, accessible,
-            and effective for every student in India.
-          </p>
-          <p>
-            We aim to provide high-quality study material, authentic question papers,
-            mock tests, and guidance so that every aspirant can prepare with confidence
-            and achieve their goals, regardless of their background or location.
-          </p>
-        </div>
-
-        <div class="target-scene reveal">
-          <div class="target">🎯</div>
-          <div class="mission-note">Simple<br>Accessible<br>Effective<br>For Every<br>Aspirant</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- VISION -->
-    <section class="section" id="vision">
-      <div class="container split">
-        <div class="copy-card reveal">
-          <h2>Our <span>Vision</span></h2>
-          <div class="title-line"></div>
-          <p>
-            To become India's most trusted and student-friendly platform for government exams,
-            helping millions of aspirants turn their dreams into reality with the right resources,
-            guidance, and continuous support.
-          </p>
-          <p>
-            We envision a future where every aspirant, regardless of their background, can access
-            quality resources, stay updated, practice effectively, and move one step closer to
-            a successful career in government service.
-          </p>
-        </div>
-
-        <div class="vision-scene reveal">
-          <div class="vision-text">One Nation<br>Accessible<br>Aspirants<br>One Goal</div>
-          <div class="india-gate">🏛️</div>
-          <div class="traveller">🎒</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHY -->
-    <section class="section why" id="why">
-      <div class="container">
-        <div class="section-heading reveal">
-          <h2>Why Choose <span>Goal2Govt?</span></h2>
-          <p>Everything you need for your government job preparation, in one place.</p>
-        </div>
-
-        <div class="feature-grid">
-          <article class="feature reveal">
-            <div class="feature-icon green">✓</div>
-            <h3>Reliable Information</h3>
-            <p>Authentic and updated content from trusted sources.</p>
-          </article>
-          <article class="feature reveal">
-            <div class="feature-icon orange">👥</div>
-            <h3>Student Friendly</h3>
-            <p>Simple, clean and easy to use.</p>
-          </article>
-          <article class="feature reveal">
-            <div class="feature-icon purple">₹</div>
-            <h3>Completely Free</h3>
-            <p>Initially accessible for every student.</p>
-          </article>
-          <article class="feature reveal">
-            <div class="feature-icon blue">↗</div>
-            <h3>Helps in Career Growth</h3>
-            <p>Guidance beyond just exams.</p>
-          </article>
-          <article class="feature reveal">
-            <div class="feature-icon pink">♥</div>
-            <h3>Built with Passion</h3>
-            <p>Created by students who understand your needs.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOUNDER -->
-    <section class="section" id="founder">
-      <div class="container">
-        <div class="section-heading reveal">
-          <h2>Founder <span>&amp; Idea</span></h2>
-        </div>
-
-        <div class="founder-grid">
-          <article class="founder-card reveal">
-            <div class="avatar">👨🏻‍💻</div>
-            <div>
-              <small>Founder &amp; Developer</small>
-              <h3>Nikhil Boddu</h3>
-              <p>
-                Founder of Team Build.exe and developer of Goal2Govt.
-                Passionate about technology and creating useful resources for students.
-              </p>
-            </div>
-          </article>
-
-          <article class="founder-card idea-card reveal">
-            <div class="avatar idea">💡</div>
-            <div>
-              <small>A Small Idea from</small>
-              <h3>Kodam Ram Prasad</h3>
-              <p>
-                A small idea from Ram Prasad. Always motivating and supporting
-                the team to build something useful for students.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- TEAM -->
-    <section class="section pale" id="team">
-      <div class="container">
-        <div class="section-heading reveal">
-          <h2>Our <span>Team</span></h2>
-          <p>
-            We sincerely thank our friends and team members for their constant support,
-            encouragement, and contribution.
-          </p>
-        </div>
-
-        <div class="team-grid">
-          <div class="team-member reveal">👤 Jagithyala Ruchitha</div>
-          <div class="team-member reveal">👤 Mandala Bharath</div>
-          <div class="team-member reveal">👤 Sadala Tejapriya</div>
-          <div class="team-member reveal">👤 Konda Akshaya</div>
-          <div class="team-member reveal">👤 Kodam Nainesh</div>
-          <div class="team-member reveal">👤 Chikile Rani</div>
-          <div class="team-member reveal">👤 Adepu Manmitha</div>
-          <div class="team-member reveal">👤 Samala Rajanandini</div>
-          <div class="team-member reveal">👤 Oggu Aishwarya</div>
-          <div class="team-member reveal">👤 Nakka Bhavana</div>
-          <div class="team-member reveal">👤 Nadimetla Ravali</div>
-          <div class="team-member reveal">👤 Kondi Ganesh</div>
-          <div class="team-member reveal">👤 Suruvu Harshitha</div>
-          <div class="team-member reveal">👤 Gorityala Akshaya</div>
-          <div class="team-member reveal">👤 Gadapa Tejashwini</div>
-          <div class="team-member reveal">👤 Gosikonda Alekhya</div>
-        </div>
-
-        <div class="mentor-card reveal">
-          <span class="mentor-icon">🎓</span>
-          <p><b>Thanks to John Harrison</b> for his valuable guidance, constant encouragement,
-            and support throughout this journey.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- THANKS -->
-    <section class="section" id="thanks">
-      <div class="container">
-        <div class="section-heading reveal">
-          <h2><span>Thanks</span> to</h2>
-        </div>
-
-        <div class="thanks-card reveal">
-          <div class="thanks-icon">🙏</div>
-          <p>
-            We would like to express our heartfelt thanks to everyone who has supported,
-            encouraged, and believed in this idea. Your guidance, suggestions, and continuous
-            support motivate us to keep improving Goal2Govt and help more students achieve
-            their goals.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SPECIAL THANKS -->
-    <section class="section special">
-      <div class="container">
-        <div class="section-heading reveal">
-          <h2>Special <span>Thanks</span></h2>
-          <p>We extend our special thanks to:</p>
-        </div>
-
-        <div class="partners">
-          <article class="partner reveal">
-            <div class="lakshya-logo">LAKSHYA<br><small>TECHNOLOGIES</small></div>
-            <h3>Lakshya Technologies</h3>
-          </article>
-          <article class="partner reveal">
-            <div class="college-logo">🎓</div>
-            <h3>Nethaji Degree College</h3>
-          </article>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="footer-wave"></div>
-    <div class="container footer-content">
-      <div class="footer-brand">Goal<span>2</span>Govt</div>
-      <p>One Nation • Accessible Aspirants • One Goal</p>
-      <div class="flag">🇮🇳</div>
-      <small>© <span id="year"></span> Goal2Govt | Team Build.exe</small>
+      <div class="ap-pencil-cup"></div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <button id="topBtn" class="top-btn" aria-label="Back to top">↑</button>
+<!-- Our Mission -->
+<section class="ap-split">
+  <div class="ap-split-text">
+    <h2>Our <span class="ap-tag">Mission</span></h2>
+    <div class="ap-underline"></div>
+    <p>Our mission is to make government exam preparation simple, accessible, and
+      effective for every student in India.</p>
+    <p>We aim to provide high-quality study material, authentic question papers, and
+      guidance so that every aspirant can prepare with confidence and achieve their goals,
+      regardless of their background or location.</p>
+  </div>
+  <div class="ap-split-visual">
+    <div class="ap-target-wrap">
+      <div class="ap-target"></div>
+      <div class="ap-arrow"></div>
+      <div class="ap-note-card">Simple<br>Accessible<br>Effective<br>For Every Aspirant</div>
+    </div>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- Our Vision -->
+<section class="ap-split ap-vision">
+  <div class="ap-split-text">
+    <h2>Our <span class="ap-tag">Vision</span></h2>
+    <div class="ap-underline"></div>
+    <p>To become India's most trusted and student-friendly platform for government exams,
+      helping millions of aspirants turn their dreams into reality with the right
+      resources, guidance, and continuous support.</p>
+    <p>We envision a future where every aspirant, regardless of their background, can
+      access quality resources, stay updated, practice effectively, and move one step
+      closer to a successful career in government service.</p>
+  </div>
+  <div class="ap-split-visual">
+    <div class="ap-arch-wrap">
+      <div class="ap-vision-tag">
+        <span class="line">One Nation</span>
+        <span class="line ap-orange">Accessible</span>
+        <span class="line">Aspirants</span>
+        <span class="line ap-orange">One Goal</span>
+      </div>
+      <div class="ap-arch"></div>
+      <div class="ap-walker"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Goal2Govt -->
+<section class="ap-why">
+  <h2>Why Choose <span>Goal2Govt?</span></h2>
+  <p class="ap-sub">Everything you need for your government job preparation, in one place.</p>
+  <div class="ap-why-grid">
+    <div class="ap-why-card">
+      <div class="ap-why-icon" style="background:#dff3e6;color:#2F7D4F;">✅</div>
+      <h4>Reliable Information</h4>
+      <p>Authentic and updated content from trusted sources.</p>
+    </div>
+    <div class="ap-why-card">
+      <div class="ap-why-icon" style="background:#ffe6d1;color:#c9711f;">👥</div>
+      <h4>Student Friendly</h4>
+      <p>Simple, clean and easy to use.</p>
+    </div>
+    <div class="ap-why-card">
+      <div class="ap-why-icon" style="background:#ece2ff;color:#7b3fd1;">₹</div>
+      <h4>Completely Free (Initially)</h4>
+      <p>Accessible for every student.</p>
+    </div>
+    <div class="ap-why-card">
+      <div class="ap-why-icon" style="background:#dcebff;color:#1565c0;">📈</div>
+      <h4>Helps in Career Growth</h4>
+      <p>Guidance beyond just exams.</p>
+    </div>
+    <div class="ap-why-card">
+      <div class="ap-why-icon" style="background:#ffe0ec;color:#d1447e;">❤️</div>
+      <h4>Built with Passion</h4>
+      <p>Created by students who understand your needs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Founder & Idea -->
+<section class="ap-founder">
+  <h2>Founder <span>&amp; Idea</span></h2>
+  <div class="ap-founder-grid">
+    <div class="ap-founder-card blue">
+      <div class="ap-founder-icon">👤</div>
+      <div>
+        <div class="ap-founder-role">Founder &amp; Developer</div>
+        <div class="ap-founder-name">Nikhil Boddu</div>
+        <p class="ap-founder-desc">Founder of Team Build.exe and developed Goal2Govt.
+          Passionate about technology and creating useful resources for students.</p>
+      </div>
+    </div>
+    <div class="ap-founder-card peach">
+      <div class="ap-founder-icon">💡</div>
+      <div>
+        <div class="ap-founder-role">A Small Idea From</div>
+        <div class="ap-founder-name">Kodam Ram Prasad</div>
+        <p class="ap-founder-desc">A small idea from Ram Prasad. Always motivating and
+          supporting the team to build something useful for students.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Team -->
+<section class="ap-team">
+  <h2>Our <span>Team</span></h2>
+  <p class="ap-sub">We sincerely thank our friends and team members for their constant support, encouragement, and contribution.</p>
+  <div class="ap-team-grid">
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Jagithyala Ruchitha</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Mandala Bharath</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Sadala Tejapriya</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Konda Akshaya</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Kodam Nainesh</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Chikile Rani</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Adepu Manmitha</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Samala Rajanandini</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Oggu Aishwarya</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Nakka Bhavana</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Nadimetla Ravali</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Kondi Ganesh</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Suruvu Harshitha</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Gorityala Akshaya</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Gadapa Tejashwini</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Gosikonda Alekhya</span></div>
+  </div>
+</section>
+
+<!-- Mentor thanks -->
+<section class="ap-mentor">
+  <div class="ap-mentor-box">
+    <div class="ap-mentor-icon">🎓</div>
+    <p>Thanks to <b>John Harrison sir</b> for his valuable guidance, constant
+      encouragement, and support throughout this journey.</p>
+  </div>
+</section>
+
+<!-- Thanks to -->
+<section class="ap-thanks">
+  <h2>Thanks To</h2>
+  <div class="ap-thanks-box">
+    <div class="ap-thanks-icon">🙏</div>
+    <p>We would like to express our heartfelt thanks to everyone who has supported,
+      encouraged, and believed in this idea. Your guidance, suggestions, and continuous
+      support motivate us to keep improving Goal2Govt and help more students achieve
+      their goals.</p>
+  </div>
+</section>
+
+<!-- Special Thanks -->
+<section class="ap-special">
+  <h2>Special <span class="ap-tag">Thanks</span></h2>
+  <p class="ap-sub">We extend our special thanks to:</p>
+  <div class="ap-special-row">
+    <div class="ap-special-card">
+      <div class="ap-lakshya-mark">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 4 A16 16 0 1 1 9 31" stroke="#1565c0" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M20 12 A8 8 0 1 1 15 25" stroke="#5aa9e6" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="ap-lakshya-word">LAK<span>SHYA</span></span>
+      </div>
+      <div class="ap-lakshya-caption">TECHNOLOGIES</div>
+      <div class="ap-special-name">Lakshya Technologies</div>
+    </div>
+    <div class="ap-special-card">
+      <div class="ap-seal">🎓</div>
+      <div class="ap-special-name">Nethaji Degree College</div>
+    </div>
+  </div>
+</section>
+
+<div class="ap-footer-art">
+  <svg viewBox="0 0 1200 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.0" y="130" width="46.0" height="70" fill="#b9cbe4"/>
+    <rect x="50.0" y="90" width="46.0" height="110" fill="#a7bcdc"/>
+    <rect x="100.0" y="140" width="46.0" height="60" fill="#b9cbe4"/>
+    <rect x="150.0" y="60" width="46.0" height="140" fill="#a7bcdc"/>
+    <rect x="200.0" y="110" width="46.0" height="90" fill="#b9cbe4"/>
+    <rect x="250.0" y="80" width="46.0" height="120" fill="#a7bcdc"/>
+    <rect x="300.0" y="125" width="46.0" height="75" fill="#b9cbe4"/>
+    <rect x="350.0" y="50" width="46.0" height="150" fill="#a7bcdc"/>
+    <rect x="400.0" y="105" width="46.0" height="95" fill="#b9cbe4"/>
+    <rect x="450.0" y="135" width="46.0" height="65" fill="#a7bcdc"/>
+    <rect x="500.0" y="70" width="46.0" height="130" fill="#b9cbe4"/>
+    <rect x="550.0" y="100" width="46.0" height="100" fill="#a7bcdc"/>
+    <rect x="600.0" y="120" width="46.0" height="80" fill="#b9cbe4"/>
+    <rect x="650.0" y="55" width="46.0" height="145" fill="#a7bcdc"/>
+    <rect x="700.0" y="110" width="46.0" height="90" fill="#b9cbe4"/>
+    <rect x="750.0" y="90" width="46.0" height="110" fill="#a7bcdc"/>
+    <rect x="800.0" y="130" width="46.0" height="70" fill="#b9cbe4"/>
+    <rect x="850.0" y="75" width="46.0" height="125" fill="#a7bcdc"/>
+    <rect x="900.0" y="115" width="46.0" height="85" fill="#b9cbe4"/>
+    <rect x="950.0" y="140" width="46.0" height="60" fill="#a7bcdc"/>
+    <rect x="1000.0" y="65" width="46.0" height="135" fill="#b9cbe4"/>
+    <rect x="1050.0" y="105" width="46.0" height="95" fill="#a7bcdc"/>
+    <rect x="1100.0" y="125" width="46.0" height="75" fill="#b9cbe4"/>
+    <rect x="1150.0" y="85" width="46.0" height="115" fill="#a7bcdc"/>
+    <polygon points="560,200 560,90 585,60 610,90 610,200" fill="#8fa8cc"/>
+    <polygon points="620,200 620,90 645,60 670,90 670,200" fill="#8fa8cc"/>
+  </svg>
+</div>
+<div class="ap-tricolor-bar"></div>
+<footer>
+  &copy; 2026 Goal2Govt. Find Your Path to Success.
+</footer>
+
+<!-- Detail modal: tabbed sheet reused for government jobs, roadmap careers, category overviews and tips -->
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+  <div class="sheet">
+    <div class="sheet-sticky">
+      <div class="sheet-head" id="sheetHead">
+        <button class="close-btn" id="closeBtn" aria-label="Close">✕</button>
+        <span class="code" id="sheetCode"></span>
+        <h2 id="sheetTitle"></h2>
+        <div class="tier-label" id="sheetTier"></div>
+      </div>
+      <div class="section-tabs"></div>
+    </div>
+    <div class="sheet-body"></div>
+  </div>
+</div>
+
+<!-- Auth modal: Sign Up / Log In (client-side demo auth, stored in this browser only) -->
+<div class="overlay" id="authOverlay" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+  <div class="sheet auth-sheet">
+    <button class="close-btn" id="authCloseBtn" aria-label="Close">✕</button>
+    <div class="auth-body">
+      <h2 id="authTitle">Welcome to Goal2Govt</h2>
+      <div class="auth-tabs">
+        <button class="auth-tab-btn active" data-authtab="login">Log In</button>
+        <button class="auth-tab-btn" data-authtab="signup">Sign Up</button>
+      </div>
+
+      <form id="loginForm" class="auth-form">
+        <label>Email</label>
+        <input type="email" id="loginEmail" required autocomplete="email">
+        <label>Password</label>
+        <input type="password" id="loginPassword" required autocomplete="current-password">
+        <p class="auth-error" id="loginError"></p>
+        <button type="submit" class="auth-submit">Log In</button>
+      </form>
+
+      <form id="signupForm" class="auth-form" style="display:none;">
+        <label>Full Name</label>
+        <input type="text" id="signupName" required autocomplete="name">
+        <label>Email</label>
+        <input type="email" id="signupEmail" required autocomplete="email">
+        <label>Password</label>
+        <input type="password" id="signupPassword" required autocomplete="new-password" minlength="6">
+        <label>Confirm Password</label>
+        <input type="password" id="signupConfirm" required autocomplete="new-password" minlength="6">
+        <p class="auth-error" id="signupError"></p>
+        <button type="submit" class="auth-submit">Create Free Account</button>
+      </form>
+
+      <p class="auth-disclaimer">Demo account system — your details are stored only in this browser, not on a server. Don't reuse a real password.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Timed mock exam — full screen, separate from the casual practice quiz -->
+<div class="overlay fullscreen" id="examOverlay" role="dialog" aria-modal="true" aria-labelledby="examJobTitle">
+  <div class="sheet exam-sheet">
+    <div class="exam-topbar">
+      <div class="exam-topbar-info">
+        <div class="exam-job-title" id="examJobTitle"></div>
+        <div class="exam-progress" id="examProgress"></div>
+      </div>
+      <div class="exam-timer" id="examTimer">--:--</div>
+      <button class="close-btn" id="examCloseBtn" aria-label="Close">✕</button>
+    </div>
+    <div class="exam-body" id="examBody"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
