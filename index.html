@@ -14,10 +14,10 @@
   <nav>
     <ul>
       <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="#roadmap-section">Roadmaps</a></li>
+      <!-- <li><a href="#roadmap-section">Roadmaps</a></li> -->
+      <li><a href="#explorer-section">Jobs & Details</a></li>
       <li><a href="#prep-section">Exam Prep</a></li>
       <li><a href="#mockexam-section">Mock Test</a></li>
-      <li><a href="#explorer-section">Jobs & Details</a></li>
       <li><a href="about.html">About Us</a></li>
     </ul>
   </nav>
@@ -39,7 +39,7 @@
   <div class="hero-visual">
     <div class="illustration">
       <span>Personalized guidance for every qualification level — from 10th pass to B.Tech</span>
-      <span class="illustration-sub">It is a student-built platform</span>
+      <span class="illustration-sub">It is a student-built platform by Team Build.exe</span>
     </div>
   </div>
 </section>
@@ -125,69 +125,7 @@
     </div>
   </div>
 </section>
-
-<!-- ===================== Exam Prep (already on home page) ===================== -->
-<section id="prep-section">
-  <h2 class="section-title">Exam Preparation <span class="link">Dashboard</span></h2>
-  <div class="prep-grid">
-    <div class="prep-card" id="card-previous-papers">
-      <div class="prep-icon">⬇️</div>
-      <div class="prep-body">
-        <h3>Previous Year Papers</h3>
-        <p>PDF Files</p>
-      </div>
-    </div>
-    <div class="prep-card" id="card-ebooks">
-      <div class="prep-icon">📱</div>
-      <div class="prep-body">
-        <h3>E-Books &amp; Guides</h3>
-        <p>Essential Study Guides</p>
-      </div>
-    </div>
-    <div class="prep-card" id="card-career-tips">
-      <div class="prep-icon">💡</div>
-      <div class="prep-body">
-        <h3>Career Tips</h3>
-        <p>Expert Advice</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== Mock Test (moved from mocktest.html) ===================== -->
-<section class="page-banner">
-  <h1>Timed Mock Exam</h1>
-  <p>Practice with a real-time timed test that matches the pattern of your target exam.</p>
-</section>
-
-<section id="mockexam-section">
-  <h2 class="section-title">Timed Mock Exam <span class="link">Sign-Up Members Only</span></h2>
-
-  <div class="mock-panel" id="mockLocked">
-    <div class="mock-lock-icon">🔒</div>
-    <h3>Sign up free to attend a real-time timed mock exam</h3>
-    <p>Guests can browse every job, roadmap and the casual practice quiz for free. A full timed mock exam — matching the question count and duration of the real exam pattern — is available once you create a free account.</p>
-    <button class="mock-cta" id="mockSignupCta">Sign Up / Log In</button>
-  </div>
-
-  <div class="mock-panel mock-panel-active" id="mockUnlocked" style="display:none;">
-    <p class="mock-welcome" id="mockWelcome"></p>
-    <div class="mock-select-row">
-      <div class="mock-field">
-        <label for="mockTierSelect">Qualification</label>
-        <select id="mockTierSelect"></select>
-      </div>
-      <div class="mock-field">
-        <label for="mockJobSelect">Exam / Job Role</label>
-        <select id="mockJobSelect"></select>
-      </div>
-    </div>
-    <div class="mock-pattern-box" id="mockPatternBox"></div>
-    <p class="mock-set-intro">Pick any set below — each one is a distinct, repeatable mock test (same question count and time limit as the real exam pattern above).</p>
-    <div class="mock-set-row" id="mockSetRow"></div>
-  </div>
-</section>
-
+  
 <!-- ===================== Jobs & Details (moved from jobsdetails.html) ===================== -->
 <section class="page-banner">
   <h1>Jobs &amp; Details</h1>
@@ -228,6 +166,68 @@
 <footer>
   &copy; 2026 Goal2Govt. Find Your Path to Success.
 </footer>
+
+  <!-- ===================== Exam Prep (already on home page) ===================== -->
+<section id="prep-section">
+  <h2 class="section-title">Exam Preparation <span class="link">Dashboard</span></h2>
+  <div class="prep-grid">
+    <div class="prep-card" id="card-previous-papers">
+      <div class="prep-icon">⬇️</div>
+      <div class="prep-body">
+        <h3>Previous Year Papers</h3>
+        <p>PDF Files</p>
+      </div>
+    </div>
+    <div class="prep-card" id="card-ebooks">
+      <div class="prep-icon">📱</div>
+      <div class="prep-body">
+        <h3>E-Books &amp; Guides</h3>
+        <p>Essential Study Guides</p>
+      </div>
+    </div>
+    <div class="prep-card" id="card-career-tips">
+      <div class="prep-icon">💡</div>
+      <div class="prep-body">
+        <h3>Career Tips</h3>
+        <p>Expert Advice</p>
+      </div>
+    </div>
+  </div>
+</section>
+  
+<!-- ===================== Mock Test (moved from mocktest.html) ===================== -->
+<section class="page-banner">
+  <h1>Timed Mock Exam</h1>
+  <p>Practice with a real-time timed test that matches the pattern of your target exam.</p>
+</section>
+
+<section id="mockexam-section">
+  <h2 class="section-title">Timed Mock Exam <span class="link">Sign-Up Members Only</span></h2>
+
+  <div class="mock-panel" id="mockLocked">
+    <div class="mock-lock-icon">🔒</div>
+    <h3>Sign up free to attend a real-time timed mock exam</h3>
+    <p>Guests can browse every job, roadmap and the casual practice quiz for free. A full timed mock exam — matching the question count and duration of the real exam pattern — is available once you create a free account.</p>
+    <button class="mock-cta" id="mockSignupCta">Sign Up / Log In</button>
+  </div>
+
+  <div class="mock-panel mock-panel-active" id="mockUnlocked" style="display:none;">
+    <p class="mock-welcome" id="mockWelcome"></p>
+    <div class="mock-select-row">
+      <div class="mock-field">
+        <label for="mockTierSelect">Qualification</label>
+        <select id="mockTierSelect"></select>
+      </div>
+      <div class="mock-field">
+        <label for="mockJobSelect">Exam / Job Role</label>
+        <select id="mockJobSelect"></select>
+      </div>
+    </div>
+    <div class="mock-pattern-box" id="mockPatternBox"></div>
+    <p class="mock-set-intro">Pick any set below — each one is a distinct, repeatable mock test (same question count and time limit as the real exam pattern above).</p>
+    <div class="mock-set-row" id="mockSetRow"></div>
+  </div>
+</section>
 
 <!-- Detail modal: tabbed sheet reused for government jobs, roadmap careers, category overviews and tips -->
 <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
