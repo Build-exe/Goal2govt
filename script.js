@@ -2093,7 +2093,7 @@ function openCategoryOverview(kind){
    you — or edit this array yourself, it's plain JavaScript.
    ============================================================ */
 const userPapers = [
- { title: "SSC-CGL-T-I-Similar-Paper-12-Sep-2025-S1-English.pdf", url: "https://drive.google.com/file/d/1z6cl35kcrfTMso-FK4zSuYxVmHI3IFwZ/view?usp=drive_link" },
+   { title: "SSC-CGL-T-I-Similar-Paper-12-Sep-2025-S1-English.pdf", url: "https://drive.google.com/file/d/1z6cl35kcrfTMso-FK4zSuYxVmHI3IFwZ/view?usp=drive_link" },
    { title: "SSC-CGL-QUESTION-PAPER-13-Aug-2021-Shift-1-English", url: "https://drive.google.com/file/d/1hV2ljDa0cQ3a2d3PXcrbAoELy3eVR3Hb/view?usp=sharing" },
    { title: "SSC-CGL-Tier-1-Question-Paper-English_09_09_2024", url: "https://drive.google.com/file/d/1oQ0pve3M2Q7E3QplLPaQrVwQYVJXhlTM/view?usp=drive_link" },
    { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://drive.google.com/file/d/1RTFsKH_e484xoSb4bzxLnIKmG3gML9ko/view?usp=drive_link" },
@@ -2111,8 +2111,6 @@ const userPapers = [
    { title: "MTS_Havaldar_CBIC_CBN_2024_Shift2_QA.pdf", url: "https://drive.google.com/file/d/1O2lu2vr3ZMdrigY0_I0IOq1gswMauumB/view?usp=drive_link" },
    { title: "RRB GROUP D SOLVED PAPER 2022 Shift 2.pdf", url: "https://drive.google.com/file/d/13vYwc8ws1eO_nyaJOJiJaggOXsB2VS9d/view?usp=drive_link" },
    { title: "bsf-head-constable-ministerial-paper-18-jun-2023-shift-2 (1).pdf, url: "https://drive.google.com/file/d/1wuFetGQD25eCnSQJotpOTr57rr6NrdH5/view?usp=drive_link" },
-{ title: "bsf-head-constable-ministerial-paper-18-jun-2023-shift-2.pdf", url: "https://drive.google.com/file/d/1O65zgeBCfpjfVuPyg7WwNRPMp85nhRaZ/view?usp=drive_link" },
-
 ];
 
 /* ============================================================
