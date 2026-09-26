@@ -60,10 +60,14 @@
     flex:1;min-width:280px;display:flex;justify-content:center;z-index:2;
   }
   .hero-visual .illustration{
-    width:100%;max-width:420px;height:230px;background:rgba(255,255,255,0.12);
-    border-radius:24px;display:flex;align-items:center;justify-content:center;
-    font-size:15px;color:rgba(255,255,255,.85);text-align:center;padding:20px;
+    width:100%;max-width:420px;min-height:230px;background:rgba(255,255,255,0.12);
+    border-radius:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:12px;font-size:15px;color:rgba(255,255,255,.85);text-align:center;padding:20px;
     border:1px solid rgba(255,255,255,.25);
+  }
+  .hero-visual .illustration-sub{
+    font-size:12.5px;font-weight:700;letter-spacing:.03em;color:#fff;
+    background:rgba(255,255,255,.18);padding:6px 14px;border-radius:16px;
   }
 
   section{padding:56px 40px;}
@@ -453,6 +457,7 @@
   .ap-split h2{font-size:27px;font-weight:800;color:var(--text-dark);margin-bottom:6px;}
   .ap-split p{font-size:14px;line-height:1.75;color:var(--text-mid);margin-bottom:12px;}
   .ap-split-visual{display:flex;align-items:center;justify-content:center;}
+  .ap-split-visual svg{width:100%;height:auto;max-width:340px;}
 
   /* Our Story — stacked "book spine" visual */
   .ap-books{
@@ -627,6 +632,7 @@
     display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--blue-dark);
   }
   .ap-special-card .ap-special-name{font-size:12.5px;font-weight:700;color:var(--text-dark);text-align:center;}
+  .ap-special-logo{max-width:150px;width:100%;height:auto;margin:0 auto 10px;border-radius:8px;object-fit:contain;}
 
   /* Footer decorative skyline + tricolor wave */
   .ap-footer-art{
