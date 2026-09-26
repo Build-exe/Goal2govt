@@ -2102,6 +2102,17 @@ const userPapers = [
    { title: "RRB-NTPC-2019-CBT-1-Question-Paper-1", url: "https://drive.google.com/file/d/1rz-8ZhN2V8kJtg2Dw2XElOxG96whdmCZ/view?usp=drive_link" },
    { title: "RRB-NTPC-2019-CBT-1-Question-Paper-1", url: "https://drive.google.com/file/d/195FMkB-SgoNwae9NEnBjv9LSjH4YEVqa/view?usp=drive_link" },
    { title: "RRB-NTPC-2019-01_04_2021_-10_30-am-to-12_00-Paper-1", url: "https://drive.google.com/file/d/1CrU4c_Tfm43DBGEeX7qlr-m08uEphWI7/view?usp=drive_link" },
+   { title: "CRPF_Constable_Tech_Tradesman_01July2023_Shift1_QA", url: "https://drive.google.com/file/d/1Y8Em9XBgBxSE4Cbcvddj1mfy77VpgsQr/view?usp=drive_link" },
+   { title: "QP_CAPF_2023_GAI_07082023.pdf", url: "https://drive.google.com/file/d/1kjgq6NWjs_vfndqS4O0eG2jdTMyaXz9-/view?usp=drive_link" },
+   { title: "QP-CAPF-22-GAI-080822.pdf", url: "https://drive.google.com/file/d/1hOeW3K6ftbPgntvjcSq6382sNmDISqtr/view?usp=drive_link" },
+   { title: "QP-CAPF-19-GEA.pdf", url: "https://drive.google.com/file/d/1jbmfpvkSYt4MX58qUKVbCnf-gnmlrX6c/view?usp=drive_link" },
+   { title: "CAPF-2018-GENERAL-ABILITY.pdf", url: "https://drive.google.com/file/d/1oJbMPKBR6pNQhnGSYdqmfc5dAzQwkbz2/view?usp=drive_link" },
+   { title: "cisf ASI paramedical staff Sample paper 1.pdf", url: "https://drive.google.com/file/d/1iJWpbueOp1828r6WJyHpVzI16luZ3fZx/view?usp=drive_link" },
+   { title: "MTS_Havaldar_CBIC_CBN_2024_Shift2_QA.pdf", url: "https://drive.google.com/file/d/1O2lu2vr3ZMdrigY0_I0IOq1gswMauumB/view?usp=drive_link" },
+   { title: "RRB GROUP D SOLVED PAPER 2022 Shift 2.pdf", url: "https://drive.google.com/file/d/13vYwc8ws1eO_nyaJOJiJaggOXsB2VS9d/view?usp=drive_link" },
+   { title: "bsf-head-constable-ministerial-paper-18-jun-2023-shift-2 (1).pdf, url: "https://drive.google.com/file/d/1wuFetGQD25eCnSQJotpOTr57rr6NrdH5/view?usp=drive_link" },
+{ title: "bsf-head-constable-ministerial-paper-18-jun-2023-shift-2.pdf", url: "https://drive.google.com/file/d/1O65zgeBCfpjfVuPyg7WwNRPMp85nhRaZ/view?usp=drive_link" },
+
 ];
 
 /* ============================================================
