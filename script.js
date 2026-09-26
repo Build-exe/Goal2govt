@@ -2110,7 +2110,6 @@ const userPapers = [
    { title: "cisf ASI paramedical staff Sample paper 1.pdf", url: "https://drive.google.com/file/d/1iJWpbueOp1828r6WJyHpVzI16luZ3fZx/view?usp=drive_link" },
    { title: "MTS_Havaldar_CBIC_CBN_2024_Shift2_QA.pdf", url: "https://drive.google.com/file/d/1O2lu2vr3ZMdrigY0_I0IOq1gswMauumB/view?usp=drive_link" },
    { title: "RRB GROUP D SOLVED PAPER 2022 Shift 2.pdf", url: "https://drive.google.com/file/d/13vYwc8ws1eO_nyaJOJiJaggOXsB2VS9d/view?usp=drive_link" },
-   { title: "bsf-head-constable-ministerial-paper-18-jun-2023-shift-2 (1).pdf, url: "https://drive.google.com/file/d/1wuFetGQD25eCnSQJotpOTr57rr6NrdH5/view?usp=drive_link" },
 ];
 
 /* ============================================================
