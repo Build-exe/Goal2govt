@@ -1,56 +1,21 @@
-const express = require("express");
-const cors = require("cors");
-const mysql = require("mysql2");
-require("dotenv").config();
+require('dotenv').config();
+const path = require('path');
+const express = require('express');
+const authRoutes = require('./routes/auth');
 
 const app = express();
+const PORT = process.env.PORT || 3000;
+const FRONTEND_DIR = path.join(__dirname, '..', 'frontend');
 
-app.use(cors());
 app.use(express.json());
 
-// MySQL connection
-const db = mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    port: process.env.DB_PORT
-});
+// Auth API used by the Sign Up / Log In modal and the mock-test gate.
+app.use('/api', authRoutes);
 
-db.connect((err) => {
-    if (err) {
-        console.error("MySQL connection failed:", err.message);
-        return;
-    }
-
-    console.log("MySQL connected successfully!");
-});
-
-// Home route
-app.get("/", (req, res) => {
-    res.send("Goal2Govt Backend is running!");
-});
-
-// Question Papers API
-app.get("/api/question-papers", (req, res) => {
-    const sql = "SELECT * FROM question_papers ORDER BY year DESC";
-
-    db.query(sql, (err, results) => {
-        if (err) {
-            console.error("Database error:", err.message);
-
-            return res.status(500).json({
-                error: "Failed to fetch question papers"
-            });
-        }
-
-        res.json(results);
-    });
-});
-
-// Start server
-const PORT = 5000;
+// Serve the site itself (HTML/CSS/JS) from the same server, so the whole
+// project runs with a single command and there's no CORS to configure.
+app.use(express.static(FRONTEND_DIR));
 
 app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Goal2Govt running at http://localhost:${PORT}`);
 });

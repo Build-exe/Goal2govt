@@ -56,6 +56,12 @@
     cursor:pointer;box-shadow:0 6px 16px rgba(0,0,0,0.15);transition:transform .2s;
   }
   .get-started:hover{transform:translateY(-2px);}
+  .hero-btn-row{display:flex;gap:14px;flex-wrap:wrap;}
+  .get-started.secondary{
+    background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.7);
+    box-shadow:none;
+  }
+  .get-started.secondary:hover{background:rgba(255,255,255,.12);}
   .hero-visual{
     flex:1;min-width:280px;display:flex;justify-content:center;z-index:2;
   }
@@ -71,13 +77,15 @@
   }
 
   section{padding:56px 40px;}
-  .section-title{font-size:24px;font-weight:800;color:var(--text-dark);margin-bottom:24px;}
+  .section-title{font-size:24px;font-weight:800;color:var(--text-dark);margin-bottom:6px;}
   .section-title .link{font-size:15px;font-weight:600;color:var(--blue);margin-left:10px;cursor:pointer;}
+  .section-sub{font-size:14.5px;color:var(--text-mid);margin-bottom:24px;max-width:640px;}
 
   /* Explore options */
   .options-grid{
     display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
   }
+  .options-grid.single{grid-template-columns:1fr;max-width:480px;}
   .option-card{
     background:var(--card-bg);border:1px solid var(--border);border-radius:12px;
     padding:20px;display:flex;align-items:center;gap:14px;cursor:pointer;
@@ -92,41 +100,48 @@
   .option-body p{font-size:12px;color:var(--text-mid);}
   .option-arrow{margin-left:auto;color:var(--blue);font-size:18px;}
 
-  /* Roadmap cards */
-  .roadmap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-  .roadmap-card{
+  /* Dashboard cards — shared big-card style for Exam Preparation Dashboard
+     and Your Career Roadmap: gradient header (icon + title + subtitle),
+     light body with a bullet list, full-width CTA button. */
+  .dashboard-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .dashboard-card{
     background:var(--card-bg);border:1px solid var(--border);border-radius:14px;
-    overflow:hidden;display:flex;flex-direction:column;
-  }
-  .roadmap-head{
-    height:70px;background:linear-gradient(120deg,var(--blue-mid),var(--blue-light));
-    display:flex;align-items:center;padding:0 18px;color:#fff;font-weight:700;font-size:16px;
-  }
-  .roadmap-body{padding:18px;flex:1;display:flex;flex-direction:column;}
-  .roadmap-body ul{list-style:none;margin-bottom:18px;}
-  .roadmap-body li{font-size:14px;color:var(--text-mid);padding:5px 0;padding-left:16px;position:relative;}
-  .roadmap-body li::before{content:"•";color:var(--blue);position:absolute;left:0;}
-  .view-details{
-    margin-top:auto;background:var(--blue-dark);color:#fff;border:none;
-    padding:10px 0;border-radius:8px;font-weight:600;font-size:14px;cursor:pointer;
-    transition:background .2s;
-  }
-  .view-details:hover{background:var(--blue);}
-
-  /* Exam prep */
-  .prep-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
-  .prep-card{
-    background:var(--card-bg);border:1px solid var(--border);border-radius:12px;
-    padding:20px;display:flex;align-items:center;gap:14px;cursor:pointer;
+    overflow:hidden;display:flex;flex-direction:column;cursor:pointer;position:relative;
     transition:box-shadow .2s, transform .2s;
   }
-  .prep-card:hover{box-shadow:0 8px 20px rgba(13,59,122,0.12);transform:translateY(-2px);}
-  .prep-icon{
-    width:42px;height:42px;border-radius:10px;background:var(--blue-mid);
-    display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;flex-shrink:0;
+  .dc-lock-badge{
+    position:absolute;top:14px;right:14px;z-index:2;
+    display:flex;align-items:center;gap:5px;
+    background:rgba(255,255,255,.94);color:var(--blue-dark);
+    font-size:11px;font-weight:700;padding:5px 10px;border-radius:20px;
+    box-shadow:0 2px 6px rgba(0,0,0,.15);
   }
-  .prep-body h3{font-size:15px;font-weight:700;}
-  .prep-body p{font-size:12px;color:var(--text-mid);}
+  .dc-lock-badge svg{width:12px;height:12px;flex:none;}
+  .dashboard-card:hover{box-shadow:0 10px 26px rgba(13,59,122,0.14);transform:translateY(-2px);}
+  .dc-head{
+    background:linear-gradient(120deg,var(--blue-mid),var(--blue-light));
+    padding:20px 20px 22px;display:flex;align-items:flex-start;gap:14px;
+  }
+  .dc-icon{
+    flex:none;width:44px;height:44px;border-radius:10px;background:#fff;
+    display:flex;align-items:center;justify-content:center;color:var(--blue);
+    box-shadow:0 4px 10px rgba(0,0,0,.12);
+  }
+  .dc-icon svg{width:22px;height:22px;}
+  .dc-head-text h3{font-size:16.5px;font-weight:800;color:#fff;margin-bottom:3px;}
+  .dc-head-text p{font-size:12.5px;color:rgba(255,255,255,.9);}
+  .dc-body{padding:20px;flex:1;display:flex;flex-direction:column;}
+  .dc-body ul{list-style:none;margin-bottom:18px;}
+  .dc-body li{font-size:13.5px;color:var(--text-mid);padding:5px 0;padding-left:16px;position:relative;}
+  .dc-body li::before{content:"•";color:var(--blue);position:absolute;left:0;}
+  .dc-btn{
+    margin-top:auto;background:var(--blue-dark);color:#fff;border:none;
+    padding:12px 0;border-radius:8px;font-weight:700;font-size:14px;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;gap:9px;
+    transition:background .2s;
+  }
+  .dc-btn svg{width:16px;height:16px;flex:none;}
+  .dc-btn:hover{background:var(--blue);}
 
   /* Government Jobs Explorer (built from flow-chart data) */
   .explorer{
@@ -248,8 +263,19 @@
   .q-opt input{accent-color:#1e88e5;}
   .q-opt.correct{background:#1E3A2A; border-color:#2F7D4F; color:#B7E4C7;}
   .q-opt.wrong{background:#3A211C; border-color:#C1442E; color:#F2B3A5;}
+  .opt-letter{ flex:none; width:22px; height:22px; border-radius:50%; background:#3A3F48; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:11px; }
+  .q-opt.correct .opt-letter{background:#2F7D4F;}
+  .q-opt.wrong .opt-letter{background:#C1442E;}
+  .review-opts{margin-top:10px;}
+  .review-opt{cursor:default; position:relative; flex-wrap:wrap;}
+  .review-opt:hover{border-color:#3A3F48;}
+  .opt-tag{margin-left:auto; font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.03em; padding:2px 8px; border-radius:10px;}
+  .review-opt.correct .opt-tag{background:#2F7D4F; color:#fff;}
+  .review-opt.wrong .opt-tag{background:#C1442E; color:#fff;}
   .quiz-score{ margin-top:14px; background:#1e88e5; color:#fff; padding:14px 16px; border-radius:8px; font-weight:700; text-transform:uppercase; font-size:15px; display:none; }
   .quiz-score.show{display:block;}
+  .q-explain{margin-top:10px; background:#20242c; border-left:3px solid #1e88e5; border-radius:4px; padding:9px 12px; font-size:12.8px; line-height:1.6; color:#cfd6e0;}
+  .q-explain b{color:#7fc4ff;}
   .submit-quiz{margin-top:6px; background:#1e88e5; color:#fff; border:none; padding:10px 18px; border-radius:6px; font-weight:700; cursor:pointer; font-size:13.5px;}
   .submit-quiz:hover{filter:brightness(1.08);}
   @media (max-width:640px){
@@ -283,13 +309,49 @@
     .page-banner{padding:32px 20px 36px;}
   }
 
+  /* ===== Mobile nav toggle (hamburger) ===== */
+  .nav-toggle{
+    display:none;
+    flex-direction:column;justify-content:center;align-items:flex-end;gap:5px;
+    width:38px;height:38px;background:none;border:none;cursor:pointer;padding:0;
+    flex-shrink:0;
+  }
+  .nav-toggle span{
+    display:block;width:24px;height:2.5px;background:var(--text-dark);border-radius:2px;
+    transition:transform .2s ease, opacity .2s ease;
+  }
+  .nav-toggle.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg);}
+  .nav-toggle.open span:nth-child(2){opacity:0;}
+  .nav-toggle.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg);}
+
   @media (max-width:900px){
     .options-grid{grid-template-columns:repeat(2,1fr);}
-    .roadmap-grid,.prep-grid{grid-template-columns:1fr;}
-    nav{display:none;}
-    header{padding:14px 20px;}
+    .options-grid.single{grid-template-columns:1fr;}
+    .roadmap-grid,.prep-grid,.dashboard-grid{grid-template-columns:1fr;}
+    header{padding:14px 20px;flex-wrap:wrap;position:relative;justify-content:flex-start;}
+    .logo{order:1;}
+    .auth-area{order:2;margin-left:auto;gap:6px;}
+    .nav-toggle{order:3;display:flex;margin-left:8px;}
+    .signup-btn,.signin-btn{padding:8px 14px;font-size:13px;}
+    nav{
+      order:4;
+      display:block;position:absolute;top:100%;left:0;width:100%;
+      background:var(--white);border-top:1px solid var(--border);
+      box-shadow:0 14px 28px rgba(13,59,122,0.14);
+      max-height:0;overflow:hidden;opacity:0;
+      transition:max-height .25s ease, opacity .2s ease;
+      z-index:49;
+    }
+    nav.open{max-height:420px;opacity:1;}
+    nav ul{flex-direction:column;gap:0;padding:6px 20px 14px;}
+    nav li{width:100%;}
+    nav a{display:block;padding:13px 0;border-bottom:1px solid var(--border);}
+    nav a.active{border-bottom:2px solid var(--blue);}
     .hero{padding:44px 20px 60px;}
     section{padding:40px 20px;}
+  }
+  @media (max-width:420px){
+    .signup-btn{display:none;}
   }
 
   /* ===== Auth area (header) ===== */
@@ -414,9 +476,10 @@
   }
   .exam-result-score .big{font-size:38px; font-weight:800;}
   .exam-result-score .sub{font-size:13.5px; opacity:.9; margin-top:4px;}
+  .exam-review-heading{font-size:14px; font-weight:700; color:#fff; margin:0 0 14px;}
   .exam-review-item{border:1px solid #3A3F48; border-radius:8px; padding:14px 16px; margin-bottom:10px;}
   .exam-review-item .rq{font-size:13.5px; font-weight:700; color:#fff; margin-bottom:8px;}
-  .exam-review-item .ra{font-size:12.8px; color:#AEB4BE; margin-bottom:3px;}
+  .exam-review-item .ra{font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.03em; color:#AEB4BE; margin-bottom:3px;}
   .exam-review-item .ra.correct{color:#B7E4C7;}
   .exam-review-item .ra.wrong{color:#F2B3A5;}
   @media (max-width:640px){
@@ -633,6 +696,26 @@
   }
   .ap-special-card .ap-special-name{font-size:12.5px;font-weight:700;color:var(--text-dark);text-align:center;}
   .ap-special-logo{max-width:150px;width:100%;height:auto;margin:0 auto 10px;border-radius:8px;object-fit:contain;}
+
+  /* Contact Us */
+  .ap-contact{padding:10px 40px 56px;text-align:center;}
+  .ap-contact h2{font-size:32px;font-weight:800;color:var(--text-dark);}
+  .ap-contact h2 .ap-tag{color:var(--blue);}
+  .ap-contact .ap-sub{font-size:16px;color:var(--text-mid);margin:8px 0 30px;}
+  .ap-contact-card{
+    max-width:420px;margin:0 auto;background:var(--white);border:1px solid var(--border);
+    border-radius:16px;padding:36px 28px;box-shadow:0 10px 30px rgba(13,59,122,0.08);
+  }
+  .ap-contact-icon{
+    width:64px;height:64px;margin:0 auto 18px;border-radius:16px;
+    background:linear-gradient(135deg,var(--blue-mid),var(--blue));
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 8px 18px rgba(21,101,192,0.3);
+  }
+  .ap-contact-icon svg{width:28px;height:28px;}
+  .ap-contact-card h3{font-size:19px;font-weight:800;color:var(--text-dark);margin-bottom:8px;}
+  .ap-contact-email{font-size:16px;color:var(--blue);font-weight:500;word-break:break-word;}
+  .ap-contact-email:hover{text-decoration:underline;}
 
   /* Footer decorative skyline + tricolor wave */
   .ap-footer-art{

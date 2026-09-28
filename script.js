@@ -72,194 +72,9 @@ const stagesByType = {
   elite: [["Prelims / Screening (or GATE Score)","Objective screening exam or your GATE score, depending on the exam."],["Mains / Descriptive Stage","In-depth written papers or specialisation-based evaluation."],["Interview / Personality Test (or SSB)","Final interview or SSB-style assessment before the merit list."]]
 };
 
-/* ---------- Practice quiz pools ---------- */
-const quizPools = {
-  p10: [
-    ["Find the next number in the series: 2, 4, 8, 16, __","24","30","32","36","32"],
-    ["Which part of the Indian Constitution lists Fundamental Duties?","Part III","Part IV-A","Part V","Part VI","Part IV-A"],
-    ["If A is the brother of B, and B is the sister of C, how is A related to C?","Father","Brother","Uncle","Cousin","Brother"],
-    ["The longest river in India is the:","Godavari","Ganga","Brahmaputra","Yamuna","Ganga"],
-    ["A train 100 m long crosses a pole in 10 seconds. Its speed is:","10 m/s","36 km/h","Both A and B","5 m/s","Both A and B"],
-    ["Which gas do plants absorb from the air for photosynthesis?","Oxygen","Nitrogen","Carbon dioxide","Hydrogen","Carbon dioxide"],
-    ["Which planet is known as the Red Planet?","Mars","Venus","Jupiter","Saturn","Mars"],
-    ["The chemical symbol for water is:","H2O","HO2","O2H","H3O","H2O"],
-    ["Complete the analogy: Bird is to Sky as Fish is to __","Sand","Water","Air","Tree","Water"],
-    ["If today is Monday, what day will it be after 10 days?","Wednesday","Thursday","Friday","Tuesday","Thursday"],
-    ["Which of these is a prime number?","21","33","37","45","37"],
-    ["The freezing point of water in Celsius is:","0","32","100","-1","0"],
-    ["Who wrote the Indian National Anthem?","Bankim Chandra Chatterjee","Rabindranath Tagore","Sarojini Naidu","Subhas Chandra Bose","Rabindranath Tagore"],
-    ["Find the missing number: 5, 10, 20, 40, __","60","70","80","45","80"],
-    ["Which is the smallest continent by area?","Asia","Africa","Australia","Europe","Australia"],
-    ["The number of sides in a hexagon is:","5","6","7","8","6"],
-    ["Which organ pumps blood in the human body?","Lungs","Heart","Kidney","Liver","Heart"],
-    ["The largest ocean on Earth is the:","Atlantic","Indian","Pacific","Arctic","Pacific"],
-    ["If 3x = 15, then x is:","3","5","8","45","5"],
-    ["Which of these is a mammal?","Shark","Frog","Whale","Crocodile","Whale"],
-    ["The capital of India is:","Mumbai","Kolkata","New Delhi","Chennai","New Delhi"],
-    ["Complete the series: A, C, E, G, __","H","I","J","F","I"],
-    ["The sun rises in the:","North","South","East","West","East"],
-    ["Which festival is known as the festival of lights?","Holi","Diwali","Eid","Baisakhi","Diwali"],
-    ["1 kilometre equals:","100 metres","1000 metres","10 metres","10000 metres","1000 metres"],
-    ["Which of these is a source of Vitamin C?","Rice","Orange","Milk","Wheat","Orange"],
-    ["The study of plants is called:","Zoology","Botany","Geology","Biology","Botany"],
-    ["If Ravi is taller than Sam, and Sam is taller than Amit, who is the shortest?","Ravi","Sam","Amit","Cannot say","Amit"],
-    ["The national bird of India is the:","Peacock","Parrot","Sparrow","Eagle","Peacock"],
-    ["Find the odd one out:","Triangle","Square","Circle","Cube","Cube"],
-    ["Which season comes right after summer in India?","Winter","Monsoon","Spring","Autumn","Monsoon"],
-    ["The value of 15% of 200 is:","20","30","25","35","30"],
-    ["Which is the fastest land animal?","Lion","Cheetah","Horse","Tiger","Cheetah"],
-    ["Water boils at what temperature in Celsius?","90","100","110","120","100"],
-    ["Complete the analogy: Doctor is to Hospital as Teacher is to __","Shop","School","Farm","Bank","School"]
-  ],
-  p12: [
-    ["Choose the correctly spelt word:","Recieve","Receive","Receeve","Receve","Receive"],
-    ["A sum of ₹1,000 becomes ₹1,100 in one year at simple interest. The rate of interest is:","5%","10%","12%","15%","10%"],
-    ["Who among the following is the ceremonial head of the Indian State?","Prime Minister","President","Chief Justice","Speaker of Lok Sabha","President"],
-    ["Pointing to a photo, Rohan said, 'She is the daughter of my grandfather's only son.' Who is she to Rohan?","Mother","Sister","Aunt","Cousin","Sister"],
-    ["Which of the following is a fundamental right under the Indian Constitution?","Right to Property","Right to Education","Right to Employment","Right to Free Legal Aid","Right to Education"],
-    ["A boat goes 10 km downstream in 1 hour and returns in 2 hours. The speed of the boat in still water is:","5 km/h","6 km/h","7.5 km/h","10 km/h","7.5 km/h"],
-    ["The HCF of 12 and 18 is:","2","3","6","9","6"],
-    ["Which article of the Indian Constitution deals with the Right to Equality?","Article 14","Article 19","Article 21","Article 32","Article 14"],
-    ["Synonym of 'Abundant' is:","Scarce","Plentiful","Rare","Empty","Plentiful"],
-    ["A sum triples itself in 8 years at simple interest. The rate of interest is:","20%","25%","12.5%","15%","25%"],
-    ["Which gas is most abundant in Earth's atmosphere?","Oxygen","Carbon Dioxide","Nitrogen","Hydrogen","Nitrogen"],
-    ["The capital of Australia is:","Sydney","Melbourne","Canberra","Perth","Canberra"],
-    ["If 20% of a number is 50, the number is:","200","250","300","100","250"],
-    ["Antonym of 'Genuine' is:","Authentic","Real","Fake","True","Fake"],
-    ["Which Five-Year Plan is associated with the early push for the Green Revolution in India?","First","Third","Fourth","Second","Third"],
-    ["The Indian Parliament's lower house is called the:","Rajya Sabha","Lok Sabha","Vidhan Sabha","Vidhan Parishad","Lok Sabha"],
-    ["If a train travels 300 km in 5 hours, its average speed is:","50 km/h","60 km/h","45 km/h","55 km/h","60 km/h"],
-    ["The currency of Japan is the:","Yuan","Won","Yen","Ringgit","Yen"],
-    ["Which vitamin deficiency causes night blindness?","Vitamin A","Vitamin B","Vitamin C","Vitamin D","Vitamin A"],
-    ["Choose the correct antonym of 'Ancient':","Old","Modern","Historic","Traditional","Modern"],
-    ["The first Prime Minister of India was:","Mahatma Gandhi","Jawaharlal Nehru","Sardar Patel","Rajendra Prasad","Jawaharlal Nehru"],
-    ["If the perimeter of a square is 40 cm, its area is:","100 sq cm","80 sq cm","64 sq cm","120 sq cm","100 sq cm"],
-    ["Which planet has the most known moons in our solar system?","Earth","Mars","Saturn","Mercury","Saturn"],
-    ["The RBI's monetary policy committee primarily targets:","Fiscal deficit","Inflation","Exchange rate alone","GDP growth alone","Inflation"],
-    ["Choose the correctly punctuated sentence:","Its a nice day","Its' a nice day","It is a nice day,","It's a nice day.","It's a nice day."],
-    ["A can do a piece of work in 10 days, B in 15 days. Together they finish it in:","5 days","6 days","8 days","12 days","6 days"],
-    ["Which Indian state has the longest coastline?","Kerala","Tamil Nadu","Gujarat","Andhra Pradesh","Gujarat"],
-    ["The 42nd Amendment to the Indian Constitution added which term to the Preamble?","Sovereign","Socialist","Republic","Democratic","Socialist"],
-    ["Which of these is a landlocked country?","Sri Lanka","Nepal","Bangladesh","Myanmar","Nepal"],
-    ["The chemical formula for common salt is:","NaCl","KCl","CaCl2","NaOH","NaCl"],
-    ["Simple interest on ₹5,000 at 8% per annum for 2 years is:","₹400","₹800","₹4,300","₹500","₹800"],
-    ["Which day is celebrated as World Environment Day?","June 5","April 22","March 21","October 2","June 5"],
-    ["The synonym of 'Diligent' is:","Lazy","Hardworking","Careless","Slow","Hardworking"],
-    ["Which committee's recommendations are associated with GST design in India?","Chelliah Committee","Kelkar Committee","Narasimham Committee","Rangarajan Committee","Kelkar Committee"],
-    ["Which of these is a fundamental right guaranteed to Indian citizens?","Right to Education","Right to Property","Right to Free Electricity","Right to Employment","Right to Education"]
-  ],
-  technical: [
-    ["Which of these is the best conductor of electricity?","Rubber","Copper","Wood","Plastic","Copper"],
-    ["The SI unit of force is the:","Joule","Newton","Watt","Pascal","Newton"],
-    ["1 Horsepower is approximately equal to:","550 W","746 W","1000 W","500 W","746 W"],
-    ["Find the odd one out:","Screwdriver","Hammer","Spanner","Ruler","Ruler"],
-    ["A motor draws 100 W and works at 80% efficiency. Its output power is:","60 W","70 W","80 W","90 W","80 W"],
-    ["Which of the following is a measuring instrument for current?","Voltmeter","Ammeter","Barometer","Thermometer","Ammeter"],
-    ["Which of these tools is used to measure diameter precisely?","Ruler","Vernier Caliper","Measuring Tape","Protractor","Vernier Caliper"],
-    ["The unit of electrical power is:","Volt","Ampere","Watt","Ohm","Watt"],
-    ["Which material is a good electrical insulator?","Copper","Aluminium","Rubber","Iron","Rubber"],
-    ["A transformer works on the principle of:","Electromagnetic Induction","Thermal Expansion","Friction","Gravity","Electromagnetic Induction"],
-    ["The SI unit of pressure is:","Pascal","Newton","Joule","Watt","Pascal"],
-    ["A distinctive feature of a two-stroke engine compared to a four-stroke engine is:","Camshaft","Valve Train","Port Timing","Turbocharger","Port Timing"],
-    ["1 kWh of energy equals:","1000 Joules","3.6 million Joules","1 Joule","36 Joules","3.6 million Joules"],
-    ["Which welding process uses a consumable electrode with shielding gas?","MIG","TIG","Gas Welding","Brazing","MIG"],
-    ["Find the odd one out:","Voltmeter","Ammeter","Wattmeter","Barometer","Barometer"],
-    ["A digital multimeter can measure:","Only voltage","Only current","Voltage, current and resistance","Only temperature","Voltage, current and resistance"],
-    ["The working principle of a generator is based on:","Electromagnetic Induction","Thermionic Emission","Photoelectric Effect","Nuclear Fission","Electromagnetic Induction"],
-    ["Which of these is a cutting tool in a lathe machine?","Chuck","Tailstock","Tool bit","Headstock","Tool bit"],
-    ["The unit of thermal conductivity is measured in:","W/m\u00b7K","J/s","N\u00b7m","Pa\u00b7s","W/m\u00b7K"],
-    ["In a 4-stroke engine, how many strokes make one complete cycle?","2","4","6","8","4"],
-    ["Which gas is commonly used as a shielding gas in arc welding?","Oxygen","Argon","Hydrogen","Chlorine","Argon"],
-    ["A fuse in an electrical circuit works on the principle of:","Magnetic effect","Heating effect of current","Chemical effect","Static electricity","Heating effect of current"],
-    ["The standard voltage of a single-phase household supply in India is:","110V","220V","440V","12V","220V"],
-    ["Which instrument is used to check the levelness of a surface?","Vernier caliper","Spirit level","Micrometer","Screw gauge","Spirit level"],
-    ["A micrometer screw gauge typically measures to an accuracy of:","1 mm","0.1 mm","0.01 mm","1 cm","0.01 mm"],
-    ["Which type of current does a household supply typically provide?","DC","AC","Both equally","Neither","AC"],
-    ["The primary function of a transformer's core is to:","Store charge","Provide a low-reluctance path for magnetic flux","Generate voltage","Convert AC to DC","Provide a low-reluctance path for magnetic flux"],
-    ["Which of the following is used to join two pipes permanently?","Welding","Bolting","Riveting temporarily","Clamping","Welding"],
-    ["The main function of a carburetor in a petrol engine is to:","Cool the engine","Mix air and fuel","Lubricate parts","Generate spark","Mix air and fuel"],
-    ["Ohm's Law states that voltage equals:","Current \u00d7 Resistance","Current \u00f7 Resistance","Current + Resistance","Current \u2212 Resistance","Current \u00d7 Resistance"],
-    ["Which trade primarily deals with pipefitting and plumbing systems?","Fitter","Plumber","Turner","Machinist","Plumber"],
-    ["A relay in an electrical circuit is mainly used as a:","Resistor","Switch operated by an electromagnet","Capacitor","Fuse","Switch operated by an electromagnet"],
-    ["The process of hardening the surface of steel while keeping the core soft is called:","Annealing","Case hardening","Tempering","Normalizing","Case hardening"],
-    ["A center punch is used in a workshop to:","Cut metal","Mark a point for drilling","Measure length","Weld joints","Mark a point for drilling"],
-    ["Which of these is a common ITI trade in the electrical stream?","Wireman","Turner","Fitter","Machinist","Wireman"]
-  ],
-  grad: [
-    ["The 'Prelims' stage of most graduate-level competitive exams mainly tests:","Descriptive writing","Objective/MCQ ability","Physical fitness","Interview skills","Objective/MCQ ability"],
-    ["Which body conducts the exam for IAS, IPS and IFS recruitment?","SSC","UPSC","IBPS","State PSC","UPSC"],
-    ["In banking exams, 'CRR' stands for:","Cash Reserve Ratio","Credit Rating Ratio","Cash Repayment Rate","Capital Reserve Rate","Cash Reserve Ratio"],
-    ["If the ratio of two numbers is 3:5 and their sum is 96, the smaller number is:","30","36","40","48","36"],
-    ["Which schedule of the Constitution deals with the allocation of seats in the Rajya Sabha?","Second Schedule","Fourth Schedule","Seventh Schedule","Ninth Schedule","Fourth Schedule"],
-    ["A can finish a work in 12 days and B in 18 days. Working together, they will finish it in:","6 days","7.2 days","8 days","9 days","7.2 days"],
-    ["The 'Mains' stage of most graduate-level exams is typically:","Objective only","Descriptive or in-depth","Physical","Only an interview","Descriptive or in-depth"],
-    ["Which body regulates monetary policy in India?","SEBI","RBI","IRDAI","NABARD","RBI"],
-    ["The Indian Constitution was adopted by the Constituent Assembly on:","26 January 1950","15 August 1947","26 November 1949","2 October 1950","26 November 1949"],
-    ["If the average of 5 numbers is 20, their sum is:","100","80","25","120","100"],
-    ["Which committee recommended major banking sector reforms in India in 1991?","Narasimham Committee","Chelliah Committee","Rangarajan Committee","Tarapore Committee","Narasimham Committee"],
-    ["A profit of 20% on cost price means the selling price is what multiple of the cost price?","1.1","1.2","1.25","1.5","1.2"],
-    ["Which writ is issued to produce a detained person before a court?","Mandamus","Habeas Corpus","Certiorari","Quo Warranto","Habeas Corpus"],
-    ["A country's national income measured at current prices is called:","Real GDP","Nominal GDP","Per Capita Income","Green GDP","Nominal GDP"],
-    ["Which of these is listed as a Fundamental Duty under the Indian Constitution?","Right to vote","Protect the environment","Right to property","Right to privacy","Protect the environment"],
-    ["Which Article of the Indian Constitution deals with the abolition of untouchability?","Article 15","Article 17","Article 21","Article 25","Article 17"],
-    ["The term 'Fiscal Deficit' refers to:","Total revenue minus total expenditure","Total expenditure minus total receipts excluding borrowings","Total imports minus exports","Total tax minus subsidies","Total expenditure minus total receipts excluding borrowings"],
-    ["If the marked price of an item is ₹1,200 and a discount of 15% is given, the selling price is:","₹1,020","₹1,050","₹1,080","₹1,000","₹1,020"],
-    ["Which international organisation publishes the Human Development Index?","WTO","UNDP","IMF","World Bank","UNDP"],
-    ["The Governor of a state in India is appointed by the:","Prime Minister","President","Chief Minister","Chief Justice","President"],
-    ["Which of these is classified as a direct tax in India?","GST","Income Tax","Excise Duty","Customs Duty","Income Tax"],
-    ["A sum of money doubles itself in 8 years at simple interest. In how many years will it become four times?","16 years","20 years","24 years","32 years","24 years"],
-    ["The 'Repo Rate' is the rate at which:","RBI lends to commercial banks","Commercial banks lend to RBI","RBI lends to the government only","Banks lend to each other","RBI lends to commercial banks"],
-    ["Which amendment of the Indian Constitution is known as the 'Mini Constitution'?","42nd Amendment","44th Amendment","52nd Amendment","73rd Amendment","42nd Amendment"],
-    ["GDP at factor cost differs from GDP at market price by the exclusion of:","Depreciation","Net indirect taxes","Net exports","Government spending","Net indirect taxes"],
-    ["Which authority appoints the Chief Election Commissioner of India?","Parliament","President","Supreme Court","Prime Minister alone","President"],
-    ["If a shopkeeper marks up goods by 40% and gives a discount of 20%, his net profit percentage is:","12%","16%","20%","8%","12%"],
-    ["Which of these organisations regulates the securities market in India?","RBI","SEBI","IRDAI","PFRDA","SEBI"],
-    ["A alone can complete a task in 20 days; B is 25% more efficient than A. B alone will take:","15 days","16 days","18 days","20 days","16 days"],
-    ["The 'Multidimensional Poverty Index' considers deprivation across:","Only income","Health, education and standard of living","Only education","Only health","Health, education and standard of living"],
-    ["NITI Aayog replaced which earlier body in India's planning framework?","The Finance Commission","The Planning Commission","The Election Commission","The Law Commission","The Planning Commission"],
-    ["The term 'Stagflation' refers to a situation of:","High growth and low inflation","Stagnant growth with high inflation","High growth and high employment","Low inflation and high employment","Stagnant growth with high inflation"],
-    ["Which of these is an example of a 'Merit Good'?","Cigarettes","Education","Alcohol","Luxury cars","Education"],
-    ["Which schedule of the Indian Constitution deals with anti-defection provisions?","Eighth Schedule","Ninth Schedule","Tenth Schedule","First Schedule","Tenth Schedule"],
-    ["Which of these best describes 'Disguised Unemployment'?","No job available at all","More workers than needed for a task, with no addition to output","High seasonal unemployment","Voluntary unemployment","More workers than needed for a task, with no addition to output"]
-  ],
-  engineering: [
-    ["A GATE score can be used for admission to M.Tech and recruitment to:","Only private companies","PSUs","Only state jobs","None of these","PSUs"],
-    ["Which of these is NOT a programming paradigm?","Object-oriented","Procedural","Functional","Trigonometric","Trigonometric"],
-    ["The SI unit of electrical resistance is the:","Ohm","Henry","Farad","Tesla","Ohm"],
-    ["In a queue data structure, insertion happens at the ___ and deletion at the ___.","Front, rear","Rear, front","Both ends","Middle","Rear, front"],
-    ["Find the next term: 3, 9, 27, 81, __","162","216","243","270","243"],
-    ["Which of these is a renewable source of energy?","Coal","Natural gas","Solar","Petroleum","Solar"],
-    ["Which sorting algorithm has the best average-case time complexity among these?","Bubble Sort","Quick Sort","Selection Sort","Insertion Sort","Quick Sort"],
-    ["The SI unit of frequency is:","Hertz","Watt","Ohm","Tesla","Hertz"],
-    ["In OOP, encapsulation primarily refers to:","Inheriting properties","Bundling data and methods together","Overriding methods","Creating multiple objects","Bundling data and methods together"],
-    ["Which of these is a NoSQL database?","MySQL","PostgreSQL","MongoDB","Oracle","MongoDB"],
-    ["The time complexity of binary search on a sorted array is:","O(n)","O(log n)","O(n^2)","O(1)","O(log n)"],
-    ["Which protocol is used to securely transfer web pages?","HTTP","FTP","HTTPS","SMTP","HTTPS"],
-    ["In GATE-based PSU recruitment, a candidate's shortlist rank is primarily based on:","Interview only","GATE score","College reputation","Work experience","GATE score"],
-    ["Which of these is a compiled language?","Python","JavaScript","C++","PHP","C++"],
-    ["RAM stands for:","Random Access Memory","Read Access Memory","Run Access Memory","Rapid Access Memory","Random Access Memory"],
-    ["Which data structure uses LIFO (Last In First Out) order?","Queue","Stack","Linked List","Tree","Stack"],
-    ["The time complexity of Bubble Sort in the worst case is:","O(n)","O(n log n)","O(n^2)","O(log n)","O(n^2)"],
-    ["Which of these is a primary memory type?","Hard Disk","RAM","SSD","CD-ROM","RAM"],
-    ["In networking, DNS is primarily used to:","Encrypt data","Translate domain names to IP addresses","Compress files","Manage email","Translate domain names to IP addresses"],
-    ["The unit of inductance is the:","Henry","Farad","Ohm","Weber","Henry"],
-    ["Which normal form in database design removes transitive dependency?","1NF","2NF","3NF","BCNF","3NF"],
-    ["A full adder circuit in digital electronics has how many inputs?","2","3","4","1","3"],
-    ["Which of these is an example of a non-relational (NoSQL) database model?","Document store","Relational tables","SQL views","Foreign keys","Document store"],
-    ["The Big-O complexity of accessing an element in an array by index is:","O(n)","O(log n)","O(1)","O(n^2)","O(1)"],
-    ["Which of these is a layer of the OSI model?","Application","Compiler","Assembler","Kernel","Application"],
-    ["In control systems, a system is called stable if its output:","Grows unbounded","Remains bounded for a bounded input","Oscillates infinitely","Becomes zero always","Remains bounded for a bounded input"],
-    ["Which of these is used for version control in software development?","Git","Docker","Jenkins","Kubernetes","Git"],
-    ["The efficiency of a Carnot engine depends only on:","The working substance","The temperatures of source and sink","The pressure","The volume","The temperatures of source and sink"],
-    ["Which of these gates outputs 1 only when both inputs are 1?","OR","AND","NOR","XOR","AND"],
-    ["Which of these best describes 'recursion' in programming?","A loop that never ends","A function calling itself","A variable declaration","A type of array","A function calling itself"],
-    ["Which of these is a wireless communication standard?","Ethernet","Bluetooth","USB","SATA","Bluetooth"],
-    ["The process of converting source code into machine code is done by a:","Linker","Compiler","Debugger","Loader","Compiler"],
-    ["Which of these represents good practice in normalized relational database design?","Storing duplicate data everywhere","Reducing data redundancy","Ignoring primary keys","Avoiding foreign keys","Reducing data redundancy"],
-    ["In thermodynamics, the first law is essentially a statement of:","Conservation of momentum","Conservation of energy","Conservation of mass","Entropy increase","Conservation of energy"],
-    ["Which of these is an example of an object-oriented programming language?","C","Java","Assembly","Fortran","Java"]
-  ]
-};
+/* quizPools now comes from questions-data.js (loaded before this file) —
+   a separate, much larger question bank (300+ per tier), kept out of
+   script.js on purpose so the logic and the data don't live in one file. */
 function tierPool(tier){
   if (tier==="10th") return quizPools.p10;
   if (tier==="12th") return quizPools.p12;
@@ -1882,18 +1697,51 @@ function shuffle(arr){
   }
   return a;
 }
-function renderQuiz(panel, tier, label){
+const QUIZ_SET_SIZE = 10;
+
+/* Shared A/B/C/D option lettering, used by both the practice quiz and the timed mock exam. */
+function optLetter(i){ return String.fromCharCode(65 + i); }
+
+/* No-repeat cursor: walks a shuffled order of the whole tier pool and only
+   reshuffles (starting a fresh cycle) once every question has been used. */
+function getQuizCycle(tier, poolLen){
+  const key = 'g2g_quiz_cycle_' + tier;
+  let data = null;
+  try{ data = JSON.parse(localStorage.getItem(key) || 'null'); }catch(e){ data = null; }
+  if (!data || !Array.isArray(data.order) || data.order.length !== poolLen){
+    data = { order: shuffle([...Array(poolLen).keys()]), pos: 0 };
+  }
+  return { key, data };
+}
+function saveQuizCycle(key, data){
+  try{ localStorage.setItem(key, JSON.stringify(data)); }catch(e){}
+}
+function nextQuizQuestions(tier, count){
   const pool = tierPool(tier);
+  const { key, data } = getQuizCycle(tier, pool.length);
+  const picks = [];
+  for (let i=0;i<count;i++){
+    if (data.pos >= data.order.length){
+      data.order = shuffle([...Array(pool.length).keys()]);
+      data.pos = 0;
+    }
+    picks.push(pool[data.order[data.pos]]);
+    data.pos++;
+  }
+  saveQuizCycle(key, data);
+  return picks;
+}
+
+function renderQuiz(panel, tier, label){
   function build(){
-    const questions = shuffle(pool).slice(0,5).map(q=>{
-      const [text, ...opts] = q;
-      const correct = opts[opts.length-1];
-      const choices = shuffle(opts.slice(0,4));
-      return {text, choices, correct};
+    const raw = nextQuizQuestions(tier, QUIZ_SET_SIZE);
+    const questions = raw.map(item=>{
+      const choices = shuffle(item.options);
+      return { text:item.q, choices, correct:item.answer, category:item.category, explain:item.explain };
     });
     panel.innerHTML = `
       <div class="quiz-head">
-        <p>A short practice set at the right difficulty level for ${label}. This is original practice material, not an official paper — treat it as a warm-up.</p>
+        <p>A fresh set of ${questions.length} questions at the right difficulty level for ${label}, pulled from a bank of ${tierPool(tier).length}+ questions — every question is used once before any repeat. This is original practice material, not an official paper.</p>
         <button class="quiz-restart" id="restartQuiz">New set</button>
       </div>
       <form id="quizForm">
@@ -1901,13 +1749,15 @@ function renderQuiz(panel, tier, label){
           <div class="q-block" data-qi="${qi}" data-correct="${q.correct.replace(/"/g,'&quot;')}">
             <div class="q-text">${qi+1}. ${q.text}</div>
             <div class="q-opts">
-              ${q.choices.map((c)=>`
+              ${q.choices.map((c,ci)=>`
                 <label class="q-opt">
                   <input type="radio" name="q${qi}" value="${c.replace(/"/g,'&quot;')}">
+                  <span class="opt-letter">${optLetter(ci)}</span>
                   <span>${c}</span>
                 </label>
               `).join('')}
             </div>
+            <div class="q-explain" id="qExplain${qi}" style="display:none;"></div>
           </div>
         `).join('')}
         <button type="submit" class="submit-quiz">Check my score</button>
@@ -1920,6 +1770,7 @@ function renderQuiz(panel, tier, label){
       let score = 0;
       const blocks = panel.querySelectorAll('.q-block');
       blocks.forEach(b=>{
+        const qi = parseInt(b.dataset.qi, 10);
         const correct = b.dataset.correct;
         const selected = b.querySelector('input:checked');
         b.querySelectorAll('.q-opt').forEach(opt=>{
@@ -1928,6 +1779,13 @@ function renderQuiz(panel, tier, label){
           else if (selected && val === selected.value) opt.classList.add('wrong');
         });
         if (selected && selected.value === correct) score++;
+        const qData = questions[qi];
+        const explainBox = document.getElementById('qExplain' + qi);
+        if (explainBox && qData.explain && (qData.category === 'maths' || qData.category === 'english' || qData.category === 'reasoning')){
+          const isCorrect = selected && selected.value === correct;
+          explainBox.innerHTML = `<b>${isCorrect ? 'Correct.' : 'Correct answer: ' + correct + '.'}</b> ${qData.explain}`;
+          explainBox.style.display = 'block';
+        }
       });
       const scoreBox = document.getElementById('quizScore');
       scoreBox.textContent = `Score: ${score} / ${blocks.length}`;
@@ -2087,40 +1945,11 @@ function openCategoryOverview(kind){
 }
 
 /* ============================================================
-   YOUR OWN UPLOADED PAPERS — Google Drive / OneDrive links
-   Add one entry per paper here: { title, url }.
-   Just send me the links and titles and I'll fill this in for
-   you — or edit this array yourself, it's plain JavaScript.
+   YOUR OWN UPLOADED PAPERS & E-BOOKS
+   Moved out to papers-data.js — edit that file to add or
+   remove a question paper or e-book. It defines the same
+   userPapers / userEbooks arrays used below.
    ============================================================ */
-const userPapers = [
-   { title: "SSC-CGL-T-I-Similar-Paper-12-Sep-2025-S1-English.pdf", url: "https://drive.google.com/file/d/1z6cl35kcrfTMso-FK4zSuYxVmHI3IFwZ/view?usp=drive_link" },
-   { title: "SSC-CGL-QUESTION-PAPER-13-Aug-2021-Shift-1-English", url: "https://drive.google.com/file/d/1hV2ljDa0cQ3a2d3PXcrbAoELy3eVR3Hb/view?usp=sharing" },
-   { title: "SSC-CGL-Tier-1-Question-Paper-English_09_09_2024", url: "https://drive.google.com/file/d/1oQ0pve3M2Q7E3QplLPaQrVwQYVJXhlTM/view?usp=drive_link" },
-   { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://drive.google.com/file/d/1RTFsKH_e484xoSb4bzxLnIKmG3gML9ko/view?usp=drive_link" },
-   { title: "RRB-NTPC-CBT-I-Question-Paper_16-03-2026_S1-2", url: "https://drive.google.com/file/d/10CS_4iE9muDNDEI6308GKJWhaMdXtjsB/view?usp=drive_link" },
-   { title: "RRB-NTPC-2025-CBT-I-Question-Paper_16-03-2026_S1-2", url: "https://drive.google.com/file/d/1sepu-w6TBAh5Wa2FrWi-PbnibQDkqhfm/view?usp=drive_link" },
-   { title: "RRB-NTPC-2019-CBT-1-Question-Paper-1", url: "https://drive.google.com/file/d/1rz-8ZhN2V8kJtg2Dw2XElOxG96whdmCZ/view?usp=drive_link" },
-   { title: "RRB-NTPC-2019-CBT-1-Question-Paper-1", url: "https://drive.google.com/file/d/195FMkB-SgoNwae9NEnBjv9LSjH4YEVqa/view?usp=drive_link" },
-   { title: "RRB-NTPC-2019-01_04_2021_-10_30-am-to-12_00-Paper-1", url: "https://drive.google.com/file/d/1CrU4c_Tfm43DBGEeX7qlr-m08uEphWI7/view?usp=drive_link" },
-   { title: "CRPF_Constable_Tech_Tradesman_01July2023_Shift1_QA", url: "https://drive.google.com/file/d/1Y8Em9XBgBxSE4Cbcvddj1mfy77VpgsQr/view?usp=drive_link" },
-   { title: "QP_CAPF_2023_GAI_07082023.pdf", url: "https://drive.google.com/file/d/1kjgq6NWjs_vfndqS4O0eG2jdTMyaXz9-/view?usp=drive_link" },
-   { title: "QP-CAPF-22-GAI-080822.pdf", url: "https://drive.google.com/file/d/1hOeW3K6ftbPgntvjcSq6382sNmDISqtr/view?usp=drive_link" },
-   { title: "QP-CAPF-19-GEA.pdf", url: "https://drive.google.com/file/d/1jbmfpvkSYt4MX58qUKVbCnf-gnmlrX6c/view?usp=drive_link" },
-   { title: "CAPF-2018-GENERAL-ABILITY.pdf", url: "https://drive.google.com/file/d/1oJbMPKBR6pNQhnGSYdqmfc5dAzQwkbz2/view?usp=drive_link" },
-   { title: "cisf ASI paramedical staff Sample paper 1.pdf", url: "https://drive.google.com/file/d/1iJWpbueOp1828r6WJyHpVzI16luZ3fZx/view?usp=drive_link" },
-   { title: "MTS_Havaldar_CBIC_CBN_2024_Shift2_QA.pdf", url: "https://drive.google.com/file/d/1O2lu2vr3ZMdrigY0_I0IOq1gswMauumB/view?usp=drive_link" },
-   { title: "RRB GROUP D SOLVED PAPER 2022 Shift 2.pdf", url: "https://drive.google.com/file/d/13vYwc8ws1eO_nyaJOJiJaggOXsB2VS9d/view?usp=drive_link" },
-];
-
-/* ============================================================
-   YOUR OWN E-BOOKS & GUIDES — Google Drive / OneDrive links
-   Add one entry per e-book here: { title, url }.
-   Same idea as userPapers above — send me links and titles,
-   or edit this array yourself.
-   ============================================================ */
-const userEbooks = [
-  // { title: "General Studies Complete Guide", url: "https://drive.google.com/file/d/XXXXXXXX/view?usp=sharing" },
-];
 
 /* ---------- Shared search-filtered list renderer ---------- */
 function renderSearchableList(panel, items, opts){
@@ -2250,7 +2079,8 @@ const listEl = document.getElementById('jobList');
 const tierKeys = Object.keys(tierMeta);
 
 // Guarded: the qualification explorer (qualTabs/jobList) only exists on the
-// home page now that Roadmaps/Mock Test/About Us are separate pages.
+// Jobs & Details page; the Roadmap cards live on the home page, and
+// Mock Test/About Us are their own separate pages.
 if (tabsEl && listEl){
   function renderJobs(tier){
     listEl.innerHTML = '';
@@ -2277,6 +2107,33 @@ if (tabsEl && listEl){
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{
+  // Mobile nav toggle (hamburger) — present on every page's header
+  const navToggle = document.getElementById('navToggle');
+  const mainNav = document.getElementById('mainNav');
+  if (navToggle && mainNav){
+    navToggle.addEventListener('click', ()=>{
+      const isOpen = mainNav.classList.toggle('open');
+      navToggle.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    // Close the menu after picking a link
+    mainNav.querySelectorAll('a').forEach(link=>{
+      link.addEventListener('click', ()=>{
+        mainNav.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded','false');
+      });
+    });
+    // Close when tapping outside the open menu
+    document.addEventListener('click', (e)=>{
+      if (!mainNav.classList.contains('open')) return;
+      if (mainNav.contains(e.target) || navToggle.contains(e.target)) return;
+      mainNav.classList.remove('open');
+      navToggle.classList.remove('open');
+      navToggle.setAttribute('aria-expanded','false');
+    });
+  }
+
   // Explore Your Career Options cards
   const govCard = document.getElementById('card-government-jobs');
   if (govCard) govCard.addEventListener('click', ()=>{
@@ -2306,11 +2163,17 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
   // Previous Year Papers card
   const papersCard = document.getElementById('card-previous-papers');
-  if (papersCard) papersCard.addEventListener('click', openPreviousPapers);
+  if (papersCard) papersCard.addEventListener('click', ()=>{
+    if (!getCurrentUser()){ openAuthModal('login'); return; }
+    openPreviousPapers();
+  });
 
   // E-Books & Guides card
   const ebooksCard = document.getElementById('card-ebooks');
-  if (ebooksCard) ebooksCard.addEventListener('click', openEbooks);
+  if (ebooksCard) ebooksCard.addEventListener('click', ()=>{
+    if (!getCurrentUser()){ openAuthModal('login'); return; }
+    openEbooks();
+  });
 });
 
 try{
@@ -2319,59 +2182,75 @@ try{
 }catch(e){}
 
 /* ============================================================
-   AUTH SYSTEM (client-side demo)
-   Stored only in this browser's localStorage — there is no
-   server or database here, so this is NOT secure real
-   authentication. It's enough to gate a feature per-browser
-   for a static site; a production version would need a real
-   backend to store accounts and verify passwords safely.
+   AUTH SYSTEM — talks to the real backend API (see /backend).
+   The browser only ever holds a signed session token
+   (in localStorage); the server hashes passwords, stores
+   accounts, and verifies logins.
    ============================================================ */
-const AUTH_USERS_KEY = 'g2g_users';
-const AUTH_SESSION_KEY = 'g2g_session';
+const AUTH_TOKEN_KEY = 'g2g_token';
+let currentUser = null; // cached in memory after /api/me resolves
 
-function getUsers(){
-  try{ return JSON.parse(localStorage.getItem(AUTH_USERS_KEY) || '[]'); }
-  catch(e){ return []; }
-}
-function saveUsers(users){
-  try{ localStorage.setItem(AUTH_USERS_KEY, JSON.stringify(users)); }catch(e){}
-}
-function getCurrentUser(){
-  const email = localStorage.getItem(AUTH_SESSION_KEY);
-  if (!email) return null;
-  return getUsers().find(u => u.email.toLowerCase() === email.toLowerCase()) || null;
-}
-function setSession(email){
-  try{ localStorage.setItem(AUTH_SESSION_KEY, email); }catch(e){}
-}
-function clearSession(){
-  try{ localStorage.removeItem(AUTH_SESSION_KEY); }catch(e){}
-}
-// Simple obfuscation only — NOT cryptographic security.
-function obfuscate(str){
-  try{ return btoa(unescape(encodeURIComponent(str))); }catch(e){ return str; }
+function authHeaders(){
+  const token = localStorage.getItem(AUTH_TOKEN_KEY);
+  return token ? { 'Authorization': 'Bearer ' + token } : {};
 }
 
-function signUp(name, email, password){
-  const users = getUsers();
-  if (users.some(u => u.email.toLowerCase() === email.toLowerCase())){
-    return { ok:false, error:'An account with this email already exists — try logging in instead.' };
+async function apiRequest(path, options = {}){
+  let res, data = null;
+  try{
+    res = await fetch(path, {
+      ...options,
+      headers: { 'Content-Type': 'application/json', ...authHeaders(), ...(options.headers || {}) }
+    });
+    try{ data = await res.json(); }catch(e){ data = null; }
+  }catch(networkErr){
+    return { ok:false, error:'Could not reach the server. Please try again.' };
   }
-  users.push({ name: name.trim(), email: email.trim(), passHash: obfuscate(password) });
-  saveUsers(users);
-  setSession(email.trim());
+  if (!res.ok){
+    return { ok:false, error: (data && data.error) || 'Something went wrong. Please try again.' };
+  }
+  return { ok:true, data };
+}
+
+function getCurrentUser(){
+  return currentUser; // synchronous read of the cached session
+}
+
+async function restoreSession(){
+  if (!localStorage.getItem(AUTH_TOKEN_KEY)) return;
+  const res = await apiRequest('/api/me');
+  if (res.ok){
+    currentUser = res.data.user;
+  } else {
+    localStorage.removeItem(AUTH_TOKEN_KEY);
+  }
+  refreshAuthUI();
+}
+
+async function signUp(name, email, password){
+  const res = await apiRequest('/api/signup', {
+    method:'POST',
+    body: JSON.stringify({ name, email, password })
+  });
+  if (!res.ok) return res;
+  localStorage.setItem(AUTH_TOKEN_KEY, res.data.token);
+  currentUser = res.data.user;
   return { ok:true };
 }
-function logIn(email, password){
-  const users = getUsers();
-  const user = users.find(u => u.email.toLowerCase() === email.trim().toLowerCase());
-  if (!user) return { ok:false, error:'No account found with this email. Try signing up.' };
-  if (user.passHash !== obfuscate(password)) return { ok:false, error:'Incorrect password.' };
-  setSession(user.email);
+async function logIn(email, password){
+  const res = await apiRequest('/api/login', {
+    method:'POST',
+    body: JSON.stringify({ email, password })
+  });
+  if (!res.ok) return res;
+  localStorage.setItem(AUTH_TOKEN_KEY, res.data.token);
+  currentUser = res.data.user;
   return { ok:true };
 }
-function logOut(){
-  clearSession();
+async function logOut(){
+  apiRequest('/api/logout', { method:'POST' }); // best-effort; token is discarded client-side regardless
+  localStorage.removeItem(AUTH_TOKEN_KEY);
+  currentUser = null;
   refreshAuthUI();
 }
 
@@ -2383,6 +2262,9 @@ function refreshAuthUI(){
   const mockLocked = document.getElementById('mockLocked');
   const mockUnlocked = document.getElementById('mockUnlocked');
   const mockWelcome = document.getElementById('mockWelcome');
+  const lockBadges = document.querySelectorAll('.dc-lock-badge');
+
+  lockBadges.forEach(b => b.style.display = user ? 'none' : 'flex');
 
   if (user){
     authBtn.textContent = 'Hi, ' + user.name.split(' ')[0] + ' ▾';
@@ -2431,30 +2313,30 @@ document.querySelectorAll('.auth-tab-btn').forEach(btn=>{
   });
 });
 
-document.getElementById('loginForm').addEventListener('submit', (e)=>{
+document.getElementById('loginForm').addEventListener('submit', async (e)=>{
   e.preventDefault();
   const email = document.getElementById('loginEmail').value;
   const password = document.getElementById('loginPassword').value;
-  const res = logIn(email, password);
   const errEl = document.getElementById('loginError');
-  if (!res.ok){ errEl.textContent = res.error; return; }
   errEl.textContent = '';
+  const res = await logIn(email, password);
+  if (!res.ok){ errEl.textContent = res.error; return; }
   closeAuthModal();
   refreshAuthUI();
 });
 
-document.getElementById('signupForm').addEventListener('submit', (e)=>{
+document.getElementById('signupForm').addEventListener('submit', async (e)=>{
   e.preventDefault();
   const name = document.getElementById('signupName').value;
   const email = document.getElementById('signupEmail').value;
   const password = document.getElementById('signupPassword').value;
   const confirm = document.getElementById('signupConfirm').value;
   const errEl = document.getElementById('signupError');
+  errEl.textContent = '';
   if (password.length < 6){ errEl.textContent = 'Password must be at least 6 characters.'; return; }
   if (password !== confirm){ errEl.textContent = 'Passwords do not match.'; return; }
-  const res = signUp(name, email, password);
+  const res = await signUp(name, email, password);
   if (!res.ok){ errEl.textContent = res.error; return; }
-  errEl.textContent = '';
   closeAuthModal();
   refreshAuthUI();
 });
@@ -2521,7 +2403,7 @@ if (mockTierSelect){
   mockJobSelect.addEventListener('change', updateMockPatternBox);
   populateMockJobs();
 
-  [1,2,3].forEach(setNum=>{
+  Array.from({length:10}, (_,i)=>i+1).forEach(setNum=>{
     const btn = document.createElement('button');
     btn.className = 'mock-cta mock-set-btn';
     btn.textContent = `Mock Test ${setNum}`;
@@ -2557,10 +2439,8 @@ function buildExamQuestions(tier, count, seedStr){
     pass++;
   }
   return rounds.map((q, idx)=>{
-    const [text, ...opts] = q;
-    const correct = opts[opts.length-1];
-    const choices = seededShuffle(opts.slice(0,4), seedStr + '-opts' + idx);
-    return { text, choices, correct };
+    const choices = seededShuffle(q.options, seedStr + '-opts' + idx);
+    return { text:q.q, choices, correct:q.answer, category:q.category, explain:q.explain };
   });
 }
 
@@ -2616,9 +2496,10 @@ function renderExamQuestion(){
     <div class="exam-qgrid">${dots}</div>
     <div class="exam-q-text">${current+1}. ${q.text}</div>
     <div class="exam-opts">
-      ${q.choices.map(c=>`
+      ${q.choices.map((c,ci)=>`
         <label class="exam-opt${answers[current]===c ? ' selected':''}">
           <input type="radio" name="examq" value="${c.replace(/"/g,'&quot;')}" ${answers[current]===c?'checked':''}>
+          <span class="opt-letter">${optLetter(ci)}</span>
           <span>${c}</span>
         </label>
       `).join('')}
@@ -2678,14 +2559,32 @@ function submitExam(timeUp){
     </div>
   `;
   const reviewList = document.getElementById('examReviewList');
-  reviewList.innerHTML = questions.map((q,i)=>{
-    const yourAnswer = answers[i] || '(not answered)';
+  reviewList.innerHTML = `<h3 class="exam-review-heading">Review — every question, your answer &amp; the correct answer</h3>` +
+    questions.map((q,i)=>{
     const isCorrect = answers[i] === q.correct;
+    const wasAnswered = answers[i] !== null;
+    const statusLabel = isCorrect ? 'Correct' : (wasAnswered ? 'Incorrect' : 'Not answered');
+    const showLogic = q.explain && (q.category === 'maths' || q.category === 'english' || q.category === 'reasoning');
     return `
       <div class="exam-review-item">
         <div class="rq">${i+1}. ${q.text}</div>
-        <div class="ra ${isCorrect ? 'correct' : 'wrong'}">Your answer: ${yourAnswer}</div>
-        ${!isCorrect ? `<div class="ra correct">Correct answer: ${q.correct}</div>` : ''}
+        <div class="ra ${isCorrect ? 'correct' : (wasAnswered ? 'wrong' : '')}">${statusLabel}</div>
+        <div class="q-opts review-opts">
+          ${q.choices.map((c,ci)=>{
+            let cls = 'q-opt review-opt';
+            if (c === q.correct) cls += ' correct';
+            else if (c === answers[i]) cls += ' wrong';
+            return `
+              <div class="${cls}">
+                <span class="opt-letter">${optLetter(ci)}</span>
+                <span>${c}</span>
+                ${c === q.correct ? '<span class="opt-tag">Correct answer</span>' : ''}
+                ${c !== q.correct && c === answers[i] ? '<span class="opt-tag">Your answer</span>' : ''}
+              </div>
+            `;
+          }).join('')}
+        </div>
+        ${showLogic ? `<div class="q-explain">${q.explain}</div>` : ''}
       </div>
     `;
   }).join('');
@@ -2716,3 +2615,4 @@ examOverlay.addEventListener('click', (e)=>{
 });
 
 refreshAuthUI();
+restoreSession(); // re-check the session token with the server on page load

@@ -11,13 +11,12 @@
   <div class="logo">
     <img src="logo.png" alt="Goal2Govt" class="logo-img">
   </div>
-  <nav>
+  <nav id="mainNav">
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="roadmap.html">Roadmaps</a></li>
-      <li><a href="index.html#prep-section">Exam Prep</a></li>
-      <li><a href="mocktest.html">Mock Test</a></li>
       <li><a href="jobsdetails.html" class="active">Jobs & Details</a></li>
+      <li><a href="examprep.html">Exam Prep</a></li>
+      <li><a href="mocktest.html">Mock Test</a></li>
       <li><a href="about.html">About Us</a></li>
     </ul>
   </nav>
@@ -28,6 +27,9 @@
       <button class="user-menu-item" id="logoutBtn">Log Out</button>
     </div>
   </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav">
+    <span></span><span></span><span></span>
+  </button>
 </header>
 
 <section class="page-banner">
@@ -35,7 +37,6 @@
   <p>Browse government job opportunities and full details for every qualification level.</p>
 </section>
 
-<!-- Interactive explorer built from the "Government Jobs After 10th, 12th, ITI, Diploma, Degree & BTech" flow chart -->
 <section id="explorer-section">
   <h2 class="section-title">Government Jobs by Qualification</h2>
   <div class="explorer">
@@ -70,7 +71,6 @@
   &copy; 2026 Goal2Govt. Find Your Path to Success.
 </footer>
 
-<!-- Detail modal: tabbed sheet reused for government jobs, roadmap careers, category overviews and tips -->
 <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
   <div class="sheet">
     <div class="sheet-sticky">
@@ -86,7 +86,6 @@
   </div>
 </div>
 
-<!-- Auth modal: Sign Up / Log In (client-side demo auth, stored in this browser only) -->
 <div class="overlay" id="authOverlay" role="dialog" aria-modal="true" aria-labelledby="authTitle">
   <div class="sheet auth-sheet">
     <button class="close-btn" id="authCloseBtn" aria-label="Close">✕</button>
@@ -124,7 +123,6 @@
   </div>
 </div>
 
-<!-- Timed mock exam — full screen, separate from the casual practice quiz -->
 <div class="overlay fullscreen" id="examOverlay" role="dialog" aria-modal="true" aria-labelledby="examJobTitle">
   <div class="sheet exam-sheet">
     <div class="exam-topbar">
@@ -139,6 +137,8 @@
   </div>
 </div>
 
+<script src="questions-data.js"></script>
+<script src="papers-data.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
