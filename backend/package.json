@@ -1,0 +1,17 @@
+{
+  "name": "goal2govt-backend",
+  "version": "1.0.0",
+  "description": "Auth API and static file server for the Goal2Govt site",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@supabase/server": "^1.8.1",
+    "@supabase/supabase-js": "^2.117.2",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.6.1",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
